@@ -1,9 +1,10 @@
 {
 	"required": true,
-	"package": "net.neamow.blockvariantswapper.mixin",
+	"package": "net.neamow.blockvariantswapper.mixin.client",
 	"compatibilityLevel": "JAVA_21",
-	"mixins": [
-		"BlockMixin"
+	"client": [
+		"InGameHudMixin",
+		"MouseMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1
