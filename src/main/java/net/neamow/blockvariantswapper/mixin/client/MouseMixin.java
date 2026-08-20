@@ -3,12 +3,12 @@ package net.neamow.blockvariantswapper.mixin.client;
 import net.fabricmc.fabric.api.client.networking.v1.ClientPlayNetworking;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.Mouse;
-import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.neamow.blockvariantswapper.BlockVariantManager;
 import net.neamow.blockvariantswapper.client.BlockVariantSwapperClientState;
+import net.neamow.blockvariantswapper.client.ModKeyBinding;
 import net.neamow.blockvariantswapper.network.CycleVariantPayload;
 import org.spongepowered.asm.mixin.Final;
 import org.spongepowered.asm.mixin.Mixin;
@@ -28,8 +28,8 @@ public class MouseMixin {
     // Intercepts the onMouseScroll method before it scrolls the player's hotbar
     @Inject(method = "onMouseScroll", at = @At(value = "INVOKE", target = "Lnet/minecraft/entity/player/PlayerInventory;scrollInHotbar(D)V"), cancellable = true)
     private void onScroll(long window, double horizontal, double vertical, CallbackInfo ci) {
-        // If ALT is held down and no screen is open, handle block variant swapping
-        if (Screen.hasAltDown() && this.client.player != null && this.client.currentScreen == null) {
+        // If the swap key is held down and no screen is open, handle block variant swapping
+        if (ModKeyBinding.swapKey.isPressed() && this.client.player != null && this.client.currentScreen == null) {
             PlayerInventory inventory = this.client.player.getInventory();
             ItemStack stack = inventory.getMainHandStack();
 

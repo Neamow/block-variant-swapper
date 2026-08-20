@@ -5,7 +5,6 @@ import com.mojang.blaze3d.systems.RenderSystem;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.gui.DrawContext;
 import net.minecraft.client.gui.hud.InGameHud;
-import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.client.render.RenderTickCounter;
 import net.minecraft.entity.JumpingMount;
 import net.minecraft.entity.player.PlayerEntity;
@@ -16,6 +15,7 @@ import net.minecraft.util.Identifier;
 import net.neamow.blockvariantswapper.BlockVariantManager;
 import net.neamow.blockvariantswapper.BlockVariantSwapper;
 import net.neamow.blockvariantswapper.client.BlockVariantSwapperClientState;
+import net.neamow.blockvariantswapper.client.ModKeyBinding;
 import org.spongepowered.asm.mixin.Final;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
@@ -41,7 +41,7 @@ public class InGameHudMixin {
     // Helper to check if the variant swapper preview should be shown
     @Unique
     private boolean shouldShowVariants() {
-        if (!Screen.hasAltDown() || this.client.player == null || this.client.currentScreen != null) {
+        if (!ModKeyBinding.swapKey.isPressed() || this.client.player == null || this.client.currentScreen != null) {
             return false;
         }
 
