@@ -22,8 +22,9 @@ public class BlockVariantSwapper implements ModInitializer {
 		// Set up the network handling for server-client communication
 		NetworkHandler.register();
 
-		// Create the default config files as soon as the game starts
-		BlockVariantConfig.createDefaultConfigs();
+		// Ensure the user config directory exists so players have a place to add overrides.
+		// Defaults live in the jar and are loaded at reload time; no files are generated here.
+		BlockVariantConfig.createConfigDirectory();
 
 		// Register a resource reload listener to initialise the BlockVariantManager.
 		// This ensures it runs after all mods have registered their content, on both client and server.

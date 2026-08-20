@@ -12,112 +12,79 @@ import java.util.*;
 import java.util.stream.Stream;
 
 // BLOCK VARIANT SWAPPER
-// This class manages the configuration for the block variant swapping feature
+// Manages configuration for the block variant swapping feature.
+//
+// Config model:
+//  - Default variant groups are bundled inside the mod jar and loaded fresh on every (re)load,
+//    so they always stay current with the installed mod version. They are never written to disk.
+//  - The on-disk config folder (config/blockvariantswapper/) is user territory. It is never auto-populated.
+//    Any *_block_variants.json files a user places there are layered on top of the defaults,
+//    and a user entry for a given base block replaces the default group for that block.
 public class BlockVariantConfig {
     private static final Gson GSON = new GsonBuilder().setPrettyPrinting().create();
     private static final String CONFIG_SUFFIX = "_block_variants.json";
-    private static final String MINECRAFT_CONFIG_NAME = "minecraft" + CONFIG_SUFFIX;
-    private static final String MINECRAFT_RESOURCE_PATH = "/assets/" + BlockVariantSwapper.MOD_ID + "/config/" + MINECRAFT_CONFIG_NAME;
 
-    // A list of all pre-made config files to ship with the mod
-    // On first run, these files will be copied from the mod's resources into the user's config folder
-    private static final List<String> BUNDLED_CONFIG_RESOURCES = List.of(
+    // Default variant group definitions bundled in the mod's resources.
+    // These are always loaded from the jar; they are never written to the config folder.
+    private static final List<String> BUNDLED_DEFAULT_RESOURCES = List.of(
+        "/assets/" + BlockVariantSwapper.MOD_ID + "/config/minecraft_block_variants.json",
         "/assets/" + BlockVariantSwapper.MOD_ID + "/config/biomesoplenty_block_variants.json"
-        // To add more, place the file in mod resources and add its path here, e.g.:
-        // "/assets/blockvariantswapper/config/create_block_variants.json"
     );
 
     private static Map<String, List<String>> mergedVariants = new LinkedHashMap<>();
 
-    // Create the config directory and copy all default/bundled configs on game startup
-    public static void createDefaultConfigs() {
-        Path configDir = FabricLoader.getInstance().getConfigDir().resolve(BlockVariantSwapper.MOD_ID);
-
+    // Ensure the (empty) user config directory exists, so players have an obvious place to add
+    // their own *_block_variants.json overrides. No files are generated here.
+    public static void createConfigDirectory() {
+        Path configDir = getConfigDir();
         if (!Files.exists(configDir)) {
             try {
                 Files.createDirectories(configDir);
             } catch (IOException e) {
                 BlockVariantSwapper.LOGGER.error("Failed to create config directory", e);
-                return;
-            }
-        }
-
-        // Create the default config file for vanilla blocks first
-        Path defaultConfig = configDir.resolve(MINECRAFT_CONFIG_NAME);
-        if (!Files.exists(defaultConfig)) {
-            BlockVariantSwapper.LOGGER.info("Creating default block variants config...");
-            Map<String, List<String>> defaultMap = loadFromResources(MINECRAFT_RESOURCE_PATH);
-            if (!defaultMap.isEmpty()) {
-                save(defaultConfig, defaultMap);
-            }
-        }
-
-        // Then create any other bundled configs, preserving their original filenames
-        for (String resourcePath : BUNDLED_CONFIG_RESOURCES) {
-            try {
-                String filename = new File(resourcePath).getName();
-                Path destPath = configDir.resolve(filename);
-
-                if (!Files.exists(destPath)) {
-                    BlockVariantSwapper.LOGGER.info("Creating bundled config: " + filename);
-                    Map<String, List<String>> modMap = loadFromResources(resourcePath);
-                    if (!modMap.isEmpty()) {
-                        save(destPath, modMap);
-                    }
-                }
-            } catch (Exception e) {
-                BlockVariantSwapper.LOGGER.error("Error processing bundled config resource: " + resourcePath, e);
             }
         }
     }
 
-    // Load data from all existing config files, called by the BlockVariantManager at world load or /reload command
+    // Build the active variant map: bundled defaults first, then user overrides layered on top.
+    // Called by the BlockVariantManager at world load and on /reload.
     public static void load() {
-        Map<String, List<String>> newMergedMap = new LinkedHashMap<>();
-        Path configDir = FabricLoader.getInstance().getConfigDir().resolve(BlockVariantSwapper.MOD_ID);
+        Map<String, List<String>> result = new LinkedHashMap<>();
 
-        if (!Files.exists(configDir)) {
-            BlockVariantSwapper.LOGGER.warn("Block variants config directory not found. Cannot load any variants.");
-            mergedVariants = newMergedMap;
-            return;
+        // 1. Load bundled defaults straight from the jar (always current with the mod version).
+        //    The default files use distinct namespaces, so their keys don't collide.
+        for (String resourcePath : BUNDLED_DEFAULT_RESOURCES) {
+            result.putAll(loadFromResources(resourcePath));
         }
 
-        try (Stream<Path> stream = Files.list(configDir)) {
-            stream.filter(path -> path.toString().endsWith(CONFIG_SUFFIX))
-                  .sorted()
-                  .forEach(path -> loadAndMerge(path, newMergedMap));
-        } catch (IOException e) {
-            BlockVariantSwapper.LOGGER.error("Failed to list config files", e);
+        // 2. Layer user overrides on top. A user entry for a base block REPLACES its default group.
+        Path configDir = getConfigDir();
+        if (Files.exists(configDir)) {
+            try (Stream<Path> stream = Files.list(configDir)) {
+                stream.filter(path -> path.toString().endsWith(CONFIG_SUFFIX))
+                      .sorted() // deterministic order; if two user files define the same base block, the last (by filename) wins
+                      .forEach(path -> loadAndOverride(path, result));
+            } catch (IOException e) {
+                BlockVariantSwapper.LOGGER.error("Failed to list config files", e);
+            }
         }
 
-        mergedVariants = newMergedMap;
+        mergedVariants = result;
     }
 
-    // Helper method that reads a single JSON file and merges its contents into the main map
-    private static void loadAndMerge(Path path, Map<String, List<String>> map) {
+    // Read a single user JSON file and apply its groups on top of the map, replacing any existing group
+    private static void loadAndOverride(Path path, Map<String, List<String>> map) {
         try (Reader reader = Files.newBufferedReader(path)) {
             Map<String, List<String>> loaded = GSON.fromJson(reader, new TypeToken<LinkedHashMap<String, List<String>>>(){}.getType());
             if (loaded != null) {
-                loaded.forEach((key, value) -> map.merge(key, new ArrayList<>(value), (existing, aNew) -> {
-                    existing.addAll(aNew);
-                    return existing;
-                }));
+                loaded.forEach((key, value) -> map.put(key, new ArrayList<>(value)));
             }
         } catch (IOException e) {
             BlockVariantSwapper.LOGGER.error("Failed to load config file: " + path, e);
         }
     }
 
-    // Helper method that saves a map of variants to a JSON file
-    private static void save(Path file, Map<String, List<String>> map) {
-        try (Writer writer = Files.newBufferedWriter(file)) {
-            GSON.toJson(map, writer);
-        } catch (IOException e) {
-            BlockVariantSwapper.LOGGER.error("Failed to save config file", e);
-        }
-    }
-
-    // Helper method that loads a config file from within the mod's own resources
+    // Load a config file bundled inside the mod's own resources
     private static Map<String, List<String>> loadFromResources(String path) {
         try (InputStream in = BlockVariantConfig.class.getResourceAsStream(path)) {
             if (in == null) {
@@ -125,12 +92,17 @@ public class BlockVariantConfig {
                 return new LinkedHashMap<>();
             }
             try (Reader reader = new InputStreamReader(in)) {
-                return GSON.fromJson(reader, new TypeToken<LinkedHashMap<String, List<String>>>(){}.getType());
+                Map<String, List<String>> loaded = GSON.fromJson(reader, new TypeToken<LinkedHashMap<String, List<String>>>(){}.getType());
+                return loaded != null ? loaded : new LinkedHashMap<>();
             }
         } catch (IOException e) {
             BlockVariantSwapper.LOGGER.error("Failed to load resource: " + path, e);
             return new LinkedHashMap<>();
         }
+    }
+
+    private static Path getConfigDir() {
+        return FabricLoader.getInstance().getConfigDir().resolve(BlockVariantSwapper.MOD_ID);
     }
 
     // Getter that allows other parts of the mod to access the loaded variant data
