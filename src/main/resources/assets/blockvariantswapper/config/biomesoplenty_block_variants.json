@@ -181,5 +181,16 @@
 		"biomesoplenty:white_sandstone_stairs",
 		"biomesoplenty:white_sandstone_slab",
 		"biomesoplenty:white_sandstone_wall"
+	],
+	"biomesoplenty:willow_planks": [
+		"biomesoplenty:willow_planks",
+		"biomesoplenty:willow_stairs",
+		"biomesoplenty:willow_slab",
+		"biomesoplenty:willow_fence",
+		"biomesoplenty:willow_fence_gate",
+		"biomesoplenty:willow_door",
+		"biomesoplenty:willow_trapdoor",
+		"biomesoplenty:willow_pressure_plate",
+		"biomesoplenty:willow_button"
 	]
 }

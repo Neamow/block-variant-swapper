@@ -117,7 +117,7 @@ No. Block reversal check is tick-based but the scan is a cheap hashmap lookup, a
 Impact is negligible. Game loading is microscopically faster because hundreds of crafting and stonecutting recipes for block
 variants were removed.
 
-**What about the stonecutter?**
+**What about the stonecutter?**  
 The stonecutter was not removed; only the recipes for block variants were removed. The block is still in the game,
 retains the full block recipes (not block shape variants) and can be used for decoration or other recipes in modded
 scenarios that this mod doesn't cover.

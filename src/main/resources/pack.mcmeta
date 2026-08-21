@@ -156,6 +156,102 @@
       {
         "namespace": "minecraft",
         "path": "advancement/recipes/.*copper_grate_from.*stonecutting\\.json"
+      },
+      {
+        "namespace": "biomesoplenty",
+        "path": "recipe/.*_stairs.json"
+      },
+      {
+        "namespace": "biomesoplenty",
+        "path": "advancement/recipes/.*_stairs.json"
+      },
+      {
+        "namespace": "biomesoplenty",
+        "path": "recipe/.*_slab.json"
+      },
+      {
+        "namespace": "biomesoplenty",
+        "path": "advancement/recipes/.*_slab.json"
+      },
+      {
+        "namespace": "biomesoplenty",
+        "path": "recipe/.*_wall.json"
+      },
+      {
+        "namespace": "biomesoplenty",
+        "path": "advancement/recipes/.*_wall.json"
+      },
+      {
+        "namespace": "biomesoplenty",
+        "path": "recipe/.*_fence.json"
+      },
+      {
+        "namespace": "biomesoplenty",
+        "path": "advancement/recipes/.*_fence.json"
+      },
+      {
+        "namespace": "biomesoplenty",
+        "path": "recipe/.*_fence_gate.json"
+      },
+      {
+        "namespace": "biomesoplenty",
+        "path": "advancement/recipes/.*_fence_gate.json"
+      },
+      {
+        "namespace": "biomesoplenty",
+        "path": "recipe/.*_door.json"
+      },
+      {
+        "namespace": "biomesoplenty",
+        "path": "advancement/recipes/.*_door.json"
+      },
+      {
+        "namespace": "biomesoplenty",
+        "path": "recipe/.*_trapdoor.json"
+      },
+      {
+        "namespace": "biomesoplenty",
+        "path": "advancement/recipes/.*_trapdoor.json"
+      },
+      {
+        "namespace": "biomesoplenty",
+        "path": "recipe/.*_pressure_plate.json"
+      },
+      {
+        "namespace": "biomesoplenty",
+        "path": "advancement/recipes/.*_pressure_plate.json"
+      },
+      {
+        "namespace": "biomesoplenty",
+        "path": "recipe/.*_button.json"
+      },
+      {
+        "namespace": "biomesoplenty",
+        "path": "advancement/recipes/.*_button.json"
+      },
+      {
+        "namespace": "biomesoplenty",
+        "path": "recipe/.*_stairs_from.*stonecutting\\.json"
+      },
+      {
+        "namespace": "biomesoplenty",
+        "path": "advancement/recipes/.*_stairs_from.*stonecutting\\.json"
+      },
+      {
+        "namespace": "biomesoplenty",
+        "path": "recipe/.*_slab_from.*stonecutting\\.json"
+      },
+      {
+        "namespace": "biomesoplenty",
+        "path": "advancement/recipes/.*_slab_from.*stonecutting\\.json"
+      },
+      {
+        "namespace": "biomesoplenty",
+        "path": "recipe/.*_walls?_from.*stonecutting\\.json"
+      },
+      {
+        "namespace": "biomesoplenty",
+        "path": "advancement/recipes/.*_walls?_from.*stonecutting\\.json"
       }
     ]
   }
