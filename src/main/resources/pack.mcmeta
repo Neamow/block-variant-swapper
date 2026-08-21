@@ -252,6 +252,78 @@
       {
         "namespace": "biomesoplenty",
         "path": "advancement/recipes/.*_walls?_from.*stonecutting\\.json"
+      },
+      {
+        "namespace": "biomeswevegone",
+        "path": "recipe/.*_stairs.json"
+      },
+      {
+        "namespace": "biomeswevegone",
+        "path": "advancement/recipes/.*_stairs.json"
+      },
+      {
+        "namespace": "biomeswevegone",
+        "path": "recipe/.*_slab.json"
+      },
+      {
+        "namespace": "biomeswevegone",
+        "path": "advancement/recipes/.*_slab.json"
+      },
+      {
+        "namespace": "biomeswevegone",
+        "path": "recipe/.*_wall.json"
+      },
+      {
+        "namespace": "biomeswevegone",
+        "path": "advancement/recipes/.*_wall.json"
+      },
+      {
+        "namespace": "biomeswevegone",
+        "path": "recipe/.*_fence.json"
+      },
+      {
+        "namespace": "biomeswevegone",
+        "path": "advancement/recipes/.*_fence.json"
+      },
+      {
+        "namespace": "biomeswevegone",
+        "path": "recipe/.*_fence_gate.json"
+      },
+      {
+        "namespace": "biomeswevegone",
+        "path": "advancement/recipes/.*_fence_gate.json"
+      },
+      {
+        "namespace": "biomeswevegone",
+        "path": "recipe/.*_door.json"
+      },
+      {
+        "namespace": "biomeswevegone",
+        "path": "advancement/recipes/.*_door.json"
+      },
+      {
+        "namespace": "biomeswevegone",
+        "path": "recipe/.*_trapdoor.json"
+      },
+      {
+        "namespace": "biomeswevegone",
+        "path": "advancement/recipes/.*_trapdoor.json"
+      },
+      {
+        "namespace": "biomeswevegone",
+        "path": "recipe/.*_pressure_plate.json"
+      },
+      {
+        "namespace": "biomeswevegone",
+        "path": "advancement/recipes/.*_pressure_plate.json"
+      },
+      {
+        "namespace": "biomeswevegone",
+        "path": "recipe/.*_button.json"
+      },
+      {
+        "namespace": "biomeswevegone",
+        "path": "advancement/recipes/.*_button.json"
       }
     ]
   }

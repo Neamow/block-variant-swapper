@@ -28,7 +28,8 @@ public class BlockVariantConfig {
     // These are always loaded from the jar; they are never written to the config folder.
     private static final List<String> BUNDLED_DEFAULT_RESOURCES = List.of(
         "/assets/" + BlockVariantSwapper.MOD_ID + "/config/minecraft_block_variants.json",
-        "/assets/" + BlockVariantSwapper.MOD_ID + "/config/biomesoplenty_block_variants.json"
+        "/assets/" + BlockVariantSwapper.MOD_ID + "/config/biomesoplenty_block_variants.json",
+        "/assets/" + BlockVariantSwapper.MOD_ID + "/config/biomeswevegone_block_variants.json"
     );
 
     private static Map<String, List<String>> mergedVariants = new LinkedHashMap<>();
