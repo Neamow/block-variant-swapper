@@ -1,0 +1,162 @@
+{
+  "pack": {
+    "pack_format": 48,
+    "description": "Block Variant Swapper: removes vanilla recipes for swappable block variants"
+  },
+  "filter": {
+    "block": [
+      {
+        "namespace": "minecraft",
+        "path": "recipe/.*_stairs.json"
+      },
+      {
+        "namespace": "minecraft",
+        "path": "advancement/recipes/.*_stairs.json"
+      },
+      {
+        "namespace": "minecraft",
+        "path": "recipe/.*_slab.json"
+      },
+      {
+        "namespace": "minecraft",
+        "path": "advancement/recipes/.*_slab.json"
+      },
+      {
+        "namespace": "minecraft",
+        "path": "recipe/.*_wall.json"
+      },
+      {
+        "namespace": "minecraft",
+        "path": "advancement/recipes/.*_wall.json"
+      },
+      {
+        "namespace": "minecraft",
+        "path": "recipe/.*_fence.json"
+      },
+      {
+        "namespace": "minecraft",
+        "path": "advancement/recipes/.*_fence.json"
+      },
+      {
+        "namespace": "minecraft",
+        "path": "recipe/.*_fence_gate.json"
+      },
+      {
+        "namespace": "minecraft",
+        "path": "advancement/recipes/.*_fence_gate.json"
+      },
+      {
+        "namespace": "minecraft",
+        "path": "recipe/(?!.*iron_door\\.json).*_door.json"
+      },
+      {
+        "namespace": "minecraft",
+        "path": "advancement/recipes/(?!.*iron_door\\.json).*_door.json"
+      },
+      {
+        "namespace": "minecraft",
+        "path": "recipe/(?!.*iron_trapdoor\\.json).*_trapdoor.json"
+      },
+      {
+        "namespace": "minecraft",
+        "path": "advancement/recipes/(?!.*iron_trapdoor\\.json).*_trapdoor.json"
+      },
+      {
+        "namespace": "minecraft",
+        "path": "recipe/(?!.*heavy_weighted_pressure_plate\\.json)(?!.*light_weighted_pressure_plate\\.json).*_pressure_plate.json"
+      },
+      {
+        "namespace": "minecraft",
+        "path": "advancement/recipes/(?!.*heavy_weighted_pressure_plate\\.json)(?!.*light_weighted_pressure_plate\\.json).*_pressure_plate.json"
+      },
+      {
+        "namespace": "minecraft",
+        "path": "recipe/.*_button.json"
+      },
+      {
+        "namespace": "minecraft",
+        "path": "advancement/recipes/.*_button.json"
+      },
+      {
+        "namespace": "minecraft",
+        "path": "recipe/.*chiseled_copper.json"
+      },
+      {
+        "namespace": "minecraft",
+        "path": "advancement/recipes/.*chiseled_copper.json"
+      },
+      {
+        "namespace": "minecraft",
+        "path": "recipe/.*copper_grate.json"
+      },
+      {
+        "namespace": "minecraft",
+        "path": "advancement/recipes/.*copper_grate.json"
+      },
+      {
+        "namespace": "minecraft",
+        "path": "recipe/.*cut_copper.json"
+      },
+      {
+        "namespace": "minecraft",
+        "path": "advancement/recipes/.*cut_copper.json"
+      },
+      {
+        "namespace": "minecraft",
+        "path": "recipe/(?!.*waxed_copper_block_from_honeycomb\\.json)(?!.*waxed_exposed_copper_from_honeycomb\\.json)(?!.*waxed_weathered_copper_from_honeycomb\\.json)(?!.*waxed_oxidized_copper_from_honeycomb\\.json)(?!.*_bulb_from_honeycomb\\.json).*waxed.*_from_honeycomb\\.json"
+      },
+      {
+        "namespace": "minecraft",
+        "path": "advancement/recipes/(?!.*waxed_copper_block_from_honeycomb\\.json)(?!.*waxed_exposed_copper_from_honeycomb\\.json)(?!.*waxed_weathered_copper_from_honeycomb\\.json)(?!.*waxed_oxidized_copper_from_honeycomb\\.json)(?!.*_bulb_from_honeycomb\\.json).*waxed.*_from_honeycomb\\.json"
+      },
+      {
+        "namespace": "minecraft",
+        "path": "recipe/.*_stairs_from.*stonecutting\\.json"
+      },
+      {
+        "namespace": "minecraft",
+        "path": "advancement/recipes/.*_stairs_from.*stonecutting\\.json"
+      },
+      {
+        "namespace": "minecraft",
+        "path": "recipe/.*_slab_from.*stonecutting\\.json"
+      },
+      {
+        "namespace": "minecraft",
+        "path": "advancement/recipes/.*_slab_from.*stonecutting\\.json"
+      },
+      {
+        "namespace": "minecraft",
+        "path": "recipe/.*_walls?_from.*stonecutting\\.json"
+      },
+      {
+        "namespace": "minecraft",
+        "path": "advancement/recipes/.*_walls?_from.*stonecutting\\.json"
+      },
+      {
+        "namespace": "minecraft",
+        "path": "recipe/.*cut_copper_from.*stonecutting\\.json"
+      },
+      {
+        "namespace": "minecraft",
+        "path": "advancement/recipes/.*cut_copper_from.*stonecutting\\.json"
+      },
+      {
+        "namespace": "minecraft",
+        "path": "recipe/.*chiseled_copper_from.*stonecutting\\.json"
+      },
+      {
+        "namespace": "minecraft",
+        "path": "advancement/recipes/.*chiseled_copper_from.*stonecutting\\.json"
+      },
+      {
+        "namespace": "minecraft",
+        "path": "recipe/.*copper_grate_from.*stonecutting\\.json"
+      },
+      {
+        "namespace": "minecraft",
+        "path": "advancement/recipes/.*copper_grate_from.*stonecutting\\.json"
+      }
+    ]
+  }
+}

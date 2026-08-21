@@ -89,15 +89,19 @@ The mod doesn't add or remove any item stacks or changes item stack counts, nor 
 in the world. The only thing it does is revert block variant item stacks outside the player hotbar/offhand into the
 base block item stacks. That's it.
 
+**What about crafting recipes that use block variants?**  
+Thankfully there's only a small amount of them (mainly chiseled blocks from slabs, but also things like the composter
+or armour stand), and all were addressed while trying to keep crafting material balance.
+
 **How does Creative pick-block / creative inventory work?**  
 Middle-clicking a placed variant gives you the variant item (drops logic doesn't apply to creative pick), which then
 works normally in the hotbar.
 
 **How does Survival pick-block work?**  
-Pick block is fully variant-aware. Middle-clicking a block will give you the item stack no matter what if it's in your inventory and from the same block
-variant family. So if you pick a full block and you have a stairs variant currently sitting on your hotbar, it will pick
-that item stack and auto-swap it for you. If you pick a variant block and you have a stack of the base block in your
-hotbar or even inside your player inventory, it will pull it and auto-swap it as well.
+Pick block is fully variant-aware. Middle-clicking a block will give you the item stack no matter what if it's in your
+inventory and from the same block variant family. So if you pick a full block and you have a stairs variant currently
+sitting on your hotbar, it will pick that item stack and auto-swap it for you. If you pick a variant block and you have
+a stack of the base block in your hotbar or even inside your player inventory, it will pull it and auto-swap it as well.
 
 **How are edge case item holders (item frames, decorated pots) handled?**  
 Item frames can still display block variants if you place them into one, so no change from vanilla. The item will revert
@@ -110,7 +114,12 @@ and then the drop results are converted to base blocks if applicable.
 
 **Does this cause any lag or performance issues?**  
 No. Block reversal check is tick-based but the scan is a cheap hashmap lookup, and only runs when an inventory UI is opened.
-Impact is negligible.
+Impact is negligible. Game loading is microscopically faster because hundreds of crafting and stonecutting recipes for block
+variants were removed.
+
+**What about the stonecutter?**
+The stonecutter was not removed; only the recipes for block variants were removed. The block is still in the game,
+and can be used for decoration or other recipes in modded scenarios that this mod doesn't cover.
 
 **Does/will this support mod X?**  
 List of supported mods is below; new ones can be requested through opening a Github issue or by creating a custom JSON
