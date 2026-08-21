@@ -29,7 +29,9 @@ public class BlockVariantConfig {
     private static final List<String> BUNDLED_DEFAULT_RESOURCES = List.of(
         "/assets/" + BlockVariantSwapper.MOD_ID + "/config/minecraft_block_variants.json",
         "/assets/" + BlockVariantSwapper.MOD_ID + "/config/biomesoplenty_block_variants.json",
-        "/assets/" + BlockVariantSwapper.MOD_ID + "/config/biomeswevegone_block_variants.json"
+        "/assets/" + BlockVariantSwapper.MOD_ID + "/config/biomeswevegone_block_variants.json",
+        "/assets/" + BlockVariantSwapper.MOD_ID + "/config/betternether_block_variants.json",
+        "/assets/" + BlockVariantSwapper.MOD_ID + "/config/betterend_block_variants.json"
     );
 
     private static Map<String, List<String>> mergedVariants = new LinkedHashMap<>();
@@ -53,9 +55,11 @@ public class BlockVariantConfig {
         Map<String, List<String>> result = new LinkedHashMap<>();
 
         // 1. Load bundled defaults straight from the jar (always current with the mod version).
-        //    The default files use distinct namespaces, so their keys don't collide.
+        //    Merge with UNION semantics: if two default files contribute to the same base block
+        //    (e.g. a mod adds shapes to a vanilla base), their variant lists are combined rather
+        //    than one silently replacing the other.
         for (String resourcePath : BUNDLED_DEFAULT_RESOURCES) {
-            result.putAll(loadFromResources(resourcePath));
+            mergeUnion(result, loadFromResources(resourcePath));
         }
 
         // 2. Layer user overrides on top. A user entry for a base block REPLACES its default group.
@@ -71,6 +75,20 @@ public class BlockVariantConfig {
         }
 
         mergedVariants = result;
+    }
+
+    // Merge a group map into the target with UNION semantics: variant lists for a shared base block
+    // are combined (deduplicated, order-preserving) rather than one file's group replacing another's.
+    // Used only for bundled defaults, so a mod adding shapes to a vanilla base (e.g. Better End's
+    // end_stone_brick walls) augments the vanilla family instead of clobbering it.
+    private static void mergeUnion(Map<String, List<String>> target, Map<String, List<String>> add) {
+        if (add == null) return;
+        add.forEach((key, values) -> {
+            List<String> list = target.computeIfAbsent(key, k -> new ArrayList<>());
+            for (String v : values) {
+                if (!list.contains(v)) list.add(v);
+            }
+        });
     }
 
     // Read a single user JSON file and apply its groups on top of the map, replacing any existing group
