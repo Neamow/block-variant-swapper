@@ -119,7 +119,8 @@ variants were removed.
 
 **What about the stonecutter?**
 The stonecutter was not removed; only the recipes for block variants were removed. The block is still in the game,
-and can be used for decoration or other recipes in modded scenarios that this mod doesn't cover.
+retains the full block recipes (not block shape variants) and can be used for decoration or other recipes in modded
+scenarios that this mod doesn't cover.
 
 **Does/will this support mod X?**  
 List of supported mods is below; new ones can be requested through opening a Github issue or by creating a custom JSON
