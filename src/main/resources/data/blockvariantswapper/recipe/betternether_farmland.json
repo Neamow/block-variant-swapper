@@ -1,0 +1,36 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "betternether"
+      ]
+    }
+  ],
+  "category": "misc",
+  "group": "nether_farmland",
+  "key": {
+    "#": {
+      "item": "betternether:stalagnate_planks"
+    },
+    "H": {
+      "item": "betternether:stalagnate_planks"
+    },
+    "N": {
+      "item": "minecraft:netherrack"
+    },
+    "S": {
+      "item": "minecraft:soul_sand"
+    }
+  },
+  "pattern": [
+    "#S#",
+    "#N#",
+    "#H#"
+  ],
+  "result": {
+    "count": 4,
+    "id": "betternether:farmland"
+  }
+}

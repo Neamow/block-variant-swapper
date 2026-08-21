@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "betterend"
+      ]
+    }
+  ],
+  "category": "misc",
+  "group": "end_stone_lanterns",
+  "key": {
+    "#": {
+      "item": "betterend:crystal_shards"
+    },
+    "S": {
+      "item": "minecraft:diorite"
+    }
+  },
+  "pattern": [
+    "S",
+    "#",
+    "S"
+  ],
+  "result": {
+    "count": 1,
+    "id": "betterend:diorite_lantern"
+  }
+}

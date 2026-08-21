@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "betterend"
+      ]
+    }
+  ],
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "betterend:azure_jadestone_pillar"
+    },
+    "S": {
+      "item": "betterend:azure_jadestone"
+    }
+  },
+  "pattern": [
+    "S",
+    "#",
+    "S"
+  ],
+  "result": {
+    "count": 3,
+    "id": "betterend:azure_jadestone_pedestal"
+  }
+}

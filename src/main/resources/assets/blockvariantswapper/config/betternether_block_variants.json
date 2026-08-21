@@ -1,0 +1,201 @@
+{
+  "betternether:anchor_tree_planks": [
+    "betternether:anchor_tree_planks",
+    "betternether:anchor_tree_stairs",
+    "betternether:anchor_tree_slab",
+    "betternether:anchor_tree_fence",
+    "betternether:anchor_tree_door",
+    "betternether:anchor_tree_trapdoor",
+    "betternether:anchor_tree_button",
+    "betternether:anchor_tree_wall"
+  ],
+  "minecraft:basalt": [
+    "minecraft:basalt",
+    "betternether:basalt_slab"
+  ],
+  "betternether:basalt_bricks": [
+    "betternether:basalt_bricks",
+    "betternether:basalt_bricks_stairs",
+    "betternether:basalt_bricks_slab",
+    "betternether:basalt_bricks_wall"
+  ],
+  "betternether:blue_obsidian_bricks": [
+    "betternether:blue_obsidian_bricks",
+    "betternether:blue_obsidian_bricks_stairs",
+    "betternether:blue_obsidian_bricks_slab"
+  ],
+  "betternether:blue_obsidian_tile_small": [
+    "betternether:blue_obsidian_tile_small",
+    "betternether:blue_obsidian_tile_stairs",
+    "betternether:blue_obsidian_tile_slab"
+  ],
+  "betternether:bone_block": [
+    "betternether:bone_block",
+    "betternether:bone_stairs",
+    "betternether:bone_slab",
+    "betternether:bone_button",
+    "betternether:bone_wall"
+  ],
+  "betternether:cincinnasite_forged": [
+    "betternether:cincinnasite_forged",
+    "betternether:cincinnasite_stairs",
+    "betternether:cincinnasite_slab",
+    "betternether:cincinnasite_wall"
+  ],
+  "betternether:mushroom_fir_planks": [
+    "betternether:mushroom_fir_planks",
+    "betternether:mushroom_fir_stairs",
+    "betternether:mushroom_fir_slab",
+    "betternether:mushroom_fir_fence",
+    "betternether:mushroom_fir_door",
+    "betternether:mushroom_fir_trapdoor",
+    "betternether:mushroom_fir_button",
+    "betternether:mushroom_fir_wall"
+  ],
+  "betternether:nether_brick_tile_large": [
+    "betternether:nether_brick_tile_large",
+    "betternether:nether_brick_wall"
+  ],
+  "betternether:nether_brick_tile_small": [
+    "betternether:nether_brick_tile_small",
+    "betternether:nether_brick_tile_stairs",
+    "betternether:nether_brick_tile_slab"
+  ],
+  "betternether:nether_mushroom_planks": [
+    "betternether:nether_mushroom_planks",
+    "betternether:nether_mushroom_stairs",
+    "betternether:nether_mushroom_slab",
+    "betternether:nether_mushroom_fence",
+    "betternether:nether_mushroom_door",
+    "betternether:nether_mushroom_trapdoor",
+    "betternether:nether_mushroom_button",
+    "betternether:nether_mushroom_wall"
+  ],
+  "betternether:nether_reed_planks": [
+    "betternether:nether_reed_planks",
+    "betternether:nether_reed_stairs",
+    "betternether:nether_reed_slab",
+    "betternether:nether_reed_fence",
+    "betternether:nether_reed_door",
+    "betternether:nether_reed_trapdoor",
+    "betternether:nether_reed_button",
+    "betternether:nether_reed_wall"
+  ],
+  "betternether:nether_reed_roof": [
+    "betternether:nether_reed_roof",
+    "betternether:nether_reed_roof_stairs",
+    "betternether:nether_reed_roof_slab"
+  ],
+  "betternether:nether_ruby_block": [
+    "betternether:nether_ruby_block",
+    "betternether:nether_ruby_stairs",
+    "betternether:nether_ruby_slab"
+  ],
+  "betternether:nether_sakura_planks": [
+    "betternether:nether_sakura_planks",
+    "betternether:nether_sakura_stairs",
+    "betternether:nether_sakura_slab",
+    "betternether:nether_sakura_fence",
+    "betternether:nether_sakura_door",
+    "betternether:nether_sakura_trapdoor",
+    "betternether:nether_sakura_button",
+    "betternether:nether_sakura_wall"
+  ],
+  "minecraft:netherrack": [
+    "minecraft:netherrack",
+    "betternether:netherrack_stairs",
+    "betternether:netherrack_slab",
+    "betternether:netherrack_wall"
+  ],
+  "betternether:obsidian_bricks": [
+    "betternether:obsidian_bricks",
+    "betternether:obsidian_bricks_stairs",
+    "betternether:obsidian_bricks_slab"
+  ],
+  "betternether:obsidian_tile_small": [
+    "betternether:obsidian_tile_small",
+    "betternether:obsidian_tile_stairs",
+    "betternether:obsidian_tile_slab"
+  ],
+  "betternether:roof_tile_cincinnasite": [
+    "betternether:roof_tile_cincinnasite",
+    "betternether:roof_tile_cincinnasite_stairs",
+    "betternether:roof_tile_cincinnasite_slab"
+  ],
+  "betternether:roof_tile_nether_bricks": [
+    "betternether:roof_tile_nether_bricks",
+    "betternether:roof_tile_nether_bricks_stairs",
+    "betternether:roof_tile_nether_bricks_slab"
+  ],
+  "betternether:rubeus_planks": [
+    "betternether:rubeus_planks",
+    "betternether:rubeus_stairs",
+    "betternether:rubeus_slab",
+    "betternether:rubeus_fence",
+    "betternether:rubeus_door",
+    "betternether:rubeus_trapdoor",
+    "betternether:rubeus_button",
+    "betternether:rubeus_wall"
+  ],
+  "betternether:soul_sandstone": [
+    "betternether:soul_sandstone",
+    "betternether:soul_sandstone_stairs",
+    "betternether:soul_sandstone_slab"
+  ],
+  "betternether:soul_sandstone_cut": [
+    "betternether:soul_sandstone_cut",
+    "betternether:soul_sandstone_cut_stairs",
+    "betternether:soul_sandstone_cut_slab",
+    "betternether:soul_sandstone_wall"
+  ],
+  "betternether:soul_sandstone_smooth": [
+    "betternether:soul_sandstone_smooth",
+    "betternether:soul_sandstone_smooth_stairs",
+    "betternether:soul_sandstone_smooth_slab"
+  ],
+  "betternether:stalagnate_planks": [
+    "betternether:stalagnate_planks",
+    "betternether:stalagnate_stairs",
+    "betternether:stalagnate_slab",
+    "betternether:stalagnate_fence",
+    "betternether:stalagnate_door",
+    "betternether:stalagnate_trapdoor",
+    "betternether:stalagnate_button",
+    "betternether:stalagnate_wall"
+  ],
+  "betternether:stalagnate_roof": [
+    "betternether:stalagnate_roof",
+    "betternether:stalagnate_roof_stairs",
+    "betternether:stalagnate_roof_slab"
+  ],
+  "betternether:wart_planks": [
+    "betternether:wart_planks",
+    "betternether:wart_stairs",
+    "betternether:wart_slab",
+    "betternether:wart_fence",
+    "betternether:wart_door",
+    "betternether:wart_trapdoor",
+    "betternether:wart_button",
+    "betternether:wart_wall"
+  ],
+  "betternether:wart_roof": [
+    "betternether:wart_roof",
+    "betternether:wart_roof_stairs",
+    "betternether:wart_roof_slab"
+  ],
+  "betternether:willow_planks": [
+    "betternether:willow_planks",
+    "betternether:willow_stairs",
+    "betternether:willow_slab",
+    "betternether:willow_fence",
+    "betternether:willow_door",
+    "betternether:willow_trapdoor",
+    "betternether:willow_button",
+    "betternether:willow_wall"
+  ],
+  "betternether:willow_roof": [
+    "betternether:willow_roof",
+    "betternether:willow_roof_stairs",
+    "betternether:willow_roof_slab"
+  ]
+}
