@@ -8,8 +8,8 @@
 		"Neamow"
 	],
 	"contact": {
-		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
+		"homepage": "https://github.com/Neamow/block-variant-swapper",
+		"sources": "https://github.com/Neamow/block-variant-swapper"
 	},
 	"license": "LGPL-3.0-only",
 	"icon": "assets/blockvariantswapper/icon.png",
@@ -17,9 +17,6 @@
 	"entrypoints": {
 		"main": [
 			"net.neamow.blockvariantswapper.BlockVariantSwapper"
-		],
-		"fabric-datagen": [
-			"net.neamow.blockvariantswapper.BlockVariantSwapperDataGenerator"
 		],
 		"client": [
 			"net.neamow.blockvariantswapper.BlockVariantSwapperClient"
