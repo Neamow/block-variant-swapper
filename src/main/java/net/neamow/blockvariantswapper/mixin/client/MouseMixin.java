@@ -41,6 +41,10 @@ public class MouseMixin {
             List<Item> variants = BlockVariantManager.getVariants(originalItem);
             if (variants.isEmpty() || variants.size() <= 1) return;
 
+            // Only act if the server can actually handle the packet (e.g. it has the mod).
+            // Otherwise let the vanilla hotbar scroll happen normally.
+            if (!ClientPlayNetworking.canSend(CycleVariantPayload.ID)) return;
+
             // Send a packet to the server to cycle the variant
             int direction = (int) Math.signum(vertical);
             ClientPlayNetworking.send(new CycleVariantPayload(direction));

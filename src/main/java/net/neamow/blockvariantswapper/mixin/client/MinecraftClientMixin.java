@@ -61,6 +61,9 @@ public class MinecraftClientMixin {
 
         // Decide the destination hotbar slot. If the source is already in the hotbar, convert it in
         // place; otherwise pick a swappable hotbar slot (same choice vanilla makes for pick-from-inventory).
+        // Only act if the server can actually handle the packet (e.g. it has the mod).
+        if (!ClientPlayNetworking.canSend(PickVariantPayload.ID)) return;
+
         int targetSlot = PlayerInventory.isValidHotbarIndex(sourceSlot)
             ? sourceSlot
             : playerInventory.getSwappableHotbarSlot();
