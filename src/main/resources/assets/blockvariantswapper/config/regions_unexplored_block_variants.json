@@ -1,0 +1,344 @@
+{
+  "regions_unexplored:alpha_planks": [
+    "regions_unexplored:alpha_planks",
+    "regions_unexplored:alpha_stairs",
+    "regions_unexplored:alpha_slab"
+  ],
+  "regions_unexplored:baobab_planks": [
+    "regions_unexplored:baobab_planks",
+    "regions_unexplored:baobab_stairs",
+    "regions_unexplored:baobab_slab",
+    "regions_unexplored:baobab_fence",
+    "regions_unexplored:baobab_fence_gate",
+    "regions_unexplored:baobab_door",
+    "regions_unexplored:baobab_trapdoor",
+    "regions_unexplored:baobab_button",
+    "regions_unexplored:baobab_pressure_plate"
+  ],
+  "regions_unexplored:black_painted_planks": [
+    "regions_unexplored:black_painted_planks",
+    "regions_unexplored:black_painted_stairs",
+    "regions_unexplored:black_painted_slab"
+  ],
+  "regions_unexplored:blackwood_planks": [
+    "regions_unexplored:blackwood_planks",
+    "regions_unexplored:blackwood_stairs",
+    "regions_unexplored:blackwood_slab",
+    "regions_unexplored:blackwood_fence",
+    "regions_unexplored:blackwood_fence_gate",
+    "regions_unexplored:blackwood_door",
+    "regions_unexplored:blackwood_trapdoor",
+    "regions_unexplored:blackwood_button",
+    "regions_unexplored:blackwood_pressure_plate"
+  ],
+  "regions_unexplored:blue_bioshroom_planks": [
+    "regions_unexplored:blue_bioshroom_planks",
+    "regions_unexplored:blue_bioshroom_stairs",
+    "regions_unexplored:blue_bioshroom_slab",
+    "regions_unexplored:blue_bioshroom_fence",
+    "regions_unexplored:blue_bioshroom_fence_gate",
+    "regions_unexplored:blue_bioshroom_door",
+    "regions_unexplored:blue_bioshroom_trapdoor",
+    "regions_unexplored:blue_bioshroom_button",
+    "regions_unexplored:blue_bioshroom_pressure_plate"
+  ],
+  "regions_unexplored:blue_painted_planks": [
+    "regions_unexplored:blue_painted_planks",
+    "regions_unexplored:blue_painted_stairs",
+    "regions_unexplored:blue_painted_slab"
+  ],
+  "regions_unexplored:brimwood_planks": [
+    "regions_unexplored:brimwood_planks",
+    "regions_unexplored:brimwood_stairs",
+    "regions_unexplored:brimwood_slab",
+    "regions_unexplored:brimwood_fence",
+    "regions_unexplored:brimwood_fence_gate",
+    "regions_unexplored:brimwood_door",
+    "regions_unexplored:brimwood_trapdoor",
+    "regions_unexplored:brimwood_button",
+    "regions_unexplored:brimwood_pressure_plate"
+  ],
+  "regions_unexplored:brown_painted_planks": [
+    "regions_unexplored:brown_painted_planks",
+    "regions_unexplored:brown_painted_stairs",
+    "regions_unexplored:brown_painted_slab"
+  ],
+  "regions_unexplored:chalk": [
+    "regions_unexplored:chalk",
+    "regions_unexplored:chalk_stairs",
+    "regions_unexplored:chalk_slab"
+  ],
+  "regions_unexplored:chalk_bricks": [
+    "regions_unexplored:chalk_bricks",
+    "regions_unexplored:chalk_brick_stairs",
+    "regions_unexplored:chalk_brick_slab"
+  ],
+  "regions_unexplored:cobalt_planks": [
+    "regions_unexplored:cobalt_planks",
+    "regions_unexplored:cobalt_stairs",
+    "regions_unexplored:cobalt_slab",
+    "regions_unexplored:cobalt_fence",
+    "regions_unexplored:cobalt_fence_gate",
+    "regions_unexplored:cobalt_door",
+    "regions_unexplored:cobalt_trapdoor",
+    "regions_unexplored:cobalt_button",
+    "regions_unexplored:cobalt_pressure_plate"
+  ],
+  "regions_unexplored:cyan_painted_planks": [
+    "regions_unexplored:cyan_painted_planks",
+    "regions_unexplored:cyan_painted_stairs",
+    "regions_unexplored:cyan_painted_slab"
+  ],
+  "regions_unexplored:cypress_planks": [
+    "regions_unexplored:cypress_planks",
+    "regions_unexplored:cypress_stairs",
+    "regions_unexplored:cypress_slab",
+    "regions_unexplored:cypress_fence",
+    "regions_unexplored:cypress_fence_gate",
+    "regions_unexplored:cypress_door",
+    "regions_unexplored:cypress_trapdoor",
+    "regions_unexplored:cypress_button",
+    "regions_unexplored:cypress_pressure_plate"
+  ],
+  "regions_unexplored:dead_planks": [
+    "regions_unexplored:dead_planks",
+    "regions_unexplored:dead_stairs",
+    "regions_unexplored:dead_slab",
+    "regions_unexplored:dead_fence",
+    "regions_unexplored:dead_fence_gate",
+    "regions_unexplored:dead_door",
+    "regions_unexplored:dead_trapdoor",
+    "regions_unexplored:dead_button",
+    "regions_unexplored:dead_pressure_plate"
+  ],
+  "regions_unexplored:eucalyptus_planks": [
+    "regions_unexplored:eucalyptus_planks",
+    "regions_unexplored:eucalyptus_stairs",
+    "regions_unexplored:eucalyptus_slab",
+    "regions_unexplored:eucalyptus_fence",
+    "regions_unexplored:eucalyptus_fence_gate",
+    "regions_unexplored:eucalyptus_door",
+    "regions_unexplored:eucalyptus_trapdoor",
+    "regions_unexplored:eucalyptus_button",
+    "regions_unexplored:eucalyptus_pressure_plate"
+  ],
+  "regions_unexplored:gray_painted_planks": [
+    "regions_unexplored:gray_painted_planks",
+    "regions_unexplored:gray_painted_stairs",
+    "regions_unexplored:gray_painted_slab"
+  ],
+  "regions_unexplored:green_bioshroom_planks": [
+    "regions_unexplored:green_bioshroom_planks",
+    "regions_unexplored:green_bioshroom_stairs",
+    "regions_unexplored:green_bioshroom_slab",
+    "regions_unexplored:green_bioshroom_fence",
+    "regions_unexplored:green_bioshroom_fence_gate",
+    "regions_unexplored:green_bioshroom_door",
+    "regions_unexplored:green_bioshroom_trapdoor",
+    "regions_unexplored:green_bioshroom_button",
+    "regions_unexplored:green_bioshroom_pressure_plate"
+  ],
+  "regions_unexplored:green_painted_planks": [
+    "regions_unexplored:green_painted_planks",
+    "regions_unexplored:green_painted_stairs",
+    "regions_unexplored:green_painted_slab"
+  ],
+  "regions_unexplored:joshua_planks": [
+    "regions_unexplored:joshua_planks",
+    "regions_unexplored:joshua_stairs",
+    "regions_unexplored:joshua_slab",
+    "regions_unexplored:joshua_fence",
+    "regions_unexplored:joshua_fence_gate",
+    "regions_unexplored:joshua_door",
+    "regions_unexplored:joshua_trapdoor",
+    "regions_unexplored:joshua_button",
+    "regions_unexplored:joshua_pressure_plate"
+  ],
+  "regions_unexplored:kapok_planks": [
+    "regions_unexplored:kapok_planks",
+    "regions_unexplored:kapok_stairs",
+    "regions_unexplored:kapok_slab",
+    "regions_unexplored:kapok_fence",
+    "regions_unexplored:kapok_fence_gate",
+    "regions_unexplored:kapok_door",
+    "regions_unexplored:kapok_trapdoor",
+    "regions_unexplored:kapok_button",
+    "regions_unexplored:kapok_pressure_plate"
+  ],
+  "regions_unexplored:larch_planks": [
+    "regions_unexplored:larch_planks",
+    "regions_unexplored:larch_stairs",
+    "regions_unexplored:larch_slab",
+    "regions_unexplored:larch_fence",
+    "regions_unexplored:larch_fence_gate",
+    "regions_unexplored:larch_door",
+    "regions_unexplored:larch_trapdoor",
+    "regions_unexplored:larch_button",
+    "regions_unexplored:larch_pressure_plate"
+  ],
+  "regions_unexplored:light_blue_painted_planks": [
+    "regions_unexplored:light_blue_painted_planks",
+    "regions_unexplored:light_blue_painted_stairs",
+    "regions_unexplored:light_blue_painted_slab"
+  ],
+  "regions_unexplored:light_gray_painted_planks": [
+    "regions_unexplored:light_gray_painted_planks",
+    "regions_unexplored:light_gray_painted_stairs",
+    "regions_unexplored:light_gray_painted_slab"
+  ],
+  "regions_unexplored:lime_painted_planks": [
+    "regions_unexplored:lime_painted_planks",
+    "regions_unexplored:lime_painted_stairs",
+    "regions_unexplored:lime_painted_slab"
+  ],
+  "regions_unexplored:magenta_painted_planks": [
+    "regions_unexplored:magenta_painted_planks",
+    "regions_unexplored:magenta_painted_stairs",
+    "regions_unexplored:magenta_painted_slab"
+  ],
+  "regions_unexplored:magnolia_planks": [
+    "regions_unexplored:magnolia_planks",
+    "regions_unexplored:magnolia_stairs",
+    "regions_unexplored:magnolia_slab",
+    "regions_unexplored:magnolia_fence",
+    "regions_unexplored:magnolia_fence_gate",
+    "regions_unexplored:magnolia_door",
+    "regions_unexplored:magnolia_trapdoor",
+    "regions_unexplored:magnolia_button",
+    "regions_unexplored:magnolia_pressure_plate"
+  ],
+  "regions_unexplored:maple_planks": [
+    "regions_unexplored:maple_planks",
+    "regions_unexplored:maple_stairs",
+    "regions_unexplored:maple_slab",
+    "regions_unexplored:maple_fence",
+    "regions_unexplored:maple_fence_gate",
+    "regions_unexplored:maple_door",
+    "regions_unexplored:maple_trapdoor",
+    "regions_unexplored:maple_button",
+    "regions_unexplored:maple_pressure_plate"
+  ],
+  "regions_unexplored:orange_painted_planks": [
+    "regions_unexplored:orange_painted_planks",
+    "regions_unexplored:orange_painted_stairs",
+    "regions_unexplored:orange_painted_slab"
+  ],
+  "regions_unexplored:palm_planks": [
+    "regions_unexplored:palm_planks",
+    "regions_unexplored:palm_stairs",
+    "regions_unexplored:palm_slab",
+    "regions_unexplored:palm_fence",
+    "regions_unexplored:palm_fence_gate",
+    "regions_unexplored:palm_door",
+    "regions_unexplored:palm_trapdoor",
+    "regions_unexplored:palm_button",
+    "regions_unexplored:palm_pressure_plate"
+  ],
+  "regions_unexplored:pine_planks": [
+    "regions_unexplored:pine_planks",
+    "regions_unexplored:pine_stairs",
+    "regions_unexplored:pine_slab",
+    "regions_unexplored:pine_fence",
+    "regions_unexplored:pine_fence_gate",
+    "regions_unexplored:pine_door",
+    "regions_unexplored:pine_trapdoor",
+    "regions_unexplored:pine_button",
+    "regions_unexplored:pine_pressure_plate"
+  ],
+  "regions_unexplored:pink_bioshroom_planks": [
+    "regions_unexplored:pink_bioshroom_planks",
+    "regions_unexplored:pink_bioshroom_stairs",
+    "regions_unexplored:pink_bioshroom_slab",
+    "regions_unexplored:pink_bioshroom_fence",
+    "regions_unexplored:pink_bioshroom_fence_gate",
+    "regions_unexplored:pink_bioshroom_door",
+    "regions_unexplored:pink_bioshroom_trapdoor",
+    "regions_unexplored:pink_bioshroom_button",
+    "regions_unexplored:pink_bioshroom_pressure_plate"
+  ],
+  "regions_unexplored:pink_painted_planks": [
+    "regions_unexplored:pink_painted_planks",
+    "regions_unexplored:pink_painted_stairs",
+    "regions_unexplored:pink_painted_slab"
+  ],
+  "regions_unexplored:polished_chalk": [
+    "regions_unexplored:polished_chalk",
+    "regions_unexplored:polished_chalk_stairs",
+    "regions_unexplored:polished_chalk_slab"
+  ],
+  "regions_unexplored:purple_painted_planks": [
+    "regions_unexplored:purple_painted_planks",
+    "regions_unexplored:purple_painted_stairs",
+    "regions_unexplored:purple_painted_slab"
+  ],
+  "regions_unexplored:red_painted_planks": [
+    "regions_unexplored:red_painted_planks",
+    "regions_unexplored:red_painted_stairs",
+    "regions_unexplored:red_painted_slab"
+  ],
+  "regions_unexplored:redwood_planks": [
+    "regions_unexplored:redwood_planks",
+    "regions_unexplored:redwood_stairs",
+    "regions_unexplored:redwood_slab",
+    "regions_unexplored:redwood_fence",
+    "regions_unexplored:redwood_fence_gate",
+    "regions_unexplored:redwood_door",
+    "regions_unexplored:redwood_trapdoor",
+    "regions_unexplored:redwood_button",
+    "regions_unexplored:redwood_pressure_plate"
+  ],
+  "regions_unexplored:socotra_planks": [
+    "regions_unexplored:socotra_planks",
+    "regions_unexplored:socotra_stairs",
+    "regions_unexplored:socotra_slab",
+    "regions_unexplored:socotra_fence",
+    "regions_unexplored:socotra_fence_gate",
+    "regions_unexplored:socotra_door",
+    "regions_unexplored:socotra_trapdoor",
+    "regions_unexplored:socotra_button",
+    "regions_unexplored:socotra_pressure_plate"
+  ],
+  "regions_unexplored:white_painted_planks": [
+    "regions_unexplored:white_painted_planks",
+    "regions_unexplored:white_painted_stairs",
+    "regions_unexplored:white_painted_slab"
+  ],
+  "regions_unexplored:willow_planks": [
+    "regions_unexplored:willow_planks",
+    "regions_unexplored:willow_stairs",
+    "regions_unexplored:willow_slab",
+    "regions_unexplored:willow_fence",
+    "regions_unexplored:willow_fence_gate",
+    "regions_unexplored:willow_door",
+    "regions_unexplored:willow_trapdoor",
+    "regions_unexplored:willow_button",
+    "regions_unexplored:willow_pressure_plate"
+  ],
+  "regions_unexplored:wisteria_planks": [
+    "regions_unexplored:wisteria_planks",
+    "regions_unexplored:wisteria_stairs",
+    "regions_unexplored:wisteria_slab",
+    "regions_unexplored:wisteria_fence",
+    "regions_unexplored:wisteria_fence_gate",
+    "regions_unexplored:wisteria_door",
+    "regions_unexplored:wisteria_trapdoor",
+    "regions_unexplored:wisteria_button",
+    "regions_unexplored:wisteria_pressure_plate"
+  ],
+  "regions_unexplored:yellow_bioshroom_planks": [
+    "regions_unexplored:yellow_bioshroom_planks",
+    "regions_unexplored:yellow_bioshroom_stairs",
+    "regions_unexplored:yellow_bioshroom_slab",
+    "regions_unexplored:yellow_bioshroom_fence",
+    "regions_unexplored:yellow_bioshroom_fence_gate",
+    "regions_unexplored:yellow_bioshroom_door",
+    "regions_unexplored:yellow_bioshroom_trapdoor",
+    "regions_unexplored:yellow_bioshroom_button",
+    "regions_unexplored:yellow_bioshroom_pressure_plate"
+  ],
+  "regions_unexplored:yellow_painted_planks": [
+    "regions_unexplored:yellow_painted_planks",
+    "regions_unexplored:yellow_painted_stairs",
+    "regions_unexplored:yellow_painted_slab"
+  ]
+}

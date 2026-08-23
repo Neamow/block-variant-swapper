@@ -34,7 +34,8 @@ public class BlockVariantConfig {
         "/assets/" + BlockVariantSwapper.MOD_ID + "/config/betterend_block_variants.json",
         "/assets/" + BlockVariantSwapper.MOD_ID + "/config/twilightforest_block_variants.json",
         "/assets/" + BlockVariantSwapper.MOD_ID + "/config/deeperdarker_block_variants.json",
-        "/assets/" + BlockVariantSwapper.MOD_ID + "/config/ecologics_block_variants.json"
+        "/assets/" + BlockVariantSwapper.MOD_ID + "/config/ecologics_block_variants.json",
+        "/assets/" + BlockVariantSwapper.MOD_ID + "/config/regions_unexplored_block_variants.json"
     );
 
     private static Map<String, List<String>> mergedVariants = new LinkedHashMap<>();

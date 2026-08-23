@@ -123,19 +123,35 @@ retains the full block recipes (not block shape variants) and can be used for de
 scenarios that this mod doesn't cover.
 
 **Does/will this support mod X?**  
-List of supported mods is below; new ones can be requested through opening a Github issue or by creating a custom JSON
-config file (explanation below).
+The list of supported mods is below. New ones can be requested by opening a GitHub issue, or added
+yourself with a custom JSON config file (explanation below).
+
+## Currently supported mods
+
+Block families ship built in for the following. Each mod's families only become active when that mod is
+actually installed, so it's always safe to have them all bundled:
+
+- **Vanilla Minecraft** - wood sets, stone families, copper, sandstone, etc.
+- **Biomes O' Plenty**
+- **Oh The Biomes We've Gone**
+- **Better Nether**
+- **Better End**
+- **Twilight Forest**
+- **Deeper Darker**
+- **Ecologics**
+- **Regions Unexplored**
+
+Don't see your favorite biome/building mod? Open a GitHub issue to request it, or drop in your own
+config (instructions below) into your game.
 
 ## Configuration
 
-The mod ships with built-in defaults that stay current with each update automatically — there are
-no config files to maintain unless you *want* to customize things:
-
-- Vanilla block families (wood sets, stone, copper, sandstone, etc.)
-- Biomes O' Plenty families (only active if that mod is installed)
+The mod ships with built-in defaults for every supported mod above, and they stay current with each
+update automatically - there are no config files to maintain unless you *want* to customize things.
 
 These defaults live inside the mod and are never written to disk, so mod updates always bring the
-latest set without you having to delete or regenerate anything.
+latest set without you having to delete or regenerate anything. Families for a mod you don't have
+installed are simply skipped.
 
 ### Customizing
 
@@ -160,14 +176,16 @@ defaults. Each file maps a base block to the list of blocks it cycles through:
 ```
 
 How your files interact with the defaults:
-- **Override:** if you define a base block that already exists in the defaults (e.g.
-  `minecraft:oak_planks`), your group *replaces* the default one entirely — list every variant you
-  want, since the default is discarded for that block.
-- **Add:** define a base block that isn't in the defaults to add a brand-new family (great for
-  supporting other mods' blocks).
+- **Override:** if you define a base block that already exists in the built-in defaults (e.g.
+  `minecraft:oak_planks`), your group *replaces* the default one entirely, so list every variant you
+  want to keep, since the default group is discarded for that block. (This is how you remove a variant
+  you don't like: redefine the family without it.)
+- **Add:** define a base block that isn't in the defaults to add a brand-new family; this way you can add support for
+ a mod that isn't bundled yet.
 - The first entry in a group is the base block that everything reverts to.
-- Item IDs that don't exist in the current game instance are skipped silently, so files that
-  reference optional mods are safe.
+- Each base block must appear **only once per file** - a JSON file with the same key twice won't load.
+- Item IDs that don't exist in the current game instance are skipped silently, so a file that
+  references an optional mod is safe to keep even when that mod isn't installed.
 - If two of your files define the same base block, the last one (by filename order) wins.
 - Run `/reload` in-game to apply config changes without restarting.
 
