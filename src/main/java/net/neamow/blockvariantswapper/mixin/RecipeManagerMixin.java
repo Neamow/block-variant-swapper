@@ -38,31 +38,38 @@ public abstract class RecipeManagerMixin {
 
     @Inject(method = "apply(Ljava/util/Map;Lnet/minecraft/resource/ResourceManager;Lnet/minecraft/util/profiler/Profiler;)V", at = @At("TAIL"))
     private void blockvariantswapper$removeVariantRecipes(Map<Identifier, JsonElement> map, ResourceManager resourceManager, Profiler profiler, CallbackInfo ci) {
-        // Ensure the variant family data reflects the current config before filtering. This is safe and
-        // idempotent, and decouples us from reload-listener ordering (our loader may run after recipes).
-        BlockVariantManager.initialize();
+        // Self-safeguard: this whole block only serves to remove our variant-producing recipes
+        // If any of it fails, that must degrade to "variants simply aren't removed" rather than crashing the data reload
+        try {
+            // Ensure the variant family data reflects the current config before filtering. This is safe and
+            // idempotent, and decouples us from reload-listener ordering (our loader may run after recipes).
+            BlockVariantManager.initialize();
 
-        List<RecipeEntry<?>> kept = new ArrayList<>();
-        int removed = 0;
-        for (RecipeEntry<?> entry : this.values()) {
-            ItemStack result;
-            try {
-                result = entry.value().getResult(this.registryLookup);
-            } catch (Exception e) {
-                // Some special recipes may not resolve a static result; those are never variants.
-                result = ItemStack.EMPTY;
+            List<RecipeEntry<?>> kept = new ArrayList<>();
+            int removed = 0;
+            for (RecipeEntry<?> entry : this.values()) {
+                ItemStack result;
+                try {
+                    result = entry.value().getResult(this.registryLookup);
+                } catch (Exception e) {
+                    // Some special recipes may not resolve a static result; those are never variants.
+                    result = ItemStack.EMPTY;
+                }
+
+                if (!result.isEmpty() && BlockVariantManager.isVariant(result.getItem())) {
+                    removed++;
+                    continue;
+                }
+                kept.add(entry);
             }
 
-            if (!result.isEmpty() && BlockVariantManager.isVariant(result.getItem())) {
-                removed++;
-                continue;
+            if (removed > 0) {
+                this.setRecipes(kept);
+                BlockVariantSwapper.LOGGER.info("Removed " + removed + " recipes that produce block variants (obtained via swapping instead).");
             }
-            kept.add(entry);
-        }
-
-        if (removed > 0) {
-            this.setRecipes(kept);
-            BlockVariantSwapper.LOGGER.info("Removed " + removed + " recipes that produce block variants (obtained via swapping instead).");
+        } catch (Throwable t) {
+            // Never let a failure in our recipe filtering crash the reload.
+            BlockVariantSwapper.LOGGER.error("Failed to filter variant-producing recipes; leaving recipes unchanged.", t);
         }
     }
 }

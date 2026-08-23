@@ -10,6 +10,7 @@ import net.minecraft.registry.Registries;
 import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.util.Identifier;
 import net.neamow.blockvariantswapper.BlockVariantManager;
+import net.neamow.blockvariantswapper.BlockVariantSwapper;
 
 import java.util.List;
 
@@ -23,17 +24,30 @@ public class NetworkHandler {
         PayloadTypeRegistry.playC2S().register(CycleVariantPayload.ID, CycleVariantPayload.CODEC);
         PayloadTypeRegistry.playC2S().register(PickVariantPayload.ID, PickVariantPayload.CODEC);
 
-        // Set up the listeners. When a packet is received,
-        // the code inside the lambda is run on the server.
+        // Set up the listeners
+        // When a packet is received, the code inside the lambda is run on the server
 
-        // BLOCK VARIANT SWAPPER (scroll to cycle variants)
+        // Handlers run on the server thread from client-sent packets
+        // We never trust client input to  behave, so any exception is caught and logged rather than allowed to crash the server tick
         ServerPlayNetworking.registerGlobalReceiver(CycleVariantPayload.ID, (payload, context) -> {
-            context.server().execute(() -> handleCycle(context.player(), payload.direction()));
+            context.server().execute(() -> {
+                try {
+                    handleCycle(context.player(), payload.direction());
+                } catch (Exception e) {
+                    BlockVariantSwapper.LOGGER.error("Error handling variant cycle packet", e);
+                }
+            });
         });
 
         // BLOCK VARIANT SWAPPER (pick-block pulls a family member and converts it to the picked variant)
         ServerPlayNetworking.registerGlobalReceiver(PickVariantPayload.ID, (payload, context) -> {
-            context.server().execute(() -> handlePickVariant(context.player(), payload.sourceSlot(), payload.targetSlot(), payload.variantItemId()));
+            context.server().execute(() -> {
+                try {
+                    handlePickVariant(context.player(), payload.sourceSlot(), payload.targetSlot(), payload.variantItemId());
+                } catch (Exception e) {
+                    BlockVariantSwapper.LOGGER.error("Error handling pick-variant packet", e);
+                }
+            });
         });
     }
 
