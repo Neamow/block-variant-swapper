@@ -1,0 +1,114 @@
+{
+  "deeperdarker:bloom_planks": [
+    "deeperdarker:bloom_planks",
+    "deeperdarker:bloom_stairs",
+    "deeperdarker:bloom_slab",
+    "deeperdarker:bloom_fence",
+    "deeperdarker:bloom_fence_gate",
+    "deeperdarker:bloom_door",
+    "deeperdarker:bloom_trapdoor",
+    "deeperdarker:bloom_button",
+    "deeperdarker:bloom_pressure_plate"
+  ],
+  "deeperdarker:cobbled_gloomslate": [
+    "deeperdarker:cobbled_gloomslate",
+    "deeperdarker:cobbled_gloomslate_stairs",
+    "deeperdarker:cobbled_gloomslate_slab",
+    "deeperdarker:cobbled_gloomslate_wall"
+  ],
+  "deeperdarker:cobbled_sculk_stone": [
+    "deeperdarker:cobbled_sculk_stone",
+    "deeperdarker:cobbled_sculk_stone_stairs",
+    "deeperdarker:cobbled_sculk_stone_slab",
+    "deeperdarker:cobbled_sculk_stone_wall"
+  ],
+  "deeperdarker:cut_gloomslate": [
+    "deeperdarker:cut_gloomslate",
+    "deeperdarker:cut_gloomslate_stairs",
+    "deeperdarker:cut_gloomslate_slab",
+    "deeperdarker:cut_gloomslate_wall"
+  ],
+  "deeperdarker:cut_sculk_stone": [
+    "deeperdarker:cut_sculk_stone",
+    "deeperdarker:cut_sculk_stone_stairs",
+    "deeperdarker:cut_sculk_stone_slab",
+    "deeperdarker:cut_sculk_stone_wall"
+  ],
+  "deeperdarker:echo_planks": [
+    "deeperdarker:echo_planks",
+    "deeperdarker:echo_stairs",
+    "deeperdarker:echo_slab",
+    "deeperdarker:echo_fence",
+    "deeperdarker:echo_fence_gate",
+    "deeperdarker:echo_door",
+    "deeperdarker:echo_trapdoor",
+    "deeperdarker:echo_button",
+    "deeperdarker:echo_pressure_plate"
+  ],
+  "deeperdarker:gloomslate": [
+    "deeperdarker:gloomslate",
+    "deeperdarker:gloomslate_stairs",
+    "deeperdarker:gloomslate_slab",
+    "deeperdarker:gloomslate_wall"
+  ],
+  "deeperdarker:gloomslate_bricks": [
+    "deeperdarker:gloomslate_bricks",
+    "deeperdarker:gloomslate_brick_stairs",
+    "deeperdarker:gloomslate_brick_slab",
+    "deeperdarker:gloomslate_brick_wall"
+  ],
+  "deeperdarker:gloomslate_tiles": [
+    "deeperdarker:gloomslate_tiles",
+    "deeperdarker:gloomslate_tile_stairs",
+    "deeperdarker:gloomslate_tile_slab",
+    "deeperdarker:gloomslate_tile_wall"
+  ],
+  "deeperdarker:polished_gloomslate": [
+    "deeperdarker:polished_gloomslate",
+    "deeperdarker:polished_gloomslate_stairs",
+    "deeperdarker:polished_gloomslate_slab",
+    "deeperdarker:polished_gloomslate_wall"
+  ],
+  "deeperdarker:polished_sculk_stone": [
+    "deeperdarker:polished_sculk_stone",
+    "deeperdarker:polished_sculk_stone_stairs",
+    "deeperdarker:polished_sculk_stone_slab",
+    "deeperdarker:polished_sculk_stone_wall"
+  ],
+  "deeperdarker:sculk_grime_bricks": [
+    "deeperdarker:sculk_grime_bricks",
+    "deeperdarker:sculk_grime_brick_stairs",
+    "deeperdarker:sculk_grime_brick_slab",
+    "deeperdarker:sculk_grime_brick_wall"
+  ],
+  "deeperdarker:sculk_stone": [
+    "deeperdarker:sculk_stone",
+    "deeperdarker:sculk_stone_stairs",
+    "deeperdarker:sculk_stone_slab",
+    "deeperdarker:sculk_stone_wall"
+  ],
+  "deeperdarker:sculk_stone_bricks": [
+    "deeperdarker:sculk_stone_bricks",
+    "deeperdarker:sculk_stone_brick_stairs",
+    "deeperdarker:sculk_stone_brick_slab",
+    "deeperdarker:sculk_stone_brick_wall"
+  ],
+  "deeperdarker:sculk_stone_tiles": [
+    "deeperdarker:sculk_stone_tiles",
+    "deeperdarker:sculk_stone_tile_stairs",
+    "deeperdarker:sculk_stone_tile_slab",
+    "deeperdarker:sculk_stone_tile_wall"
+  ],
+  "deeperdarker:smooth_gloomslate": [
+    "deeperdarker:smooth_gloomslate",
+    "deeperdarker:smooth_gloomslate_stairs",
+    "deeperdarker:smooth_gloomslate_slab",
+    "deeperdarker:smooth_gloomslate_wall"
+  ],
+  "deeperdarker:smooth_sculk_stone": [
+    "deeperdarker:smooth_sculk_stone",
+    "deeperdarker:smooth_sculk_stone_stairs",
+    "deeperdarker:smooth_sculk_stone_slab",
+    "deeperdarker:smooth_sculk_stone_wall"
+  ]
+}
