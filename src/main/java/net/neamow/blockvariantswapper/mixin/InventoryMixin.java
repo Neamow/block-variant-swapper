@@ -40,8 +40,6 @@ public abstract class InventoryMixin implements Container {
             ItemStack stack = this.items.get(i);
             Item item = stack.getItem();
             if (BlockVariantManager.isVariant(item) && !Inventory.isHotbarSlot(i)) {
-                net.neamow.blockvariantswapper.BlockVariantSwapper.LOGGER.info(
-                    "[debug] InventoryMixin.tick reverting variant {} at index {}", item, i);
                 Item original = BlockVariantManager.getOriginalItem(item);
                 ItemStack newStack = stack.transmuteCopy(original, stack.getCount());
                 this.items.set(i, newStack);

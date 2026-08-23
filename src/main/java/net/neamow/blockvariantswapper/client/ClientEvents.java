@@ -60,9 +60,6 @@ public class ClientEvents {
         ItemStack stack = client.player.getMainHandItem();
         if (stack.isEmpty()) return;
 
-        BlockVariantSwapper.LOGGER.info("[debug] client sees main hand = {}",
-            net.minecraft.core.registries.BuiltInRegistries.ITEM.getKey(stack.getItem()));
-
         Item originalItem = BlockVariantManager.getOriginalItem(stack.getItem());
         List<Item> variants = BlockVariantManager.getVariants(originalItem);
         if (variants.size() <= 1) return;

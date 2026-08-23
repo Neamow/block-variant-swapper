@@ -136,8 +136,8 @@ public class NetworkHandler {
         Inventory inventory = player.getInventory();
         inventory.setItem(inventory.selected, newStack);
 
-        // Writing directly to the inventory bypasses the player's container-menu change tracking, so
-        // the client's copy of the slot never refreshes. Force a full resync so the held item updates.
-        player.inventoryMenu.broadcastFullState();
+        // Writing directly to the inventory bypasses the player's container-menu change tracking, so the client's copy of the slot never refreshes on its own
+        // Broadcast the change so the held item visually updates on the client
+        player.inventoryMenu.broadcastChanges();
     }
 }
