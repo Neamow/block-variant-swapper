@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "composter",
+  "key": {
+    "#": {
+      "item": "betternether:anchor_tree_slab"
+    },
+    "B": {
+      "item": "minecraft:bone_meal"
+    }
+  },
+  "pattern": [
+    "   ",
+    "#B#",
+    "###"
+  ],
+  "result": {
+    "count": 1,
+    "id": "betternether:anchor_tree_composter"
+  }
+}

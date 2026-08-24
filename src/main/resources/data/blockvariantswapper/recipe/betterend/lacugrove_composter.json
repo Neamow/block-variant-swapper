@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "composter",
+  "key": {
+    "B": {
+      "item": "minecraft:bone_meal"
+    },
+    "#": {
+      "item": "betterend:lacugrove_slab"
+    }
+  },
+  "pattern": [
+    "#B#",
+    "###"
+  ],
+  "result": {
+    "count": 1,
+    "id": "betterend:lacugrove_composter"
+  }
+}

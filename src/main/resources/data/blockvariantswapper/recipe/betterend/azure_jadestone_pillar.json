@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "end_pillar",
+  "key": {
+    "#": {
+      "item": "betterend:azure_jadestone"
+    }
+  },
+  "pattern": [
+    "#",
+    "#"
+  ],
+  "result": {
+    "count": 2,
+    "id": "betterend:azure_jadestone_pillar"
+  }
+}

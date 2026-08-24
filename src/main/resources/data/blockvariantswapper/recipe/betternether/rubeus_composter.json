@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "composter",
+  "key": {
+    "#": {
+      "item": "betternether:rubeus_planks"
+    },
+    "B": {
+      "item": "minecraft:bone_meal"
+    }
+  },
+  "pattern": [
+    "   ",
+    "#B#",
+    "###"
+  ],
+  "result": {
+    "count": 1,
+    "id": "betternether:rubeus_composter"
+  }
+}

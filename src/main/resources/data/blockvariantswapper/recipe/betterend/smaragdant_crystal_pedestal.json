@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "betterend:smaragdant_crystal_pillar"
+    },
+    "S": {
+      "item": "betterend:smaragdant_crystal"
+    }
+  },
+  "pattern": [
+    "S",
+    "#",
+    "S"
+  ],
+  "result": {
+    "count": 3,
+    "id": "betterend:smaragdant_crystal_pedestal"
+  }
+}

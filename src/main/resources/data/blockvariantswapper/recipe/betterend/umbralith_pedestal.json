@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "betterend:umbralith_pillar"
+    },
+    "S": {
+      "item": "betterend:umbralith"
+    }
+  },
+  "pattern": [
+    "S",
+    "#",
+    "S"
+  ],
+  "result": {
+    "count": 3,
+    "id": "betterend:umbralith_pedestal"
+  }
+}

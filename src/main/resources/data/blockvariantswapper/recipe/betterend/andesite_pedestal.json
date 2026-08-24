@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "minecraft:polished_andesite"
+    },
+    "S": {
+      "item": "minecraft:andesite"
+    }
+  },
+  "pattern": [
+    "S",
+    "#",
+    "S"
+  ],
+  "result": {
+    "count": 3,
+    "id": "betterend:andesite_pedestal"
+  }
+}

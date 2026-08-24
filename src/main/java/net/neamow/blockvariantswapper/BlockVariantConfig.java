@@ -29,6 +29,8 @@ public class BlockVariantConfig {
             "/assets/" + BlockVariantSwapper.MOD_ID + "/config/minecraft_block_variants.json",
             "/assets/" + BlockVariantSwapper.MOD_ID + "/config/biomesoplenty_block_variants.json",
             "/assets/" + BlockVariantSwapper.MOD_ID + "/config/biomeswevegone_block_variants.json",
+            "/assets/" + BlockVariantSwapper.MOD_ID + "/config/betternether_block_variants.json",
+            "/assets/" + BlockVariantSwapper.MOD_ID + "/config/betterend_block_variants.json",
             "/assets/" + BlockVariantSwapper.MOD_ID + "/config/twilightforest_block_variants.json",
             "/assets/" + BlockVariantSwapper.MOD_ID + "/config/ecologics_block_variants.json",
             "/assets/" + BlockVariantSwapper.MOD_ID + "/config/regions_unexplored_block_variants.json"

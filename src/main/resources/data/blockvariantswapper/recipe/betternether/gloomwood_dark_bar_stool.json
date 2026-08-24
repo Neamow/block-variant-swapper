@@ -1,0 +1,21 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "group":  "bar_stool",
+    "key":  {
+                "#":  {
+                          "item":  "betternether:gloomwood_planks"
+                      },
+                "I":  {
+                          "item":  "minecraft:stick"
+                      }
+            },
+    "pattern":  [
+                    "##",
+                    "II",
+                    "II"
+                ],
+    "result":  {
+                   "id":  "betternether:gloomwood_dark_bar_stool"
+               }
+}

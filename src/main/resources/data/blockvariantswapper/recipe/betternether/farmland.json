@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "nether_farmland",
+  "key": {
+    "#": {
+      "item": "betternether:stalagnate_planks"
+    },
+    "N": {
+      "item": "minecraft:netherrack"
+    },
+    "S": {
+      "item": "minecraft:soul_sand"
+    }
+  },
+  "pattern": [
+    "#S#",
+    "#N#",
+    "###"
+  ],
+  "result": {
+    "count": 4,
+    "id": "betternether:farmland"
+  }
+}

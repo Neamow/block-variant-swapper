@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "end_stone_lanterns",
+  "key": {
+    "#": {
+      "item": "betterend:crystal_shards"
+    },
+    "S": {
+      "item": "minecraft:andesite"
+    }
+  },
+  "pattern": [
+    "S",
+    "#",
+    "S"
+  ],
+  "result": {
+    "count": 2,
+    "id": "betterend:andesite_lantern"
+  }
+}
