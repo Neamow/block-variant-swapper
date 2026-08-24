@@ -160,7 +160,7 @@
   ],
   "minecraft:jungle_log": [
     "minecraft:jungle_log",
-    "twilightforest:hollow_oak_log"
+    "twilightforest:hollow_jungle_log"
   ],
   "minecraft:acacia_log": [
     "minecraft:acacia_log",
@@ -172,7 +172,7 @@
   ],
   "minecraft:mangrove_log": [
     "minecraft:mangrove_log",
-    "twilightforest:hollow_mangrove_log"
+    "twilightforest:hollow_vangrove_log"
   ],
   "minecraft:cherry_log": [
     "minecraft:cherry_log",
