@@ -1,0 +1,276 @@
+{
+  "twilightforest:aurora_block": [
+    "twilightforest:aurora_block",
+    "twilightforest:aurora_slab"
+  ],
+  "twilightforest:castle_brick": [
+    "twilightforest:castle_brick",
+    "twilightforest:castle_brick_stairs"
+  ],
+  "twilightforest:bold_castle_brick_tile": [
+    "twilightforest:bold_castle_brick_tile",
+    "twilightforest:bold_castle_brick_stairs"
+  ],
+  "twilightforest:cracked_castle_brick": [
+    "twilightforest:cracked_castle_brick",
+    "twilightforest:cracked_castle_brick_stairs"
+  ],
+  "twilightforest:encased_castle_brick_tile": [
+    "twilightforest:encased_castle_brick_tile",
+    "twilightforest:encased_castle_brick_stairs"
+  ],
+  "twilightforest:mossy_castle_brick": [
+    "twilightforest:mossy_castle_brick",
+    "twilightforest:mossy_castle_brick_stairs"
+  ],
+  "twilightforest:worn_castle_brick": [
+    "twilightforest:worn_castle_brick",
+    "twilightforest:worn_castle_brick_stairs"
+  ],
+  "twilightforest:etched_nagastone": [
+    "twilightforest:etched_nagastone",
+    "twilightforest:nagastone_stairs_right",
+    "twilightforest:nagastone_stairs_left"
+  ],
+  "twilightforest:cracked_etched_nagastone": [
+    "twilightforest:cracked_etched_nagastone",
+    "twilightforest:cracked_nagastone_stairs_right",
+    "twilightforest:cracked_nagastone_stairs_left"
+  ],
+  "twilightforest:mossy_etched_nagastone": [
+    "twilightforest:mossy_etched_nagastone",
+    "twilightforest:mossy_nagastone_stairs_right",
+    "twilightforest:mossy_nagastone_stairs_left"
+  ],
+  "twilightforest:canopy_planks": [
+    "twilightforest:canopy_planks",
+    "twilightforest:canopy_stairs",
+    "twilightforest:canopy_slab",
+    "twilightforest:canopy_fence",
+    "twilightforest:canopy_fence_gate",
+    "twilightforest:canopy_door",
+    "twilightforest:canopy_trapdoor",
+    "twilightforest:canopy_button",
+    "twilightforest:canopy_pressure_plate",
+    "twilightforest:canopy_banister",
+    "twilightforest:canopy_drying_rack"
+  ],
+  "twilightforest:dark_planks": [
+    "twilightforest:dark_planks",
+    "twilightforest:dark_stairs",
+    "twilightforest:dark_slab",
+    "twilightforest:dark_fence",
+    "twilightforest:dark_fence_gate",
+    "twilightforest:dark_door",
+    "twilightforest:dark_trapdoor",
+    "twilightforest:dark_button",
+    "twilightforest:dark_pressure_plate",
+    "twilightforest:dark_banister",
+    "twilightforest:dark_drying_rack"
+  ],
+  "twilightforest:mangrove_planks": [
+    "twilightforest:mangrove_planks",
+    "twilightforest:mangrove_stairs",
+    "twilightforest:mangrove_slab",
+    "twilightforest:mangrove_fence",
+    "twilightforest:mangrove_fence_gate",
+    "twilightforest:mangrove_door",
+    "twilightforest:mangrove_trapdoor",
+    "twilightforest:mangrove_button",
+    "twilightforest:mangrove_pressure_plate",
+    "twilightforest:mangrove_banister",
+    "twilightforest:mangrove_drying_rack"
+  ],
+  "twilightforest:mining_planks": [
+    "twilightforest:mining_planks",
+    "twilightforest:mining_stairs",
+    "twilightforest:mining_slab",
+    "twilightforest:mining_fence",
+    "twilightforest:mining_fence_gate",
+    "twilightforest:mining_door",
+    "twilightforest:mining_trapdoor",
+    "twilightforest:mining_button",
+    "twilightforest:mining_pressure_plate",
+    "twilightforest:mining_banister",
+    "twilightforest:mining_drying_rack"
+  ],
+  "twilightforest:sorting_planks": [
+    "twilightforest:sorting_planks",
+    "twilightforest:sorting_stairs",
+    "twilightforest:sorting_slab",
+    "twilightforest:sorting_fence",
+    "twilightforest:sorting_fence_gate",
+    "twilightforest:sorting_door",
+    "twilightforest:sorting_trapdoor",
+    "twilightforest:sorting_button",
+    "twilightforest:sorting_pressure_plate",
+    "twilightforest:sorting_banister",
+    "twilightforest:sorting_drying_rack"
+  ],
+  "twilightforest:time_planks": [
+    "twilightforest:time_planks",
+    "twilightforest:time_stairs",
+    "twilightforest:time_slab",
+    "twilightforest:time_fence",
+    "twilightforest:time_fence_gate",
+    "twilightforest:time_door",
+    "twilightforest:time_trapdoor",
+    "twilightforest:time_button",
+    "twilightforest:time_pressure_plate",
+    "twilightforest:time_banister",
+    "twilightforest:time_drying_rack"
+  ],
+  "twilightforest:transformation_planks": [
+    "twilightforest:transformation_planks",
+    "twilightforest:transformation_stairs",
+    "twilightforest:transformation_slab",
+    "twilightforest:transformation_fence",
+    "twilightforest:transformation_fence_gate",
+    "twilightforest:transformation_door",
+    "twilightforest:transformation_trapdoor",
+    "twilightforest:transformation_button",
+    "twilightforest:transformation_pressure_plate",
+    "twilightforest:transformation_banister",
+    "twilightforest:transformation_drying_rack"
+  ],
+  "twilightforest:twilight_oak_planks": [
+    "twilightforest:twilight_oak_planks",
+    "twilightforest:twilight_oak_stairs",
+    "twilightforest:twilight_oak_slab",
+    "twilightforest:twilight_oak_fence",
+    "twilightforest:twilight_oak_fence_gate",
+    "twilightforest:twilight_oak_door",
+    "twilightforest:twilight_oak_trapdoor",
+    "twilightforest:twilight_oak_button",
+    "twilightforest:twilight_oak_pressure_plate",
+    "twilightforest:twilight_oak_banister",
+    "twilightforest:twilight_oak_drying_rack"
+  ],
+  "minecraft:oak_log": [
+    "minecraft:oak_log",
+    "twilightforest:hollow_oak_log"
+  ],
+  "minecraft:spruce_log": [
+    "minecraft:spruce_log",
+    "twilightforest:hollow_spruce_log"
+  ],
+  "minecraft:birch_log": [
+    "minecraft:birch_log",
+    "twilightforest:hollow_birch_log"
+  ],
+  "minecraft:jungle_log": [
+    "minecraft:jungle_log",
+    "twilightforest:hollow_jungle_log"
+  ],
+  "minecraft:acacia_log": [
+    "minecraft:acacia_log",
+    "twilightforest:hollow_acacia_log"
+  ],
+  "minecraft:dark_oak_log": [
+    "minecraft:dark_oak_log",
+    "twilightforest:hollow_dark_oak_log"
+  ],
+  "minecraft:mangrove_log": [
+    "minecraft:mangrove_log",
+    "twilightforest:hollow_vangrove_log"
+  ],
+  "minecraft:cherry_log": [
+    "minecraft:cherry_log",
+    "twilightforest:hollow_cherry_log"
+  ],
+  "minecraft:crimson_stem": [
+    "minecraft:crimson_stem",
+    "twilightforest:hollow_crimson_stem"
+  ],
+  "minecraft:warped_stem": [
+    "minecraft:warped_stem",
+    "twilightforest:hollow_warped_stem"
+  ],
+  "twilightforest:twilight_oak_log": [
+    "twilightforest:twilight_oak_log",
+    "twilightforest:hollow_twilight_oak_log"
+  ],
+  "twilightforest:canopy_log": [
+    "twilightforest:canopy_log",
+    "twilightforest:hollow_canopy_log"
+  ],
+  "twilightforest:mangrove_log": [
+    "twilightforest:mangrove_log",
+    "twilightforest:hollow_mangrove_log"
+  ],
+  "twilightforest:dark_log": [
+    "twilightforest:dark_log",
+    "twilightforest:hollow_dark_log"
+  ],
+  "twilightforest:time_log": [
+    "twilightforest:time_log",
+    "twilightforest:hollow_time_log"
+  ],
+  "twilightforest:transformation_log": [
+    "twilightforest:transformation_log",
+    "twilightforest:hollow_transformation_log"
+  ],
+  "twilightforest:mining_log": [
+    "twilightforest:mining_log",
+    "twilightforest:hollow_mining_log"
+  ],
+  "twilightforest:sorting_log": [
+    "twilightforest:sorting_log",
+    "twilightforest:hollow_sorting_log"
+  ],
+  "minecraft:oak_planks": [
+    "minecraft:oak_planks",
+    "twilightforest:oak_banister",
+    "twilightforest:oak_drying_rack"
+  ],
+  "minecraft:spruce_planks": [
+    "minecraft:spruce_planks",
+    "twilightforest:spruce_banister",
+    "twilightforest:spruce_drying_rack"
+  ],
+  "minecraft:birch_planks": [
+    "minecraft:birch_planks",
+    "twilightforest:birch_banister",
+    "twilightforest:birch_drying_rack"
+  ],
+  "minecraft:jungle_planks": [
+    "minecraft:jungle_planks",
+    "twilightforest:jungle_banister",
+    "twilightforest:jungle_drying_rack"
+  ],
+  "minecraft:acacia_planks": [
+    "minecraft:acacia_planks",
+    "twilightforest:acacia_banister",
+    "twilightforest:acacia_drying_rack"
+  ],
+  "minecraft:dark_oak_planks": [
+    "minecraft:dark_oak_planks",
+    "twilightforest:dark_oak_banister",
+    "twilightforest:dark_oak_drying_rack"
+  ],
+  "minecraft:mangrove_planks": [
+    "minecraft:mangrove_planks",
+    "twilightforest:vangrove_banister",
+    "twilightforest:vangrove_drying_rack"
+  ],
+  "minecraft:cherry_planks": [
+    "minecraft:cherry_planks",
+    "twilightforest:cherry_banister",
+    "twilightforest:cherry_drying_rack"
+  ],
+  "minecraft:bamboo_planks": [
+    "minecraft:bamboo_planks",
+    "twilightforest:bamboo_banister",
+    "twilightforest:bamboo_drying_rack"
+  ],
+  "minecraft:crimson_planks": [
+    "minecraft:crimson_planks",
+    "twilightforest:crimson_banister",
+    "twilightforest:crimson_drying_rack"
+  ],
+  "minecraft:warped_planks": [
+    "minecraft:warped_planks",
+    "twilightforest:warped_banister",
+    "twilightforest:warped_drying_rack"
+  ]
+}

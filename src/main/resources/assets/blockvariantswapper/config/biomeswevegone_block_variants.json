@@ -1,0 +1,516 @@
+{
+  "biomeswevegone:aspen_planks": [
+    "biomeswevegone:aspen_planks",
+    "biomeswevegone:aspen_stairs",
+    "biomeswevegone:aspen_slab",
+    "biomeswevegone:aspen_fence",
+    "biomeswevegone:aspen_fence_gate",
+    "biomeswevegone:aspen_door",
+    "biomeswevegone:aspen_trapdoor",
+    "biomeswevegone:aspen_pressure_plate",
+    "biomeswevegone:aspen_button"
+  ],
+  "biomeswevegone:baobab_planks": [
+    "biomeswevegone:baobab_planks",
+    "biomeswevegone:baobab_stairs",
+    "biomeswevegone:baobab_slab",
+    "biomeswevegone:baobab_fence",
+    "biomeswevegone:baobab_fence_gate",
+    "biomeswevegone:baobab_door",
+    "biomeswevegone:baobab_trapdoor",
+    "biomeswevegone:baobab_pressure_plate",
+    "biomeswevegone:baobab_button"
+  ],
+  "biomeswevegone:black_sandstone": [
+    "biomeswevegone:black_sandstone",
+    "biomeswevegone:black_sandstone_stairs",
+    "biomeswevegone:black_sandstone_slab",
+    "biomeswevegone:black_sandstone_wall"
+  ],
+  "biomeswevegone:blue_enchanted_planks": [
+    "biomeswevegone:blue_enchanted_planks",
+    "biomeswevegone:blue_enchanted_stairs",
+    "biomeswevegone:blue_enchanted_slab",
+    "biomeswevegone:blue_enchanted_fence",
+    "biomeswevegone:blue_enchanted_fence_gate",
+    "biomeswevegone:blue_enchanted_door",
+    "biomeswevegone:blue_enchanted_trapdoor",
+    "biomeswevegone:blue_enchanted_pressure_plate",
+    "biomeswevegone:blue_enchanted_button"
+  ],
+  "biomeswevegone:blue_sandstone": [
+    "biomeswevegone:blue_sandstone",
+    "biomeswevegone:blue_sandstone_stairs",
+    "biomeswevegone:blue_sandstone_slab",
+    "biomeswevegone:blue_sandstone_wall"
+  ],
+  "biomeswevegone:cattail_thatch": [
+    "biomeswevegone:cattail_thatch",
+    "biomeswevegone:cattail_thatch_stairs",
+    "biomeswevegone:cattail_thatch_slab"
+  ],
+  "biomeswevegone:chiseled_dacite_bricks": [
+    "biomeswevegone:chiseled_dacite_bricks",
+    "biomeswevegone:chiseled_dacite_brick_stairs",
+    "biomeswevegone:chiseled_dacite_brick_slab",
+    "biomeswevegone:chiseled_dacite_brick_wall"
+  ],
+  "biomeswevegone:chiseled_red_rock_bricks": [
+    "biomeswevegone:chiseled_red_rock_bricks",
+    "biomeswevegone:chiseled_red_rock_brick_stairs",
+    "biomeswevegone:chiseled_red_rock_brick_slab",
+    "biomeswevegone:chiseled_red_rock_brick_wall"
+  ],
+  "biomeswevegone:chiseled_white_dacite_bricks": [
+    "biomeswevegone:chiseled_white_dacite_bricks",
+    "biomeswevegone:chiseled_white_dacite_brick_stairs",
+    "biomeswevegone:chiseled_white_dacite_brick_slab",
+    "biomeswevegone:chiseled_white_dacite_brick_wall"
+  ],
+  "biomeswevegone:cika_planks": [
+    "biomeswevegone:cika_planks",
+    "biomeswevegone:cika_stairs",
+    "biomeswevegone:cika_slab",
+    "biomeswevegone:cika_fence",
+    "biomeswevegone:cika_fence_gate",
+    "biomeswevegone:cika_door",
+    "biomeswevegone:cika_trapdoor",
+    "biomeswevegone:cika_pressure_plate",
+    "biomeswevegone:cika_button"
+  ],
+  "biomeswevegone:cracked_dacite_bricks": [
+    "biomeswevegone:cracked_dacite_bricks",
+    "biomeswevegone:cracked_dacite_brick_stairs",
+    "biomeswevegone:cracked_dacite_brick_slab",
+    "biomeswevegone:cracked_dacite_brick_wall"
+  ],
+  "biomeswevegone:cracked_red_rock_bricks": [
+    "biomeswevegone:cracked_red_rock_bricks",
+    "biomeswevegone:cracked_red_rock_brick_stairs",
+    "biomeswevegone:cracked_red_rock_brick_slab",
+    "biomeswevegone:cracked_red_rock_brick_wall"
+  ],
+  "biomeswevegone:cracked_white_dacite_bricks": [
+    "biomeswevegone:cracked_white_dacite_bricks",
+    "biomeswevegone:cracked_white_dacite_brick_stairs",
+    "biomeswevegone:cracked_white_dacite_brick_slab",
+    "biomeswevegone:cracked_white_dacite_brick_wall"
+  ],
+  "biomeswevegone:cut_black_sandstone": [
+    "biomeswevegone:cut_black_sandstone",
+    "biomeswevegone:cut_black_sandstone_slab"
+  ],
+  "biomeswevegone:cut_blue_sandstone": [
+    "biomeswevegone:cut_blue_sandstone",
+    "biomeswevegone:cut_blue_sandstone_slab"
+  ],
+  "biomeswevegone:cut_pink_sandstone": [
+    "biomeswevegone:cut_pink_sandstone",
+    "biomeswevegone:cut_pink_sandstone_slab"
+  ],
+  "biomeswevegone:cut_purple_sandstone": [
+    "biomeswevegone:cut_purple_sandstone",
+    "biomeswevegone:cut_purple_sandstone_slab"
+  ],
+  "biomeswevegone:cut_white_sandstone": [
+    "biomeswevegone:cut_white_sandstone",
+    "biomeswevegone:cut_white_sandstone_slab"
+  ],
+  "biomeswevegone:cut_windswept_sandstone": [
+    "biomeswevegone:cut_windswept_sandstone",
+    "biomeswevegone:cut_windswept_sandstone_slab"
+  ],
+  "biomeswevegone:cypress_planks": [
+    "biomeswevegone:cypress_planks",
+    "biomeswevegone:cypress_stairs",
+    "biomeswevegone:cypress_slab",
+    "biomeswevegone:cypress_fence",
+    "biomeswevegone:cypress_fence_gate",
+    "biomeswevegone:cypress_door",
+    "biomeswevegone:cypress_trapdoor",
+    "biomeswevegone:cypress_pressure_plate",
+    "biomeswevegone:cypress_button"
+  ],
+  "biomeswevegone:dacite": [
+    "biomeswevegone:dacite",
+    "biomeswevegone:dacite_stairs",
+    "biomeswevegone:dacite_slab",
+    "biomeswevegone:dacite_wall"
+  ],
+  "biomeswevegone:dacite_bricks": [
+    "biomeswevegone:dacite_bricks",
+    "biomeswevegone:dacite_brick_stairs",
+    "biomeswevegone:dacite_brick_slab",
+    "biomeswevegone:dacite_brick_wall"
+  ],
+  "biomeswevegone:dacite_cobblestone": [
+    "biomeswevegone:dacite_cobblestone",
+    "biomeswevegone:dacite_cobblestone_stairs",
+    "biomeswevegone:dacite_cobblestone_slab",
+    "biomeswevegone:dacite_cobblestone_wall"
+  ],
+  "biomeswevegone:dacite_tiles": [
+    "biomeswevegone:dacite_tiles",
+    "biomeswevegone:dacite_tile_stairs",
+    "biomeswevegone:dacite_tile_slab",
+    "biomeswevegone:dacite_tile_wall"
+  ],
+  "biomeswevegone:ebony_planks": [
+    "biomeswevegone:ebony_planks",
+    "biomeswevegone:ebony_stairs",
+    "biomeswevegone:ebony_slab",
+    "biomeswevegone:ebony_fence",
+    "biomeswevegone:ebony_fence_gate",
+    "biomeswevegone:ebony_door",
+    "biomeswevegone:ebony_trapdoor",
+    "biomeswevegone:ebony_pressure_plate",
+    "biomeswevegone:ebony_button"
+  ],
+  "biomeswevegone:fir_planks": [
+    "biomeswevegone:fir_planks",
+    "biomeswevegone:fir_stairs",
+    "biomeswevegone:fir_slab",
+    "biomeswevegone:fir_fence",
+    "biomeswevegone:fir_fence_gate",
+    "biomeswevegone:fir_door",
+    "biomeswevegone:fir_trapdoor",
+    "biomeswevegone:fir_pressure_plate",
+    "biomeswevegone:fir_button"
+  ],
+  "biomeswevegone:florus_planks": [
+    "biomeswevegone:florus_planks",
+    "biomeswevegone:florus_stairs",
+    "biomeswevegone:florus_slab",
+    "biomeswevegone:florus_fence",
+    "biomeswevegone:florus_fence_gate",
+    "biomeswevegone:florus_door",
+    "biomeswevegone:florus_trapdoor",
+    "biomeswevegone:florus_pressure_plate",
+    "biomeswevegone:florus_button"
+  ],
+  "biomeswevegone:green_enchanted_planks": [
+    "biomeswevegone:green_enchanted_planks",
+    "biomeswevegone:green_enchanted_stairs",
+    "biomeswevegone:green_enchanted_slab",
+    "biomeswevegone:green_enchanted_fence",
+    "biomeswevegone:green_enchanted_fence_gate",
+    "biomeswevegone:green_enchanted_door",
+    "biomeswevegone:green_enchanted_trapdoor",
+    "biomeswevegone:green_enchanted_pressure_plate",
+    "biomeswevegone:green_enchanted_button"
+  ],
+  "biomeswevegone:holly_planks": [
+    "biomeswevegone:holly_planks",
+    "biomeswevegone:holly_stairs",
+    "biomeswevegone:holly_slab",
+    "biomeswevegone:holly_fence",
+    "biomeswevegone:holly_fence_gate",
+    "biomeswevegone:holly_door",
+    "biomeswevegone:holly_trapdoor",
+    "biomeswevegone:holly_pressure_plate",
+    "biomeswevegone:holly_button"
+  ],
+  "biomeswevegone:ironwood_planks": [
+    "biomeswevegone:ironwood_planks",
+    "biomeswevegone:ironwood_stairs",
+    "biomeswevegone:ironwood_slab",
+    "biomeswevegone:ironwood_fence",
+    "biomeswevegone:ironwood_fence_gate",
+    "biomeswevegone:ironwood_door",
+    "biomeswevegone:ironwood_trapdoor",
+    "biomeswevegone:ironwood_pressure_plate",
+    "biomeswevegone:ironwood_button"
+  ],
+  "biomeswevegone:jacaranda_planks": [
+    "biomeswevegone:jacaranda_planks",
+    "biomeswevegone:jacaranda_stairs",
+    "biomeswevegone:jacaranda_slab",
+    "biomeswevegone:jacaranda_fence",
+    "biomeswevegone:jacaranda_fence_gate",
+    "biomeswevegone:jacaranda_door",
+    "biomeswevegone:jacaranda_trapdoor",
+    "biomeswevegone:jacaranda_pressure_plate",
+    "biomeswevegone:jacaranda_button"
+  ],
+  "biomeswevegone:mahogany_planks": [
+    "biomeswevegone:mahogany_planks",
+    "biomeswevegone:mahogany_stairs",
+    "biomeswevegone:mahogany_slab",
+    "biomeswevegone:mahogany_fence",
+    "biomeswevegone:mahogany_fence_gate",
+    "biomeswevegone:mahogany_door",
+    "biomeswevegone:mahogany_trapdoor",
+    "biomeswevegone:mahogany_pressure_plate",
+    "biomeswevegone:mahogany_button"
+  ],
+  "biomeswevegone:maple_planks": [
+    "biomeswevegone:maple_planks",
+    "biomeswevegone:maple_stairs",
+    "biomeswevegone:maple_slab",
+    "biomeswevegone:maple_fence",
+    "biomeswevegone:maple_fence_gate",
+    "biomeswevegone:maple_door",
+    "biomeswevegone:maple_trapdoor",
+    "biomeswevegone:maple_pressure_plate",
+    "biomeswevegone:maple_button"
+  ],
+  "biomeswevegone:mossy_dacite_bricks": [
+    "biomeswevegone:mossy_dacite_bricks",
+    "biomeswevegone:mossy_dacite_brick_stairs",
+    "biomeswevegone:mossy_dacite_brick_slab",
+    "biomeswevegone:mossy_dacite_brick_wall"
+  ],
+  "biomeswevegone:mossy_red_rock_bricks": [
+    "biomeswevegone:mossy_red_rock_bricks",
+    "biomeswevegone:mossy_red_rock_brick_stairs",
+    "biomeswevegone:mossy_red_rock_brick_slab",
+    "biomeswevegone:mossy_red_rock_brick_wall"
+  ],
+  "biomeswevegone:mossy_stone": [
+    "biomeswevegone:mossy_stone",
+    "biomeswevegone:mossy_stone_stairs",
+    "biomeswevegone:mossy_stone_slab",
+    "biomeswevegone:mossy_stone_wall"
+  ],
+  "biomeswevegone:mossy_white_dacite_bricks": [
+    "biomeswevegone:mossy_white_dacite_bricks",
+    "biomeswevegone:mossy_white_dacite_brick_stairs",
+    "biomeswevegone:mossy_white_dacite_brick_slab",
+    "biomeswevegone:mossy_white_dacite_brick_wall"
+  ],
+  "biomeswevegone:pale_mud_bricks": [
+    "biomeswevegone:pale_mud_bricks",
+    "biomeswevegone:pale_mud_bricks_stairs",
+    "biomeswevegone:pale_mud_bricks_slab",
+    "biomeswevegone:pale_mud_bricks_wall"
+  ],
+  "biomeswevegone:palm_planks": [
+    "biomeswevegone:palm_planks",
+    "biomeswevegone:palm_stairs",
+    "biomeswevegone:palm_slab",
+    "biomeswevegone:palm_fence",
+    "biomeswevegone:palm_fence_gate",
+    "biomeswevegone:palm_door",
+    "biomeswevegone:palm_trapdoor",
+    "biomeswevegone:palm_pressure_plate",
+    "biomeswevegone:palm_button"
+  ],
+  "biomeswevegone:pine_planks": [
+    "biomeswevegone:pine_planks",
+    "biomeswevegone:pine_stairs",
+    "biomeswevegone:pine_slab",
+    "biomeswevegone:pine_fence",
+    "biomeswevegone:pine_fence_gate",
+    "biomeswevegone:pine_door",
+    "biomeswevegone:pine_trapdoor",
+    "biomeswevegone:pine_pressure_plate",
+    "biomeswevegone:pine_button"
+  ],
+  "biomeswevegone:pink_sandstone": [
+    "biomeswevegone:pink_sandstone",
+    "biomeswevegone:pink_sandstone_stairs",
+    "biomeswevegone:pink_sandstone_slab",
+    "biomeswevegone:pink_sandstone_wall"
+  ],
+  "biomeswevegone:polished_red_rock": [
+    "biomeswevegone:polished_red_rock",
+    "biomeswevegone:polished_red_rock_stairs",
+    "biomeswevegone:polished_red_rock_slab",
+    "biomeswevegone:polished_red_rock_wall"
+  ],
+  "biomeswevegone:purple_sandstone": [
+    "biomeswevegone:purple_sandstone",
+    "biomeswevegone:purple_sandstone_stairs",
+    "biomeswevegone:purple_sandstone_slab",
+    "biomeswevegone:purple_sandstone_wall"
+  ],
+  "biomeswevegone:rainbow_eucalyptus_planks": [
+    "biomeswevegone:rainbow_eucalyptus_planks",
+    "biomeswevegone:rainbow_eucalyptus_stairs",
+    "biomeswevegone:rainbow_eucalyptus_slab",
+    "biomeswevegone:rainbow_eucalyptus_fence",
+    "biomeswevegone:rainbow_eucalyptus_fence_gate",
+    "biomeswevegone:rainbow_eucalyptus_door",
+    "biomeswevegone:rainbow_eucalyptus_trapdoor",
+    "biomeswevegone:rainbow_eucalyptus_pressure_plate",
+    "biomeswevegone:rainbow_eucalyptus_button"
+  ],
+  "biomeswevegone:red_rock": [
+    "biomeswevegone:red_rock",
+    "biomeswevegone:red_rock_stairs",
+    "biomeswevegone:red_rock_slab",
+    "biomeswevegone:red_rock_wall"
+  ],
+  "biomeswevegone:red_rock_bricks": [
+    "biomeswevegone:red_rock_bricks",
+    "biomeswevegone:red_rock_brick_stairs",
+    "biomeswevegone:red_rock_brick_slab",
+    "biomeswevegone:red_rock_brick_wall"
+  ],
+  "biomeswevegone:red_rock_tiles": [
+    "biomeswevegone:red_rock_tiles",
+    "biomeswevegone:red_rock_tile_stairs",
+    "biomeswevegone:red_rock_tile_slab",
+    "biomeswevegone:red_rock_tile_wall"
+  ],
+  "biomeswevegone:redwood_planks": [
+    "biomeswevegone:redwood_planks",
+    "biomeswevegone:redwood_stairs",
+    "biomeswevegone:redwood_slab",
+    "biomeswevegone:redwood_fence",
+    "biomeswevegone:redwood_fence_gate",
+    "biomeswevegone:redwood_door",
+    "biomeswevegone:redwood_trapdoor",
+    "biomeswevegone:redwood_pressure_plate",
+    "biomeswevegone:redwood_button"
+  ],
+  "biomeswevegone:rocky_stone": [
+    "biomeswevegone:rocky_stone",
+    "biomeswevegone:rocky_stone_stairs",
+    "biomeswevegone:rocky_stone_slab",
+    "biomeswevegone:rocky_stone_wall"
+  ],
+  "biomeswevegone:sakura_planks": [
+    "biomeswevegone:sakura_planks",
+    "biomeswevegone:sakura_stairs",
+    "biomeswevegone:sakura_slab",
+    "biomeswevegone:sakura_fence",
+    "biomeswevegone:sakura_fence_gate",
+    "biomeswevegone:sakura_door",
+    "biomeswevegone:sakura_trapdoor",
+    "biomeswevegone:sakura_pressure_plate",
+    "biomeswevegone:sakura_button"
+  ],
+  "biomeswevegone:skyris_planks": [
+    "biomeswevegone:skyris_planks",
+    "biomeswevegone:skyris_stairs",
+    "biomeswevegone:skyris_slab",
+    "biomeswevegone:skyris_fence",
+    "biomeswevegone:skyris_fence_gate",
+    "biomeswevegone:skyris_door",
+    "biomeswevegone:skyris_trapdoor",
+    "biomeswevegone:skyris_pressure_plate",
+    "biomeswevegone:skyris_button"
+  ],
+  "biomeswevegone:smooth_black_sandstone": [
+    "biomeswevegone:smooth_black_sandstone",
+    "biomeswevegone:smooth_black_sandstone_stairs",
+    "biomeswevegone:smooth_black_sandstone_slab"
+  ],
+  "biomeswevegone:smooth_blue_sandstone": [
+    "biomeswevegone:smooth_blue_sandstone",
+    "biomeswevegone:smooth_blue_sandstone_stairs",
+    "biomeswevegone:smooth_blue_sandstone_slab"
+  ],
+  "biomeswevegone:smooth_pink_sandstone": [
+    "biomeswevegone:smooth_pink_sandstone",
+    "biomeswevegone:smooth_pink_sandstone_stairs",
+    "biomeswevegone:smooth_pink_sandstone_slab"
+  ],
+  "biomeswevegone:smooth_purple_sandstone": [
+    "biomeswevegone:smooth_purple_sandstone",
+    "biomeswevegone:smooth_purple_sandstone_stairs",
+    "biomeswevegone:smooth_purple_sandstone_slab"
+  ],
+  "biomeswevegone:smooth_white_sandstone": [
+    "biomeswevegone:smooth_white_sandstone",
+    "biomeswevegone:smooth_white_sandstone_stairs",
+    "biomeswevegone:smooth_white_sandstone_slab"
+  ],
+  "biomeswevegone:smooth_windswept_sandstone": [
+    "biomeswevegone:smooth_windswept_sandstone",
+    "biomeswevegone:smooth_windswept_sandstone_stairs",
+    "biomeswevegone:smooth_windswept_sandstone_slab"
+  ],
+  "biomeswevegone:spirit_planks": [
+    "biomeswevegone:spirit_planks",
+    "biomeswevegone:spirit_stairs",
+    "biomeswevegone:spirit_slab",
+    "biomeswevegone:spirit_fence",
+    "biomeswevegone:spirit_fence_gate",
+    "biomeswevegone:spirit_door",
+    "biomeswevegone:spirit_trapdoor",
+    "biomeswevegone:spirit_pressure_plate",
+    "biomeswevegone:spirit_button"
+  ],
+  "biomeswevegone:white_dacite": [
+    "biomeswevegone:white_dacite",
+    "biomeswevegone:white_dacite_stairs",
+    "biomeswevegone:white_dacite_slab",
+    "biomeswevegone:white_dacite_wall"
+  ],
+  "biomeswevegone:white_dacite_bricks": [
+    "biomeswevegone:white_dacite_bricks",
+    "biomeswevegone:white_dacite_brick_stairs",
+    "biomeswevegone:white_dacite_brick_slab",
+    "biomeswevegone:white_dacite_brick_wall"
+  ],
+  "biomeswevegone:white_dacite_cobblestone": [
+    "biomeswevegone:white_dacite_cobblestone",
+    "biomeswevegone:white_dacite_cobblestone_stairs",
+    "biomeswevegone:white_dacite_cobblestone_slab",
+    "biomeswevegone:white_dacite_cobblestone_wall"
+  ],
+  "biomeswevegone:white_dacite_tiles": [
+    "biomeswevegone:white_dacite_tiles",
+    "biomeswevegone:white_dacite_tile_stairs",
+    "biomeswevegone:white_dacite_tile_slab",
+    "biomeswevegone:white_dacite_tile_wall"
+  ],
+  "biomeswevegone:white_mangrove_planks": [
+    "biomeswevegone:white_mangrove_planks",
+    "biomeswevegone:white_mangrove_stairs",
+    "biomeswevegone:white_mangrove_slab",
+    "biomeswevegone:white_mangrove_fence",
+    "biomeswevegone:white_mangrove_fence_gate",
+    "biomeswevegone:white_mangrove_door",
+    "biomeswevegone:white_mangrove_trapdoor",
+    "biomeswevegone:white_mangrove_pressure_plate",
+    "biomeswevegone:white_mangrove_button"
+  ],
+  "biomeswevegone:white_sandstone": [
+    "biomeswevegone:white_sandstone",
+    "biomeswevegone:white_sandstone_stairs",
+    "biomeswevegone:white_sandstone_slab",
+    "biomeswevegone:white_sandstone_wall"
+  ],
+  "biomeswevegone:willow_planks": [
+    "biomeswevegone:willow_planks",
+    "biomeswevegone:willow_stairs",
+    "biomeswevegone:willow_slab",
+    "biomeswevegone:willow_fence",
+    "biomeswevegone:willow_fence_gate",
+    "biomeswevegone:willow_door",
+    "biomeswevegone:willow_trapdoor",
+    "biomeswevegone:willow_pressure_plate",
+    "biomeswevegone:willow_button"
+  ],
+  "biomeswevegone:windswept_sandstone": [
+    "biomeswevegone:windswept_sandstone",
+    "biomeswevegone:windswept_sandstone_stairs",
+    "biomeswevegone:windswept_sandstone_slab",
+    "biomeswevegone:windswept_sandstone_wall"
+  ],
+  "biomeswevegone:witch_hazel_planks": [
+    "biomeswevegone:witch_hazel_planks",
+    "biomeswevegone:witch_hazel_stairs",
+    "biomeswevegone:witch_hazel_slab",
+    "biomeswevegone:witch_hazel_fence",
+    "biomeswevegone:witch_hazel_fence_gate",
+    "biomeswevegone:witch_hazel_door",
+    "biomeswevegone:witch_hazel_trapdoor",
+    "biomeswevegone:witch_hazel_pressure_plate",
+    "biomeswevegone:witch_hazel_button"
+  ],
+  "biomeswevegone:zelkova_planks": [
+    "biomeswevegone:zelkova_planks",
+    "biomeswevegone:zelkova_stairs",
+    "biomeswevegone:zelkova_slab",
+    "biomeswevegone:zelkova_fence",
+    "biomeswevegone:zelkova_fence_gate",
+    "biomeswevegone:zelkova_door",
+    "biomeswevegone:zelkova_trapdoor",
+    "biomeswevegone:zelkova_pressure_plate",
+    "biomeswevegone:zelkova_button"
+  ]
+}
