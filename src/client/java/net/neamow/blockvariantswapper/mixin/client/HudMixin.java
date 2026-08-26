@@ -15,6 +15,10 @@ import net.neamow.blockvariantswapper.BlockVariantManager;
 import net.neamow.blockvariantswapper.BlockVariantSwapper;
 import net.neamow.blockvariantswapper.client.BlockVariantSwapperClientState;
 import net.neamow.blockvariantswapper.client.ModKeyBinding;
+import com.llamalad7.mixinextras.injector.v2.WrapWithCondition;
+import net.minecraft.client.DeltaTracker;
+import net.minecraft.client.gui.Font;
+import net.minecraft.client.gui.contextualbar.ContextualBar;
 import org.spongepowered.asm.mixin.Final;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
@@ -129,5 +133,27 @@ public class HudMixin {
     @Inject(method = "extractSelectedItemName", at = @At("HEAD"), cancellable = true)
     private void blockvariantswapper$hideSelectedItemName(GuiGraphicsExtractor graphics, CallbackInfo ci) {
         if (this.blockvariantswapper$shouldShowVariants()) ci.cancel();
+    }
+    // XP/jump/locator contextual bar
+    @WrapWithCondition(
+        method = "extractHotbarAndDecorations",
+        at = @At(value = "INVOKE", target = "Lnet/minecraft/client/gui/contextualbar/ContextualBar;extractBackground(Lnet/minecraft/client/gui/GuiGraphicsExtractor;Lnet/minecraft/client/DeltaTracker;)V")
+    )
+    private boolean blockvariantswapper$hideContextualBarBackground(ContextualBar bar, GuiGraphicsExtractor graphics, DeltaTracker deltaTracker) {
+        return !this.blockvariantswapper$shouldShowVariants();
+    }
+    @WrapWithCondition(
+        method = "extractHotbarAndDecorations",
+        at = @At(value = "INVOKE", target = "Lnet/minecraft/client/gui/contextualbar/ContextualBar;extractExperienceLevel(Lnet/minecraft/client/gui/GuiGraphicsExtractor;Lnet/minecraft/client/gui/Font;I)V")
+    )
+    private boolean blockvariantswapper$hideExperienceLevel(GuiGraphicsExtractor graphics, Font font, int level) {
+        return !this.blockvariantswapper$shouldShowVariants();
+    }
+    @WrapWithCondition(
+        method = "extractHotbarAndDecorations",
+        at = @At(value = "INVOKE", target = "Lnet/minecraft/client/gui/contextualbar/ContextualBar;extractRenderState(Lnet/minecraft/client/gui/GuiGraphicsExtractor;Lnet/minecraft/client/DeltaTracker;)V")
+    )
+    private boolean blockvariantswapper$hideContextualBar(ContextualBar bar, GuiGraphicsExtractor graphics, DeltaTracker deltaTracker) {
+        return !this.blockvariantswapper$shouldShowVariants();
     }
 }
