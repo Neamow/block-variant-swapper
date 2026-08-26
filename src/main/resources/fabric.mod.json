@@ -20,9 +20,6 @@
 		],
 		"client": [
 			"net.neamow.blockvariantswapper.BlockVariantSwapperClient"
-		],
-		"fabric-datagen": [
-			"net.neamow.blockvariantswapper.BlockVariantSwapperDataGenerator"
 		]
 	},
 	"mixins": [
