@@ -25,6 +25,7 @@
     "betterend:dragon_tree_stairs",
     "betterend:dragon_tree_slab",
     "betterend:dragon_tree_fence",
+    "betterend:dragon_tree_gate",
     "betterend:dragon_tree_door",
     "betterend:dragon_tree_trapdoor",
     "betterend:dragon_tree_plate",
@@ -40,6 +41,7 @@
     "betterend:end_lotus_stairs",
     "betterend:end_lotus_slab",
     "betterend:end_lotus_fence",
+    "betterend:end_lotus_gate",
     "betterend:end_lotus_door",
     "betterend:end_lotus_trapdoor",
     "betterend:end_lotus_plate",
@@ -93,6 +95,7 @@
     "betterend:helix_tree_stairs",
     "betterend:helix_tree_slab",
     "betterend:helix_tree_fence",
+    "betterend:helix_tree_gate",
     "betterend:helix_tree_door",
     "betterend:helix_tree_trapdoor",
     "betterend:helix_tree_plate",
@@ -108,6 +111,7 @@
     "betterend:jellyshroom_stairs",
     "betterend:jellyshroom_slab",
     "betterend:jellyshroom_fence",
+    "betterend:jellyshroom_gate",
     "betterend:jellyshroom_door",
     "betterend:jellyshroom_trapdoor",
     "betterend:jellyshroom_plate",
@@ -123,6 +127,7 @@
     "betterend:lacugrove_stairs",
     "betterend:lacugrove_slab",
     "betterend:lacugrove_fence",
+    "betterend:lacugrove_gate",
     "betterend:lacugrove_door",
     "betterend:lacugrove_trapdoor",
     "betterend:lacugrove_plate",
@@ -138,6 +143,7 @@
     "betterend:lucernia_stairs",
     "betterend:lucernia_slab",
     "betterend:lucernia_fence",
+    "betterend:lucernia_gate",
     "betterend:lucernia_door",
     "betterend:lucernia_trapdoor",
     "betterend:lucernia_plate",
@@ -153,6 +159,7 @@
     "betterend:mossy_glowshroom_stairs",
     "betterend:mossy_glowshroom_slab",
     "betterend:mossy_glowshroom_fence",
+    "betterend:mossy_glowshroom_gate",
     "betterend:mossy_glowshroom_door",
     "betterend:mossy_glowshroom_trapdoor",
     "betterend:mossy_glowshroom_plate",
@@ -173,6 +180,7 @@
     "betterend:pythadendron_stairs",
     "betterend:pythadendron_slab",
     "betterend:pythadendron_fence",
+    "betterend:pythadendron_gate",
     "betterend:pythadendron_door",
     "betterend:pythadendron_trapdoor",
     "betterend:pythadendron_plate",
@@ -228,11 +236,17 @@
     "betterend:sulphuric_rock_bricks_wall",
     "betterend:sulphuric_rock_flower_pot"
   ],
+  "betterend:terminite_tile": [
+    "betterend:terminite_tile",
+    "betterend:terminite_stairs",
+    "betterend:terminite_slab"
+  ],
   "betterend:tenanea_planks": [
     "betterend:tenanea_planks",
     "betterend:tenanea_stairs",
     "betterend:tenanea_slab",
     "betterend:tenanea_fence",
+    "betterend:tenanea_gate",
     "betterend:tenanea_door",
     "betterend:tenanea_trapdoor",
     "betterend:tenanea_plate",
@@ -243,13 +257,8 @@
     "betterend:tenanea_chair",
     "betterend:tenanea_taburet"
   ],
-  "betterend:terminite_block": [
-    "betterend:terminite_block",
-    "betterend:terminite_stairs",
-    "betterend:terminite_slab"
-  ],
-  "betterend:thallasium_block": [
-    "betterend:thallasium_block",
+  "betterend:thallasium_tile": [
+    "betterend:thallasium_tile",
     "betterend:thallasium_stairs",
     "betterend:thallasium_slab"
   ],
@@ -274,6 +283,7 @@
     "betterend:umbrella_tree_stairs",
     "betterend:umbrella_tree_slab",
     "betterend:umbrella_tree_fence",
+    "betterend:umbrella_tree_gate",
     "betterend:umbrella_tree_door",
     "betterend:umbrella_tree_trapdoor",
     "betterend:umbrella_tree_plate",
