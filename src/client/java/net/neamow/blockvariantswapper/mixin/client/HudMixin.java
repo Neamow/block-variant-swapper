@@ -105,7 +105,7 @@ public class HudMixin {
             graphics.item(variantStack, slotX + 1, itemY + 1);
 
             Component name = variantStack.getHoverName();
-            graphics.text(this.minecraft.font, name, slotX + 22, itemY + 5, 0xFFFFFF, true);
+            graphics.text(this.minecraft.font, name, slotX + 22, itemY + 5, 0xFFFFFFFF, true);
         }
     }
 
