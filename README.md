@@ -74,6 +74,31 @@ The idea is to change the thinking about block ratios when making variants, and 
 about variants as separate blocks entirely. With this mod, variants don't exist outside of the hotbar, it's
 always just the base block you're swapping to your desired shape.
 
+**Why isn't block X in a variant family?**  
+Usually for a good reason - technical issues, game balance (vast difference in number of input blocks in the normal crafting
+recipe, or uses other items in the crafting recipe than just the source block), or block categorisation (the mod tries to
+family up only blocks in the Creative menu Building Blocks tab). Here are some examples of vanilla items and reasons:
+- Wood signs: basic signs are only made with planks and sticks, which would make them fit as we also allow fences and
+  fence gates. However, signs carry extra component data and only stack to 16 and not 64, which made them inconsistent
+  with the other swappable blocks and caused stacking issues. I didn't want to get into complicated item stack component
+  comparisons or changing max item stack sizes, that's not the purpose of this mod.
+- Functional blocks (chests, composters, barrels, furnaces...): game balance, even if they are made only from one type
+  of material, they're significantly more expensive than just one plank/cobblestone.
+- Ladders: only made from sticks, so if assigned to the oak planks family for example, it would disallow crafting from other
+  wood types.
+- Glass block/pane and carpet/layers: game balance again, crafting outputs significantly more items than the base block.
+- Coloured blocks, copper bulbs, hanging signs: game balance, require other crafting items (dyes, blaze rods, chains...)
+- Iron/gold blocks (doors, trapdoors, weighted pressure plates): made from ingots, not blocks; if made from blocks they
+  would be significantly more expensive.
+
+**Why aren't full block variants swappable?**  
+This mod aims to allow swapping between different block shape variants, not different full blocks entirely. That's why you
+can't swap between stone and cobblestone, deepslate and cobbled deepslate, or the chiseled/pillar variants. In addition,
+many such blocks tend to have a lot of their own shape variants (e.g. all the deepslate blocks, cobbled/polished/bricks/tiles
+all have their own stairs, slabs and walls) so putting them all in one variant family would be impractical. The only sort
+of deviation from this rule are copper grates, which are kinda a full block but not really in my opinion, you can waterlog
+them like stairs or slabs for example.
+
 **Is this client-side or server-side?**  
 Both. The swap, drop-revert, and confinement all run through server-side mixins and networking,
 while the swap-key + scroll trigger and ghost preview are client-side. So it needs to be installed both
@@ -134,10 +159,9 @@ actually installed, so it's always safe to have them all bundled:
 - **Vanilla Minecraft** - wood sets, stone families, copper, sandstone, etc.
 - **Biomes O' Plenty**
 - **Oh The Biomes We've Gone**
-- **Better Nether**
-- **Better End**
+- **Better Nether: New Dawn**
+- **Better End: New Dawn**
 - **Twilight Forest**
-- **Deeper Darker**
 - **Ecologics**
 - **Regions Unexplored**
 
@@ -174,6 +198,12 @@ defaults. Each file maps a base block to the list of blocks it cycles through:
   ]
 }
 ```
+
+Things to keep in mind:
+1. Custom configs are your responsibility to maintain and make sure they work correctly.
+2. The mod fully supports only regular building blocks in its block family configs. Other block types, especially blocks
+   that contain component data (e.g. functional blocks like signs, furnaces, etc.), or don't stack to standard 64 item stacks,
+   will not work properly and may cause unintended behaviour. I will not accept issues raised on these.
 
 How your files interact with the defaults:
 - **Override:** if you define a base block that already exists in the built-in defaults (e.g.
