@@ -75,7 +75,7 @@ public abstract class PlayerInventoryMixin implements Container {
             return false;
         }
 
-        // Only merge when the components match, so custom-named/enchanted stacks stay separate
-        return Objects.equals(existingStack.getComponents(), stack.getComponents());
+        // Only merge when the custom component data matches, so renamed/enchanted stacks stay separate
+        return Objects.equals(existingStack.getComponentsPatch(), stack.getComponentsPatch());
     }
 }
