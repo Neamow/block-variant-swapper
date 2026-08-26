@@ -2,6 +2,7 @@ package net.neamow.blockvariantswapper.network;
 
 import net.fabricmc.fabric.api.networking.v1.PayloadTypeRegistry;
 import net.fabricmc.fabric.api.networking.v1.ServerPlayNetworking;
+import net.minecraft.network.protocol.game.ClientboundSetPlayerInventoryPacket;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.item.Item;
@@ -58,6 +59,10 @@ public class NetworkHandler {
         ItemStack newStack = stack.transmuteCopy(nextItem, stack.getCount());
 
         Inventory inventory = player.getInventory();
-        inventory.setItem(inventory.getSelectedSlot(), newStack);
+        int slot = inventory.getSelectedSlot();
+        inventory.setItem(slot, newStack);
+
+        // Explicitly sync the changed slot to the client so the hotbar and hand visuals update immediately
+        player.connection.send(new ClientboundSetPlayerInventoryPacket(slot, newStack));
     }
 }

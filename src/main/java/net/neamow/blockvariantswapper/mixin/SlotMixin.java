@@ -17,7 +17,7 @@ import org.spongepowered.asm.mixin.injection.ModifyVariable;
 // This is the catch-all that keeps variants out of the main inventory and every storage container
 @Mixin(Slot.class)
 public class SlotMixin {
-    @Shadow public int index;
+    @Shadow @Final private int slot;
     @Shadow @Final public Container container;
 
     // Intercepts any attempt to place a stack into a slot
@@ -28,8 +28,10 @@ public class SlotMixin {
             boolean shouldRevert = true;
 
             // Don't revert if the target slot is in the player's hotbar or offhand
+            // We check the container-relative 'slot' field (0-8 = hotbar, 40 = offhand), not the menu-relative 'index' field
+            // (same issue as in the 1.21.1 NeoForge port)
             if (this.container instanceof Inventory) {
-                if (Inventory.isHotbarSlot(this.index) || this.index == Inventory.SLOT_OFFHAND) {
+                if (Inventory.isHotbarSlot(this.slot) || this.slot == Inventory.SLOT_OFFHAND) {
                     shouldRevert = false;
                 }
             }
