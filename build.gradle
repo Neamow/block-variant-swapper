@@ -11,6 +11,19 @@ repositories {
 	// for more information about repositories.
 }
 
+loom {
+	// Client-only code and client-only Fabric API live in a dedicated 'client' source set,
+	// giving a compile-time guarantee against touching client-only code from the server
+	splitEnvironmentSourceSets()
+
+	mods {
+		"block-variant-swapper" {
+			sourceSet sourceSets.main
+			sourceSet sourceSets.client
+		}
+	}
+}
+
 fabricApi {
 	configureDataGeneration {
 		client = true
