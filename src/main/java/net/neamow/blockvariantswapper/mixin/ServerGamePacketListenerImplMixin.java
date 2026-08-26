@@ -1,5 +1,6 @@
 package net.neamow.blockvariantswapper.mixin;
 
+import net.minecraft.network.protocol.game.ClientboundSetHeldSlotPacket;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.server.network.ServerGamePacketListenerImpl;
 import net.minecraft.world.entity.player.Inventory;
@@ -65,7 +66,9 @@ public abstract class ServerGamePacketListenerImplMixin {
             inventory.pickSlot(sourceSlot);
         }
 
-        inventory.setChanged();
+        // Sync the new selected slot and inventory contents to the client
+        this.player.connection.send(new ClientboundSetHeldSlotPacket(inventory.getSelectedSlot()));
+        this.player.inventoryMenu.broadcastChanges();
 
         // We fully handled the pick; skip vanilla's tryPickItem
         ci.cancel();
