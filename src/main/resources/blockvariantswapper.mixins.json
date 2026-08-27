@@ -2,7 +2,15 @@
   "required": true,
   "package": "net.neamow.blockvariantswapper.mixin",
   "compatibilityLevel": "JAVA_25",
-  "mixins": [],
+  "mixins": [
+    "BlockMixin",
+    "HopperBlockEntityMixin",
+    "ItemEntityMixin",
+    "PlayerInventoryMixin",
+    "RecipeManagerMixin",
+    "ServerGamePacketListenerImplMixin",
+    "SlotMixin"
+  ],
   "injectors": {
     "defaultRequire": 1
   },

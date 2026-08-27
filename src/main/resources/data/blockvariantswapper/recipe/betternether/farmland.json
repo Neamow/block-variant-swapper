@@ -1,0 +1,24 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "betternether"
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "group": "nether_farmland",
+  "key": {
+    "#": "betternether:stalagnate_planks",
+    "N": "minecraft:netherrack",
+    "S": "minecraft:soul_sand"
+  },
+  "pattern": [
+    "#S#",
+    "#N#",
+    "###"
+  ],
+  "result": {
+    "id": "betternether:farmland",
+    "count": 4
+  }
+}

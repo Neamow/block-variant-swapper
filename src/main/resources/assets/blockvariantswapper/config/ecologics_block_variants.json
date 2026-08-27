@@ -1,0 +1,74 @@
+{
+  "ecologics:azalea_planks": [
+    "ecologics:azalea_planks",
+    "ecologics:azalea_stairs",
+    "ecologics:azalea_slab",
+    "ecologics:azalea_fence",
+    "ecologics:azalea_fence_gate",
+    "ecologics:azalea_door",
+    "ecologics:azalea_trapdoor",
+    "ecologics:azalea_button",
+    "ecologics:azalea_pressure_plate"
+  ],
+  "ecologics:coconut_planks": [
+    "ecologics:coconut_planks",
+    "ecologics:coconut_stairs",
+    "ecologics:coconut_slab",
+    "ecologics:coconut_fence",
+    "ecologics:coconut_fence_gate",
+    "ecologics:coconut_door",
+    "ecologics:coconut_trapdoor",
+    "ecologics:coconut_button",
+    "ecologics:coconut_pressure_plate"
+  ],
+  "ecologics:flowering_azalea_planks": [
+    "ecologics:flowering_azalea_planks",
+    "ecologics:flowering_azalea_stairs",
+    "ecologics:flowering_azalea_slab",
+    "ecologics:flowering_azalea_fence",
+    "ecologics:flowering_azalea_fence_gate",
+    "ecologics:flowering_azalea_door",
+    "ecologics:flowering_azalea_trapdoor"
+  ],
+  "ecologics:ice_bricks": [
+    "ecologics:ice_bricks",
+    "ecologics:ice_brick_stairs",
+    "ecologics:ice_brick_slab",
+    "ecologics:ice_brick_wall"
+  ],
+  "ecologics:seashell_tiles": [
+    "ecologics:seashell_tiles",
+    "ecologics:seashell_tile_stairs",
+    "ecologics:seashell_tile_slab",
+    "ecologics:seashell_tile_wall"
+  ],
+  "ecologics:snow_bricks": [
+    "ecologics:snow_bricks",
+    "ecologics:snow_brick_stairs",
+    "ecologics:snow_brick_slab",
+    "ecologics:snow_brick_wall"
+  ],
+  "ecologics:stripped_azalea_log": [
+    "ecologics:stripped_azalea_log",
+    "ecologics:azalea_shelf"
+  ],
+  "ecologics:stripped_coconut_log": [
+    "ecologics:stripped_coconut_log",
+    "ecologics:coconut_shelf"
+  ],
+  "ecologics:stripped_walnut_log": [
+    "ecologics:stripped_walnut_log",
+    "ecologics:walnut_shelf"
+  ],
+  "ecologics:walnut_planks": [
+    "ecologics:walnut_planks",
+    "ecologics:walnut_stairs",
+    "ecologics:walnut_slab",
+    "ecologics:walnut_fence",
+    "ecologics:walnut_fence_gate",
+    "ecologics:walnut_door",
+    "ecologics:walnut_trapdoor",
+    "ecologics:walnut_button",
+    "ecologics:walnut_pressure_plate"
+  ]
+}

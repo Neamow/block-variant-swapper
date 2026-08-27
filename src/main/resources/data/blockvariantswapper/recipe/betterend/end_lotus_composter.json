@@ -1,0 +1,21 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "betterend"
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "#": "betterend:end_lotus_planks",
+    "B": "minecraft:bone_meal"
+  },
+  "pattern": [
+    "   ",
+    "#B#",
+    "###"
+  ],
+  "result": {
+    "id": "betterend:end_lotus_composter"
+  }
+}
