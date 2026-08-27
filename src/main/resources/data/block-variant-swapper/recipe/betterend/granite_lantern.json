@@ -1,0 +1,21 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": ["betterend"]
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "#": "betterend:crystal_shards",
+    "S": "minecraft:granite"
+  },
+  "pattern": [
+    "S",
+    "#",
+    "S"
+  ],
+  "result": {
+    "id": "betterend:granite_lantern"
+  }
+}

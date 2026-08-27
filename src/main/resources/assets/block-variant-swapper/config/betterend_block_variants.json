@@ -1,0 +1,388 @@
+{
+  "betterend:azure_jadestone": [
+    "betterend:azure_jadestone",
+    "betterend:azure_jadestone_stairs",
+    "betterend:azure_jadestone_slab",
+    "betterend:azure_jadestone_wall",
+    "betterend:azure_jadestone_button",
+    "betterend:azure_jadestone_plate",
+    "betterend:azure_jadestone_pedestal"
+  ],
+  "betterend:azure_jadestone_brick": [
+    "betterend:azure_jadestone_brick",
+    "betterend:azure_jadestone_brick_stairs",
+    "betterend:azure_jadestone_brick_slab",
+    "betterend:azure_jadestone_brick_wall",
+    "betterend:azure_jadestone_flower_pot"
+  ],
+  "betterend:dragon_bone_block": [
+    "betterend:dragon_bone_block",
+    "betterend:dragon_bone_stairs",
+    "betterend:dragon_bone_slab"
+  ],
+  "betterend:dragon_tree_planks": [
+    "betterend:dragon_tree_planks",
+    "betterend:dragon_tree_stairs",
+    "betterend:dragon_tree_slab",
+    "betterend:dragon_tree_wall",
+    "betterend:dragon_tree_fence",
+    "betterend:dragon_tree_gate",
+    "betterend:dragon_tree_door",
+    "betterend:dragon_tree_trapdoor",
+    "betterend:dragon_tree_button",
+    "betterend:dragon_tree_plate",
+    "betterend:dragon_tree_taburet",
+    "betterend:dragon_tree_chair",
+    "betterend:dragon_tree_bar_stool"
+  ],
+  "betterend:dragon_tree_stripped_log": [
+    "betterend:dragon_tree_stripped_log",
+    "betterend:dragon_tree_shelf"
+  ],
+  "betterend:end_lotus_planks": [
+    "betterend:end_lotus_planks",
+    "betterend:end_lotus_stairs",
+    "betterend:end_lotus_slab",
+    "betterend:end_lotus_wall",
+    "betterend:end_lotus_fence",
+    "betterend:end_lotus_gate",
+    "betterend:end_lotus_door",
+    "betterend:end_lotus_trapdoor",
+    "betterend:end_lotus_button",
+    "betterend:end_lotus_plate",
+    "betterend:end_lotus_taburet",
+    "betterend:end_lotus_chair",
+    "betterend:end_lotus_bar_stool"
+  ],
+  "betterend:end_lotus_stripped_log": [
+    "betterend:end_lotus_stripped_log",
+    "betterend:end_lotus_shelf"
+  ],
+  "betterend:end_stone_brick_cracked": [
+    "betterend:end_stone_brick_cracked",
+    "betterend:end_stone_brick_cracked_stairs",
+    "betterend:end_stone_brick_cracked_slab",
+    "betterend:end_stone_brick_cracked_wall"
+  ],
+  "betterend:end_stone_brick_weathered": [
+    "betterend:end_stone_brick_weathered",
+    "betterend:end_stone_brick_weathered_stairs",
+    "betterend:end_stone_brick_weathered_slab",
+    "betterend:end_stone_brick_weathered_wall"
+  ],
+  "betterend:flavolite": [
+    "betterend:flavolite",
+    "betterend:flavolite_stairs",
+    "betterend:flavolite_slab",
+    "betterend:flavolite_wall",
+    "betterend:flavolite_button",
+    "betterend:flavolite_plate",
+    "betterend:flavolite_pedestal"
+  ],
+  "betterend:flavolite_brick": [
+    "betterend:flavolite_brick",
+    "betterend:flavolite_brick_stairs",
+    "betterend:flavolite_brick_slab",
+    "betterend:flavolite_brick_wall",
+    "betterend:flavolite_flower_pot"
+  ],
+  "betterend:helix_tree_planks": [
+    "betterend:helix_tree_planks",
+    "betterend:helix_tree_stairs",
+    "betterend:helix_tree_slab",
+    "betterend:helix_tree_wall",
+    "betterend:helix_tree_fence",
+    "betterend:helix_tree_gate",
+    "betterend:helix_tree_door",
+    "betterend:helix_tree_trapdoor",
+    "betterend:helix_tree_button",
+    "betterend:helix_tree_plate",
+    "betterend:helix_tree_taburet",
+    "betterend:helix_tree_chair",
+    "betterend:helix_tree_bar_stool"
+  ],
+  "betterend:helix_tree_stripped_log": [
+    "betterend:helix_tree_stripped_log",
+    "betterend:helix_tree_shelf"
+  ],
+  "betterend:jellyshroom_planks": [
+    "betterend:jellyshroom_planks",
+    "betterend:jellyshroom_stairs",
+    "betterend:jellyshroom_slab",
+    "betterend:jellyshroom_wall",
+    "betterend:jellyshroom_fence",
+    "betterend:jellyshroom_gate",
+    "betterend:jellyshroom_door",
+    "betterend:jellyshroom_trapdoor",
+    "betterend:jellyshroom_button",
+    "betterend:jellyshroom_plate",
+    "betterend:jellyshroom_taburet",
+    "betterend:jellyshroom_chair",
+    "betterend:jellyshroom_bar_stool"
+  ],
+  "betterend:jellyshroom_stripped_log": [
+    "betterend:jellyshroom_stripped_log",
+    "betterend:jellyshroom_shelf"
+  ],
+  "betterend:lacugrove_planks": [
+    "betterend:lacugrove_planks",
+    "betterend:lacugrove_stairs",
+    "betterend:lacugrove_slab",
+    "betterend:lacugrove_wall",
+    "betterend:lacugrove_fence",
+    "betterend:lacugrove_gate",
+    "betterend:lacugrove_door",
+    "betterend:lacugrove_trapdoor",
+    "betterend:lacugrove_button",
+    "betterend:lacugrove_plate",
+    "betterend:lacugrove_taburet",
+    "betterend:lacugrove_chair",
+    "betterend:lacugrove_bar_stool"
+  ],
+  "betterend:lacugrove_stripped_log": [
+    "betterend:lacugrove_stripped_log",
+    "betterend:lacugrove_shelf"
+  ],
+  "betterend:lucernia_planks": [
+    "betterend:lucernia_planks",
+    "betterend:lucernia_stairs",
+    "betterend:lucernia_slab",
+    "betterend:lucernia_wall",
+    "betterend:lucernia_fence",
+    "betterend:lucernia_gate",
+    "betterend:lucernia_door",
+    "betterend:lucernia_trapdoor",
+    "betterend:lucernia_button",
+    "betterend:lucernia_plate",
+    "betterend:lucernia_jellyshroom_taburet",
+    "betterend:lucernia_taburet",
+    "betterend:lucernia_chair",
+    "betterend:lucernia_jellyshroom_chair",
+    "betterend:lucernia_bar_stool",
+    "betterend:lucernia_jellyshroom_bar_stool"
+  ],
+  "betterend:lucernia_stripped_log": [
+    "betterend:lucernia_stripped_log",
+    "betterend:lucernia_shelf"
+  ],
+  "betterend:mossy_glowshroom_planks": [
+    "betterend:mossy_glowshroom_planks",
+    "betterend:mossy_glowshroom_stairs",
+    "betterend:mossy_glowshroom_slab",
+    "betterend:mossy_glowshroom_wall",
+    "betterend:mossy_glowshroom_fence",
+    "betterend:mossy_glowshroom_gate",
+    "betterend:mossy_glowshroom_door",
+    "betterend:mossy_glowshroom_trapdoor",
+    "betterend:mossy_glowshroom_button",
+    "betterend:mossy_glowshroom_plate",
+    "betterend:mossy_glowshroom_taburet",
+    "betterend:mossy_glowshroom_chair",
+    "betterend:mossy_glowshroom_bar_stool"
+  ],
+  "betterend:mossy_glowshroom_stripped_log": [
+    "betterend:mossy_glowshroom_stripped_log",
+    "betterend:mossy_glowshroom_shelf"
+  ],
+  "betterend:neon_cactus_block": [
+    "betterend:neon_cactus_block",
+    "betterend:neon_cactus_stairs",
+    "betterend:neon_cactus_slab"
+  ],
+  "betterend:pythadendron_planks": [
+    "betterend:pythadendron_planks",
+    "betterend:pythadendron_stairs",
+    "betterend:pythadendron_slab",
+    "betterend:pythadendron_wall",
+    "betterend:pythadendron_fence",
+    "betterend:pythadendron_gate",
+    "betterend:pythadendron_door",
+    "betterend:pythadendron_trapdoor",
+    "betterend:pythadendron_button",
+    "betterend:pythadendron_plate",
+    "betterend:pythadendron_taburet",
+    "betterend:pythadendron_chair",
+    "betterend:pythadendron_bar_stool"
+  ],
+  "betterend:pythadendron_stripped_log": [
+    "betterend:pythadendron_stripped_log",
+    "betterend:pythadendron_shelf"
+  ],
+  "betterend:sandy_jadestone": [
+    "betterend:sandy_jadestone",
+    "betterend:sandy_jadestone_stairs",
+    "betterend:sandy_jadestone_slab",
+    "betterend:sandy_jadestone_wall",
+    "betterend:sandy_jadestone_button",
+    "betterend:sandy_jadestone_plate",
+    "betterend:sandy_jadestone_pedestal"
+  ],
+  "betterend:sandy_jadestone_brick": [
+    "betterend:sandy_jadestone_brick",
+    "betterend:sandy_jadestone_brick_stairs",
+    "betterend:sandy_jadestone_brick_slab",
+    "betterend:sandy_jadestone_brick_wall",
+    "betterend:sandy_jadestone_flower_pot"
+  ],
+  "betterend:smaragdant_crystal": [
+    "betterend:smaragdant_crystal",
+    "betterend:smaragdant_crystal_stairs",
+    "betterend:smaragdant_crystal_slab",
+    "betterend:smaragdant_crystal_wall",
+    "betterend:smaragdant_crystal_pedestal"
+  ],
+  "betterend:smaragdant_crystal_bricks": [
+    "betterend:smaragdant_crystal_bricks",
+    "betterend:smaragdant_crystal_bricks_stairs",
+    "betterend:smaragdant_crystal_bricks_slab",
+    "betterend:smaragdant_crystal_bricks_wall"
+  ],
+  "betterend:sulphuric_rock": [
+    "betterend:sulphuric_rock",
+    "betterend:sulphuric_rock_stairs",
+    "betterend:sulphuric_rock_slab",
+    "betterend:sulphuric_rock_wall",
+    "betterend:sulphuric_rock_button",
+    "betterend:sulphuric_rock_plate",
+    "betterend:sulphuric_rock_pedestal"
+  ],
+  "betterend:sulphuric_rock_brick": [
+    "betterend:sulphuric_rock_brick",
+    "betterend:sulphuric_rock_brick_stairs",
+    "betterend:sulphuric_rock_brick_slab",
+    "betterend:sulphuric_rock_brick_wall",
+    "betterend:sulphuric_rock_flower_pot"
+  ],
+  "betterend:tenanea_planks": [
+    "betterend:tenanea_planks",
+    "betterend:tenanea_stairs",
+    "betterend:tenanea_slab",
+    "betterend:tenanea_wall",
+    "betterend:tenanea_fence",
+    "betterend:tenanea_gate",
+    "betterend:tenanea_door",
+    "betterend:tenanea_trapdoor",
+    "betterend:tenanea_button",
+    "betterend:tenanea_plate",
+    "betterend:tenanea_taburet",
+    "betterend:tenanea_chair",
+    "betterend:tenanea_bar_stool"
+  ],
+  "betterend:tenanea_stripped_log": [
+    "betterend:tenanea_stripped_log",
+    "betterend:tenanea_shelf"
+  ],
+  "betterend:terminite_block": [
+    "betterend:terminite_block",
+    "betterend:terminite_stairs",
+    "betterend:terminite_slab",
+    "betterend:terminite_door",
+    "betterend:terminite_trapdoor",
+    "betterend:terminite_plate"
+  ],
+  "betterend:thallasium_block": [
+    "betterend:thallasium_block",
+    "betterend:thallasium_stairs",
+    "betterend:thallasium_slab",
+    "betterend:thallasium_door",
+    "betterend:thallasium_trapdoor",
+    "betterend:thallasium_plate"
+  ],
+  "betterend:umbralith": [
+    "betterend:umbralith",
+    "betterend:umbralith_stairs",
+    "betterend:umbralith_slab",
+    "betterend:umbralith_wall",
+    "betterend:umbralith_button",
+    "betterend:umbralith_plate",
+    "betterend:umbralith_pedestal"
+  ],
+  "betterend:umbralith_brick": [
+    "betterend:umbralith_brick",
+    "betterend:umbralith_brick_stairs",
+    "betterend:umbralith_brick_slab",
+    "betterend:umbralith_brick_wall",
+    "betterend:umbralith_flower_pot"
+  ],
+  "betterend:umbrella_tree_planks": [
+    "betterend:umbrella_tree_planks",
+    "betterend:umbrella_tree_stairs",
+    "betterend:umbrella_tree_slab",
+    "betterend:umbrella_tree_wall",
+    "betterend:umbrella_tree_fence",
+    "betterend:umbrella_tree_gate",
+    "betterend:umbrella_tree_door",
+    "betterend:umbrella_tree_trapdoor",
+    "betterend:umbrella_tree_button",
+    "betterend:umbrella_tree_plate",
+    "betterend:umbrella_tree_taburet",
+    "betterend:umbrella_tree_chair",
+    "betterend:umbrella_tree_bar_stool"
+  ],
+  "betterend:umbrella_tree_stripped_log": [
+    "betterend:umbrella_tree_stripped_log",
+    "betterend:umbrella_tree_shelf"
+  ],
+  "betterend:violecite": [
+    "betterend:violecite",
+    "betterend:violecite_stairs",
+    "betterend:violecite_slab",
+    "betterend:violecite_wall",
+    "betterend:violecite_button",
+    "betterend:violecite_plate",
+    "betterend:violecite_pedestal"
+  ],
+  "betterend:violecite_brick": [
+    "betterend:violecite_brick",
+    "betterend:violecite_brick_stairs",
+    "betterend:violecite_brick_slab",
+    "betterend:violecite_brick_wall",
+    "betterend:violecite_flower_pot"
+  ],
+  "betterend:virid_jadestone": [
+    "betterend:virid_jadestone",
+    "betterend:virid_jadestone_stairs",
+    "betterend:virid_jadestone_slab",
+    "betterend:virid_jadestone_wall",
+    "betterend:virid_jadestone_button",
+    "betterend:virid_jadestone_plate",
+    "betterend:virid_jadestone_pedestal"
+  ],
+  "betterend:virid_jadestone_brick": [
+    "betterend:virid_jadestone_brick",
+    "betterend:virid_jadestone_brick_stairs",
+    "betterend:virid_jadestone_brick_slab",
+    "betterend:virid_jadestone_brick_wall",
+    "betterend:virid_jadestone_flower_pot"
+  ],
+  "minecraft:end_stone": [
+    "minecraft:end_stone",
+    "betterend:end_stone_stairs",
+    "betterend:end_stone_slab",
+    "betterend:end_stone_wall"
+  ],
+  "minecraft:end_stone_bricks": [
+    "minecraft:end_stone_bricks",
+    "betterend:end_stone_flower_pot"
+  ],
+  "minecraft:polished_andesite": [
+    "minecraft:polished_andesite",
+    "betterend:andesite_pedestal"
+  ],
+  "minecraft:polished_diorite": [
+    "minecraft:polished_diorite",
+    "betterend:diorite_pedestal"
+  ],
+  "minecraft:polished_granite": [
+    "minecraft:polished_granite",
+    "betterend:granite_pedestal"
+  ],
+  "minecraft:purpur_block": [
+    "minecraft:purpur_block",
+    "betterend:purple_pedestal"
+  ],
+  "minecraft:quartz_block": [
+    "minecraft:quartz_block",
+    "betterend:quartz_pedestal"
+  ]
+}

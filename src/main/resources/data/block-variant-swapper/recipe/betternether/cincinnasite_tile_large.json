@@ -1,0 +1,21 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": ["betternether"]
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "group": "nether_cincinnasite_tile_large",
+  "key": {
+    "#": "betternether:cincinnasite_forged"
+  },
+  "pattern": [
+    "#",
+    "#"
+  ],
+  "result": {
+    "id": "betternether:cincinnasite_tile_large",
+    "count": 2
+  }
+}
