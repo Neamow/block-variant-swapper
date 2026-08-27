@@ -365,6 +365,54 @@
     "minecraft:stone_brick_slab",
     "minecraft:stone_brick_wall"
   ],
+  "minecraft:stripped_oak_log": [
+    "minecraft:stripped_oak_log",
+    "minecraft:oak_shelf"
+  ],
+  "minecraft:stripped_spruce_log": [
+    "minecraft:stripped_spruce_log",
+    "minecraft:spruce_shelf"
+  ],
+  "minecraft:stripped_birch_log": [
+    "minecraft:stripped_birch_log",
+    "minecraft:birch_shelf"
+  ],
+  "minecraft:stripped_jungle_log": [
+    "minecraft:stripped_jungle_log",
+    "minecraft:jungle_shelf"
+  ],
+  "minecraft:stripped_acacia_log": [
+    "minecraft:stripped_acacia_log",
+    "minecraft:acacia_shelf"
+  ],
+  "minecraft:stripped_dark_oak_log": [
+    "minecraft:stripped_dark_oak_log",
+    "minecraft:dark_oak_shelf"
+  ],
+  "minecraft:stripped_mangrove_log": [
+    "minecraft:stripped_mangrove_log",
+    "minecraft:mangrove_shelf"
+  ],
+  "minecraft:stripped_cherry_log": [
+    "minecraft:stripped_cherry_log",
+    "minecraft:cherry_shelf"
+  ],
+  "minecraft:stripped_pale_oak_log": [
+    "minecraft:stripped_pale_oak_log",
+    "minecraft:pale_oak_shelf"
+  ],
+  "minecraft:stripped_bamboo_block": [
+    "minecraft:stripped_bamboo_block",
+    "minecraft:bamboo_shelf"
+  ],
+  "minecraft:stripped_crimson_stem": [
+    "minecraft:stripped_crimson_stem",
+    "minecraft:crimson_shelf"
+  ],
+  "minecraft:stripped_warped_stem": [
+    "minecraft:stripped_warped_stem",
+    "minecraft:warped_shelf"
+  ],
   "minecraft:sulfur": [
     "minecraft:sulfur",
     "minecraft:sulfur_stairs",
