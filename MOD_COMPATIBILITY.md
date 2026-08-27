@@ -6,14 +6,14 @@ Status: ✅ Done | ❌ Not started | ➖ N/A (mod not available for this version
 
 ## Compatibility Matrix
 
-| Mod                         | 1.21.1 Fabric | 1.21.1 NeoForge | 26.2 Fabric |
+| Mod                         | 1.21.1<br/>Fabric | 1.21.1<br/>NeoForge | 26.2<br/>Fabric |
 |-----------------------------|:-------------:|:---------------:|:-----------:|
 | Minecraft (vanilla)         | ✅            | ✅              | ✅          |
-| Biomes O' Plenty            | ✅            | ✅              | ❌          |
+| Biomes O' Plenty            | ✅            | ✅              | ✅          |
 | Oh The Biomes We've Gone    | ✅            | ✅              | ➖          |
-| BetterNether                | ✅            | ✅<sup>*(New Dawn port)*</sup>              | ❌          |
-| BetterEnd                   | ✅            | ✅<sup>*(New Dawn port)*</sup>              | ❌          |
-| Twilight Forest             | ✅            | ✅              | ❌          |
-| Deeper & Darker             | ✅            | ❌              | ❌          |
-| Ecologics                   | ✅            | ✅              | ❌          |
-| Regions Unexplored          | ✅            | ✅              | ❌          |
+| BetterNether                | ✅            | ✅<sup>*(New Dawn port)*</sup>              | ✅          |
+| BetterEnd                   | ✅            | ✅<sup>*(New Dawn port)*</sup>              | ✅          |
+| Twilight Forest             | ✅            | ✅              | ➖          |
+| Deeper & Darker             | ✅            | ❌              | ➖          |
+| Ecologics                   | ✅            | ✅              | ✅          |
+| Regions Unexplored          | ✅            | ✅              | ➖          |
