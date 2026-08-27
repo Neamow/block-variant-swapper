@@ -8,7 +8,7 @@ Status: ✅ Done | ❌ Not started | ➖ N/A (mod not available for this version
 
 | Mod                      | 1.21.1 Fabric | 1.21.1 NeoForge                      | 26.2 Fabric | 26.2 NeoForge |
 |--------------------------|:-------------:|:-------------------------------------:|:-----------:|:-------------:|
-| Minecraft (vanilla)      | ✅            | ✅                                    | ✅          | WIP           |
+| Minecraft (vanilla)      | ✅            | ✅                                    | ✅          | ✅           |
 | Biomes O' Plenty         | ✅            | ✅                                    | ✅          | ✅            |
 | Oh The Biomes We've Gone | ✅            | ✅                                    | ➖          | ➖            |
 | BetterNether             | ✅            | ✅<sup>*(New Dawn port)*</sup>        | ✅          | ✅<sup>*(New Dawn port)*</sup>            |
