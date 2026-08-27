@@ -1,7 +1,5 @@
 package net.neamow.blockvariantswapper.mixin;
 
-import net.minecraft.server.packs.resources.ResourceManager;
-import net.minecraft.util.profiling.ProfilerFiller;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.crafting.RecipeHolder;
 import net.minecraft.world.item.crafting.RecipeManager;
@@ -21,22 +19,21 @@ import java.util.List;
 
 // Dynamically removes any loaded recipe whose result is a block variant
 // It is result-based, so it works across every namespace/mod with no per-mod tuning
-// Runs server-side on data load/reload; clients get the filtered set via recipe sync
+//
+// Filter at the HEAD of finalizeRecipeLoading, NOT in apply(). apply() just stores the recipe map, but other mods / Fabric recipe hooks
+// can re-assign RecipeManager.recipes between apply() and finalizeRecipeLoading(), which caused a non-deterministic race where my filtered
+// map got overwritten randomly 50% of the time.
+// finalizeRecipeLoading is the single choke point that (re)builds everything the game uses from this.recipes, so filtering here guarantees
+// removal takes effect regardless of who touched the field earlier in the reload.
+// Can potentially still break on larger modpacks in case other mods mixin into finalizeRecipeLoading or with some exotic crafting. To monitor.
 @Mixin(RecipeManager.class)
 public abstract class RecipeManagerMixin {
 
     @Shadow private RecipeMap recipes;
 
-    // apply() stores the prepared recipe map into 'this.recipes'
-    // Overwrite it with a filtered copy, so no variant-producing recipe stays active
-    // Injecting at TAIL means the field is already set, and the later finalizeRecipeLoading (stonecutter/property sets) rebuilds from our filtered map
-    @Inject(
-        method = "apply",
-        at = @At("TAIL")
-    )
-    private void blockvariantswapper$removeVariantRecipes(RecipeMap recipeMap, ResourceManager manager, ProfilerFiller profiler, CallbackInfo ci) {
-        // Self-safeguard: this whole block only removes our variant-producing recipes
-        // If anything fails, it must degrade to "variants simply aren't removed" rather than crashing the reload
+    @Inject(method = "finalizeRecipeLoading", at = @At("HEAD"))
+    private void blockvariantswapper$removeVariantRecipes(CallbackInfo ci) {
+        // Self-safeguard: if anything fails, degrade to "variants simply aren't removed" rather than crash the reload
         try {
             // Ensure the variant family data reflects the current config before filtering
             // This is safe and idempotent, and decouples us from reload-listener ordering
@@ -53,6 +50,8 @@ public abstract class RecipeManagerMixin {
             }
 
             if (removed > 0) {
+                // Overwrite with the filtered map right before finalizeRecipeLoading reads it to build
+                // the stonecutter/property/display structures, so none of them include variant recipes
                 this.recipes = RecipeMap.create(kept);
                 BlockVariantSwapper.LOGGER.info("Removed " + removed + " recipes that produce block variants (obtained via swapping instead).");
             }
@@ -62,7 +61,8 @@ public abstract class RecipeManagerMixin {
     }
 
     // A recipe produces a variant if its displayed result item is a block variant
-    // Extract the item directly from the SlotDisplay type (ItemSlotDisplay or ItemStackSlotDisplay)
+    // Extract the item directly from the SlotDisplay type (ItemSlotDisplay or ItemStackSlotDisplay),
+    // avoiding resolveForStacks which needs bound components not available during recipe load
     private static boolean blockvariantswapper$producesVariant(RecipeHolder<?> holder) {
         try {
             for (RecipeDisplay display : holder.value().display()) {
@@ -86,6 +86,4 @@ public abstract class RecipeManagerMixin {
         }
         return null;
     }
-
-    private static int blockvariantswapper$diagCount = 0;
 }
