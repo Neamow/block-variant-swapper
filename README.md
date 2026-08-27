@@ -115,8 +115,10 @@ in the world. The only thing it does is revert block variant item stacks outside
 base block item stacks. That's it.
 
 **What about crafting recipes that use block variants?**  
-Thankfully there's only a small amount of them (mainly chiseled blocks from slabs, but also things like the composter
-or armour stand), and all were addressed while trying to keep crafting material balance.
+Thankfully there's only a small amount of them (mainly chiseled/pillar blocks from slabs, but also things like the composter
+or armour stand), and all were addressed while trying to keep crafting material balance (e.g. chiseled/pillar blocks are made
+from two full blocks instead of two slabs but produce two blocks instead of one, consistent with the vanilla quartz pillar
+recipe).
 
 **How does Creative pick-block / creative inventory work?**  
 Middle-clicking a placed variant gives you the variant item (drops logic doesn't apply to creative pick), which then
