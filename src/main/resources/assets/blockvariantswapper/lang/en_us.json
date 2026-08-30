@@ -1,4 +1,7 @@
 {
   "category.blockvariantswapper.general": "Block Variant Swapper",
-  "key.blockvariantswapper.swap_variant": "Swap block variant (hold + scroll)"
+  "key.blockvariantswapper.swap_variant": "Swap block variant (hold + scroll)",
+  "gui.blockvariantswapper.jei.category": "Variant Swap",
+  "gui.blockvariantswapper.jei.base": "Base block",
+  "gui.blockvariantswapper.jei.hint": "Hold %s + scroll"
 }
