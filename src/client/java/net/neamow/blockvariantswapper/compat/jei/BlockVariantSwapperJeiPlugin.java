@@ -47,11 +47,6 @@ public class BlockVariantSwapperJeiPlugin implements IModPlugin {
         BlockVariantSwapper.LOGGER.info("Registered " + recipes.size() + " variant families with JEI.");
     }
 
-    // No recipe catalysts on purpose: catalysts are for items that are not already recipe ingredients
-    // (e.g. a crafting station), and JEI lists them all in the category's left panel. Every base and
-    // variant here is already an input or output slot, so the category is still found when you look up
-    // any family member, and skipping catalysts avoids dumping every variant block into that panel.
-
     // Lazily build and cache the entries, so the register* passes share one config load
     private List<VariantSwapRecipe> getRecipes() {
         if (cachedRecipes == null) {

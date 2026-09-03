@@ -3,6 +3,12 @@ plugins {
 	id 'maven-publish'
 }
 
+// Published jar name: blockvariantswapper-<loader>-<mcversion>-<modversion>
+// Gradle appends the project version automatically
+base {
+	archivesName = "blockvariantswapper-fabric-${project.minecraft_version}"
+}
+
 repositories {
 	// Add repositories to retrieve artifacts from in here.
 	// You should only use this when depending on other mods because
