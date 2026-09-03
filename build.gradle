@@ -27,7 +27,9 @@ repositories {
 }
 
 base {
-    archivesName = mod_id
+// Published jar name: blockvariantswapper-<loader>-<mcversion>-<modversion>
+// Gradle appends the project version automatically
+    archivesName = "blockvariantswapper-neoforge-${minecraft_version}"
 }
 
 // Mojang ships Java 25 to end users in 26.2, so mods should target Java 25.
