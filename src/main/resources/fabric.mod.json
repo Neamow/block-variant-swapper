@@ -20,6 +20,9 @@
 		],
 		"client": [
 			"net.neamow.blockvariantswapper.BlockVariantSwapperClient"
+		],
+		"jei_mod_plugin": [
+			"net.neamow.blockvariantswapper.compat.jei.BlockVariantSwapperJeiPlugin"
 		]
 	},
 	"mixins": [

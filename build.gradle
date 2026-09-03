@@ -9,6 +9,12 @@ repositories {
 	// Loom adds the essential maven repositories to download Minecraft and libraries from automatically.
 	// See https://docs.gradle.org/current/userguide/declaring_repositories.html
 	// for more information about repositories.
+
+	// BlameJared maven hosts JEI, used for the optional recipe category integration
+	maven {
+		name = "Jared's maven"
+		url = "https://maven.blamejared.com/"
+	}
 }
 
 loom {
@@ -31,6 +37,16 @@ dependencies {
 
 	// Fabric API. This is technically optional, but you probably want it anyway.
 	implementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_api_version}"
+
+	// JEI, an optional soft dependency for the recipe category integration.
+	// This build runs on official mappings, so mod dependencies do not need Loom remapping and are
+	// declared with plain compileOnly/runtimeOnly (matching how fabric-loader/api are declared above).
+	// The split -api artifacts are used directly. JEI stays optional via the jei_mod_plugin entrypoint,
+	// so the mod still runs fine without JEI.
+	compileOnly "mezz.jei:jei-${project.minecraft_version}-common-api:${project.jei_version}"
+	compileOnly "mezz.jei:jei-${project.minecraft_version}-fabric-api:${project.jei_version}"
+	// Full JEI jar at dev runtime so the integration can be tested in-game
+	runtimeOnly "mezz.jei:jei-${project.minecraft_version}-fabric:${project.jei_version}"
 }
 
 processResources {
