@@ -153,22 +153,15 @@ scenarios that this mod doesn't cover.
 The list of supported mods is below. New ones can be requested by opening a GitHub issue, or added
 yourself with a custom JSON config file (explanation below).
 
-## Currently supported mods
+## Supported mods
 
-Block families ship built in for the following. Each mod's families only become active when that mod is
-actually installed, so it's always safe to have them all bundled:
+The goal is to integrate variant swapper support for as many popular mods as possible, if there is interest.
+The mod ships with built-in compatibility for a specific group of mods already, depending on the version and modloader combination.
 
-- **Vanilla Minecraft** - wood sets, stone families, copper, sandstone, etc.
-- **Biomes O' Plenty**
-- **Oh The Biomes We've Gone**
-- **Better Nether: New Dawn**
-- **Better End: New Dawn**
-- **Twilight Forest**
-- **Ecologics**
-- **Regions Unexplored**
+You can find the current list of supported mods across versions [here](https://github.com/Neamow/block-variant-swapper/blob/mod-compat-tracker/MOD_COMPATIBILITY.md).
 
-Don't see your favorite biome/building mod? Open a GitHub issue to request it, or drop in your own
-config (instructions below) into your game.
+Don't see your favorite mod with block shape variants? Open a GitHub issue to request it, or drop in your own config
+(instructions below) into your game.
 
 ## Configuration
 
