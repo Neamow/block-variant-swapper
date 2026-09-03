@@ -32,12 +32,12 @@ public class VariantSwapCategory implements IRecipeCategory<VariantSwapRecipe> {
     public static final IRecipeType<VariantSwapRecipe> RECIPE_TYPE =
             IRecipeType.create(UID.getNamespace(), UID.getPath(), VariantSwapRecipe.class);
 
-    private static final int SLOT = 18;              // one slot cell including its 2px border
-    private static final int COLUMNS = 7;            // variants per row
-    private static final int VISIBLE_ROWS = 3;       // rows shown at once; extra rows scroll into view
-    private static final int SCROLLBAR_WIDTH = 14;   // room for the grid's scrollbar on the right
-    private static final int PADDING = 4;            // spacing
-    private static final int LABEL_COLOUR = 0x555555FF;
+    private static final int SLOT = 18;                  // one slot cell including its 2px border
+    private static final int COLUMNS = 7;                // variants per row
+    private static final int VISIBLE_ROWS = 3;           // rows shown at once; extra rows scroll into view
+    private static final int SCROLLBAR_WIDTH = 14;       // room for the grid's scrollbar on the right
+    private static final int PADDING = 4;                // spacing
+    private static final int LABEL_COLOUR = 0xFF555555;  // label colour (ARGB not RGBA)
 
     // Top row: base block slot with a "Base block" label to its right
     private static final int BASE_SLOT_X = PADDING;
@@ -159,9 +159,10 @@ public class VariantSwapCategory implements IRecipeCategory<VariantSwapRecipe> {
         grid.setPosition(GRID_X, GRID_Y);
     }
 
-    // Stable, unique id per entry (keyed on the base) so JEI can bookmark and identify families
+    // Stable, unique id per entry (keyed on the base) so JEI can bookmark and identify families.
+    // getIdentifier replaced the deprecated getRegistryName in the 30.x API
     @Override
-    public Identifier getRegistryName(VariantSwapRecipe recipe) {
+    public Identifier getIdentifier(VariantSwapRecipe recipe) {
         return BuiltInRegistries.ITEM.getKey(recipe.base());
     }
 }
