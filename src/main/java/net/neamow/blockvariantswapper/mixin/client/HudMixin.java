@@ -109,24 +109,32 @@ public class HudMixin {
     }
 
     // Hide overlapping HUD clutter while the preview is active
-    @Inject(method = "extractPlayerHealth", at = @At("HEAD"), cancellable = true)
-    private void blockvariantswapper$hidePlayerHealth(GuiGraphicsExtractor graphics, CallbackInfo ci) {
+    // NeoForge 26.3 registers each survival HUD element as its own layer method (see Hud.registerVanillaLayers),
+    // so we cancel those layer entry points directly. extractPlayerHealth is now just a delegate the layer
+    // manager never calls, so cancelling it would do nothing
+    @Inject(method = "extractHealthLevel", at = @At("HEAD"), cancellable = true)
+    private void blockvariantswapper$hideHealthLevel(GuiGraphicsExtractor graphics, CallbackInfo ci) {
+        if (this.blockvariantswapper$shouldShowVariants()) ci.cancel();
+    }
+    @Inject(method = "extractArmorLevel", at = @At("HEAD"), cancellable = true)
+    private void blockvariantswapper$hideArmorLevel(GuiGraphicsExtractor graphics, CallbackInfo ci) {
+        if (this.blockvariantswapper$shouldShowVariants()) ci.cancel();
+    }
+    @Inject(method = "extractFoodLevel", at = @At("HEAD"), cancellable = true)
+    private void blockvariantswapper$hideFoodLevel(GuiGraphicsExtractor graphics, CallbackInfo ci) {
+        if (this.blockvariantswapper$shouldShowVariants()) ci.cancel();
+    }
+    @Inject(method = "extractAirLevel", at = @At("HEAD"), cancellable = true)
+    private void blockvariantswapper$hideAirLevel(GuiGraphicsExtractor graphics, CallbackInfo ci) {
         if (this.blockvariantswapper$shouldShowVariants()) ci.cancel();
     }
     @Inject(method = "extractVehicleHealth", at = @At("HEAD"), cancellable = true)
     private void blockvariantswapper$hideVehicleHealth(GuiGraphicsExtractor graphics, CallbackInfo ci) {
         if (this.blockvariantswapper$shouldShowVariants()) ci.cancel();
     }
-    @Inject(method = "extractFood", at = @At("HEAD"), cancellable = true)
-    private void blockvariantswapper$hideFood(GuiGraphicsExtractor graphics, Player player, int yLineBase, int xRight, CallbackInfo ci) {
-        if (this.blockvariantswapper$shouldShowVariants()) ci.cancel();
-    }
-    @Inject(method = "extractAirBubbles", at = @At("HEAD"), cancellable = true)
-    private void blockvariantswapper$hideAirBubbles(GuiGraphicsExtractor graphics, Player player, int vehicleHearts, int yLineAir, int xRight, CallbackInfo ci) {
-        if (this.blockvariantswapper$shouldShowVariants()) ci.cancel();
-    }
-    @Inject(method = "extractSelectedItemName(Lnet/minecraft/client/gui/GuiGraphicsExtractor;)V", at = @At("HEAD"), cancellable = true)
-    private void blockvariantswapper$hideSelectedItemName(GuiGraphicsExtractor graphics, CallbackInfo ci) {
+    // Held item tooltip (the layer entry point the manager actually calls)
+    @Inject(method = "maybeExtractSelectedItemName", at = @At("HEAD"), cancellable = true)
+    private void blockvariantswapper$hideSelectedItemName(GuiGraphicsExtractor graphics, DeltaTracker deltaTracker, CallbackInfo ci) {
         if (this.blockvariantswapper$shouldShowVariants()) ci.cancel();
     }
     // XP/jump/locator contextual bar
