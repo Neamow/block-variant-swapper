@@ -1,0 +1,13 @@
+{
+  "itemGroup.blockvariantswapper": "Example Mod Tab",
+  "block.blockvariantswapper.example_block": "Example Block",
+  "item.blockvariantswapper.example_item": "Example Item",
+
+  "blockvariantswapper.configuration.title": "Block Variant Swapper Configs",
+  "blockvariantswapper.configuration.section.blockvariantswapper.common.toml": "Block Variant Swapper Configs",
+  "blockvariantswapper.configuration.section.blockvariantswapper.common.toml.title": "Block Variant Swapper Configs",
+  "blockvariantswapper.configuration.items": "Item List",
+  "blockvariantswapper.configuration.logDirtBlock": "Log Dirt Block",
+  "blockvariantswapper.configuration.magicNumberIntroduction": "Magic Number Text",
+  "blockvariantswapper.configuration.magicNumber": "Magic Number"
+}
