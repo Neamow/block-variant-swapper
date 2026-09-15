@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "cushion",
+  "key": {
+    "#": "minecraft:pink_wool"
+  },
+  "pattern": [
+    "###"
+  ],
+  "result": {
+    "id": "minecraft:pink_cushion",
+    "count": 2
+  }
+}
