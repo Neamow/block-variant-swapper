@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "B": "minecraft:bookshelf",
+    "S": "#minecraft:planks"
+  },
+  "pattern": [
+    " S ",
+    " B ",
+    " S "
+  ],
+  "result": {
+    "id": "minecraft:lectern"
+  }
+}

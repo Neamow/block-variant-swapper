@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "cushion",
+  "key": {
+    "#": "minecraft:cyan_wool"
+  },
+  "pattern": [
+    "###"
+  ],
+  "result": {
+    "id": "minecraft:cyan_cushion",
+    "count": 2
+  }
+}

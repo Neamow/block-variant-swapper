@@ -1,0 +1,15 @@
+{
+  "required": true,
+  "package": "net.neamow.blockvariantswapper.mixin.client",
+  "compatibilityLevel": "JAVA_25",
+  "client": [
+    "HudMixin",
+    "MouseMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "overwrites": {
+    "requireAnnotations": true
+  }
+}
