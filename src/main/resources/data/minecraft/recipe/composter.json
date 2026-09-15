@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "#": "#minecraft:planks",
+    "B": "minecraft:bone_meal"
+  },
+  "pattern": [
+    "   ",
+    "#B#",
+    "###"
+  ],
+  "result": {
+    "id": "minecraft:composter"
+  }
+}

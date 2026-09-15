@@ -3,6 +3,12 @@ plugins {
 	id 'maven-publish'
 }
 
+// Published jar name: blockvariantswapper-<loader>-<mcversion>-<modversion>
+// Gradle appends the project version automatically
+base {
+	archivesName = "blockvariantswapper-fabric-${project.minecraft_version}"
+}
+
 repositories {
 	// Add repositories to retrieve artifacts from in here.
 	// You should only use this when depending on other mods because
@@ -11,9 +17,16 @@ repositories {
 	// for more information about repositories.
 }
 
-fabricApi {
-	configureDataGeneration {
-		client = true
+loom {
+	// Client-only code and client-only Fabric API live in a dedicated 'client' source set,
+	// giving a compile-time guarantee against touching client-only code from the server
+	splitEnvironmentSourceSets()
+
+	mods {
+		"block-variant-swapper" {
+			sourceSet sourceSets.main
+			sourceSet sourceSets.client
+		}
 	}
 }
 
