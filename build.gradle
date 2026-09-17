@@ -19,7 +19,11 @@ sourceSets.main.resources {
 }
 
 repositories {
-    // Add here additional repositories if required by some of the dependencies below.
+    // BlameJared maven hosts JEI (for JEI integration)
+    maven {
+        name = "Jared's maven"
+        url = "https://maven.blamejared.com/"
+    }
 }
 
 base {
@@ -62,6 +66,13 @@ configurations {
 }
 
 dependencies {
+    // JEI (optional soft dependency, used for the recipe category integration).
+    // NeoForge is Mojmap so the split -api artifacts are used directly (no remap). JEI stays optional
+    // via the @JeiPlugin annotation (the plugin only loads when JEI is present), so no mods.toml dep.
+    compileOnly "mezz.jei:jei-${minecraft_version}-common-api:${jei_version}"
+    compileOnly "mezz.jei:jei-${minecraft_version}-neoforge-api:${jei_version}"
+    // Full JEI jar at dev runtime so the integration can be tested in-game
+    localRuntime "mezz.jei:jei-${minecraft_version}-neoforge:${jei_version}"
 }
 
 // Expand version properties into mod metadata (neoforge.mods.toml)
