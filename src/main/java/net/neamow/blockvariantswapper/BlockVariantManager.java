@@ -3,6 +3,9 @@ package net.neamow.blockvariantswapper;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.Identifier;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.crafting.RecipeHolder;
+import net.minecraft.world.item.crafting.display.RecipeDisplay;
+import net.minecraft.world.item.crafting.display.SlotDisplay;
 
 import java.util.*;
 import java.util.stream.Collectors;
@@ -35,6 +38,33 @@ public class BlockVariantManager {
         if (!initialized) return false;
         // An item is a variant if it exists as a key in our reverse map
         return ORIGINAL_ITEM_MAP.containsKey(item);
+    }
+
+    // Single source of truth for "does this recipe produce a variant shape?"
+    // Used both to hide variant recipes from the recipe book and to make them unmatchable
+    // Reads the recipe's displayed result item directly, avoiding component resolution that isn't available during recipe load
+    public static boolean recipeProducesVariant(RecipeHolder<?> holder) {
+        try {
+            for (RecipeDisplay display : holder.value().display()) {
+                Item resultItem = extractResultItem(display.result());
+                if (resultItem != null && isVariant(resultItem)) {
+                    return true;
+                }
+            }
+        } catch (Exception e) {
+            // Some special recipes have no simple result; those are never variants
+        }
+        return false;
+    }
+
+    // Pull the result Item out of the common SlotDisplay types without resolving components
+    private static Item extractResultItem(SlotDisplay display) {
+        if (display instanceof SlotDisplay.ItemSlotDisplay itemDisplay) {
+            return itemDisplay.item().value();
+        } else if (display instanceof SlotDisplay.ItemStackSlotDisplay stackDisplay) {
+            return stackDisplay.stack().item().value();
+        }
+        return null;
     }
 
     // Core method that reads the config and builds our maps
