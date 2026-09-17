@@ -7,7 +7,7 @@
     "HopperBlockEntityMixin",
     "ItemEntityMixin",
     "PlayerInventoryMixin",
-    "RecipeManagerMixin",
+    "RecipeMapMixin",
     "ServerGamePacketListenerImplMixin",
     "SlotMixin"
   ],
