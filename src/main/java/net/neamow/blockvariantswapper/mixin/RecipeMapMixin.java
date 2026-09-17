@@ -1,35 +1,56 @@
 package net.neamow.blockvariantswapper.mixin;
 
-import com.llamalad7.mixinextras.injector.ModifyReturnValue;
-import net.minecraft.world.item.crafting.RecipeHolder;
+import com.llamalad7.mixinextras.injector.ModifyExpressionValue;
+import net.minecraft.core.Holder;
+import net.minecraft.world.item.crafting.Recipe;
 import net.minecraft.world.item.crafting.RecipeMap;
 import net.neamow.blockvariantswapper.BlockVariantManager;
 import net.neamow.blockvariantswapper.BlockVariantSwapper;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 
+import java.util.List;
 import java.util.stream.Stream;
 
-// Makes variant-producing recipes genuinely unmatchable, not just hidden
+// Removes variant-producing recipes from the recipe map at the point it is built
 //
-// Every recipe lookup funnels through RecipeManager.getRecipeFor -> RecipeMap.getRecipesFor, which streams byType(type) filtered by Recipe.matches
-// RecipeMap is final so can't strip entries from it; instead filter the returned stream so variant recipes never surface as a match
-// Complements RecipeManagerMixin, which only hides them from the recipe book / stonecutter panel
+// RecipeMap.create builds both immutable indexes (byKey and byType) from the recipe registry's listElements() stream
+// By filtering that stream we make variant recipes truly absent from the map, so everything downstream (matching, the recipe book,
+// the stonecutter panel, and property sets) sees a map that never contained them (no per-site filtering needed)
+//
+// @ModifyExpressionValue is additive and non-destructive: it wraps the listElements() result and composes with other mods' injectors,
+// rather than overwriting the method, so it plays nicely alongside other recipe-touching mods
+// Runs once per RecipeManager construction (i.e. per data reload)
 @Mixin(RecipeMap.class)
 public abstract class RecipeMapMixin {
 
-    // Drop any variant-producing holder from the match stream before the caller reads it
-    // Lazy stream filter, so the cost is only paid on holders actually enumerated for a lookup
-    // Raw Stream keeps the handler assignable to the generic getRecipesFor return type
-    @SuppressWarnings({"rawtypes", "unchecked"})
-    @ModifyReturnValue(method = "getRecipesFor", at = @At("RETURN"))
-    private Stream blockvariantswapper$excludeVariantRecipes(Stream original) {
-        // Self-safeguard: never let a filter error break recipe matching for the whole game
+    // Wrap the registry element stream feeding create() and drop every variant-producing recipe
+    @ModifyExpressionValue(
+        method = "create",
+        at = @At(value = "INVOKE", target = "Lnet/minecraft/core/HolderLookup;listElements()Ljava/util/stream/Stream;")
+    )
+    private static Stream<Holder.Reference<Recipe<?>>> blockvariantswapper$stripVariantRecipes(Stream<Holder.Reference<Recipe<?>>> original) {
+        // Materialise once up front so we can filter, count, and still have a valid fallback stream (the original stream can only be consumed once)
+        // listElements() is finite per reload
+        List<Holder.Reference<Recipe<?>>> all = original.toList();
+        // Self-safeguard: on any failure, fall back to the unfiltered list rather than break recipe loading
         try {
-            return original.filter(holder -> !BlockVariantManager.recipeProducesVariant((RecipeHolder<?>) holder));
+            // Ensure variant family data reflects the current config before filtering
+            // Safe and idempotent, and decouples us from reload-listener ordering
+            BlockVariantManager.initialize();
+
+            List<Holder.Reference<Recipe<?>>> kept = all.stream()
+                .filter(ref -> !BlockVariantManager.recipeProducesVariant(ref.value()))
+                .toList();
+
+            int removed = all.size() - kept.size();
+            if (removed > 0) {
+                BlockVariantSwapper.LOGGER.info("Removed " + removed + " recipes that produce block variants (obtained via swapping instead).");
+            }
+            return kept.stream();
         } catch (Throwable t) {
-            BlockVariantSwapper.LOGGER.error("Failed to filter variant recipes from matching; leaving matches unchanged.", t);
-            return original;
+            BlockVariantSwapper.LOGGER.error("Failed to strip variant-producing recipes; leaving recipes unchanged.", t);
+            return all.stream();
         }
     }
 }

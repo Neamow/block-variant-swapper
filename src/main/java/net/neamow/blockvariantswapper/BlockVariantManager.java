@@ -3,7 +3,7 @@ package net.neamow.blockvariantswapper;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.Identifier;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.item.crafting.RecipeHolder;
+import net.minecraft.world.item.crafting.Recipe;
 import net.minecraft.world.item.crafting.display.RecipeDisplay;
 import net.minecraft.world.item.crafting.display.SlotDisplay;
 
@@ -41,11 +41,11 @@ public class BlockVariantManager {
     }
 
     // Single source of truth for "does this recipe produce a variant shape?"
-    // Used both to hide variant recipes from the recipe book and to make them unmatchable
+    // Used to strip variant recipes from the recipe map at build time, so they are genuinely absent and not just hidden
     // Reads the recipe's displayed result item directly, avoiding component resolution that isn't available during recipe load
-    public static boolean recipeProducesVariant(RecipeHolder<?> holder) {
+    public static boolean recipeProducesVariant(Recipe<?> recipe) {
         try {
-            for (RecipeDisplay display : holder.value().display()) {
+            for (RecipeDisplay display : recipe.display()) {
                 Item resultItem = extractResultItem(display.result());
                 if (resultItem != null && isVariant(resultItem)) {
                     return true;
