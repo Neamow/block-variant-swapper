@@ -8,7 +8,11 @@
 		"InventoryMixin",
 		"ItemEntityMixin",
 		"RecipeManagerMixin",
-		"SlotMixin"
+		"SlotMixin",
+		"accessor.ShapedRecipeAccessor",
+		"accessor.ShapedRecipePatternAccessor",
+		"accessor.ShapelessRecipeAccessor",
+		"accessor.SingleItemRecipeAccessor"
 	],
 	"injectors": {
 		"defaultRequire": 1

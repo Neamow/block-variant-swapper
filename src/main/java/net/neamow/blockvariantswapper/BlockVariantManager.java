@@ -3,6 +3,8 @@ package net.neamow.blockvariantswapper;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.crafting.Ingredient;
 
 import java.util.*;
 import java.util.stream.Collectors;
@@ -35,6 +37,40 @@ public class BlockVariantManager {
         if (!initialized) return false;
         // An item is a variant if it exists as a key in our reverse map
         return ORIGINAL_ITEM_MAP.containsKey(item);
+    }
+
+    // Build a widened copy of a recipe ingredient that also accepts the base block of any variant it matches
+    // Returns a new Ingredient, or null if the ingredient referenced no variant
+    // This lets recipes that consume a variant child still be crafted from the base block
+    //
+    // IMPORTANT: must run only after item tags are bound (e.g. ServerStartedEvent / OnDatapackSyncEvent)
+    // At recipe-load time tags are not yet populated, so getItems() on a tag ingredient would resolve to nothing and permanently cache an empty result
+    public static Ingredient widenToIncludeBase(Ingredient ingredient) {
+        if (!initialized || ingredient == null || ingredient.isEmpty()) return null;
+
+        // Tags are bound by now, so this resolves (and caches) correctly
+        ItemStack[] matching = ingredient.getItems();
+        if (matching.length == 0) return null;
+
+        // Keep every item the ingredient already accepts, then add the base of any variant among them
+        // Order-preserving and deduplicated so the widened slot reads cleanly in the recipe book and JEI
+        LinkedHashSet<Item> items = new LinkedHashSet<>();
+        boolean foundVariant = false;
+        for (ItemStack stack : matching) {
+            Item item = stack.getItem();
+            items.add(item);
+            if (isVariant(item)) {
+                foundVariant = true;
+                items.add(getOriginalItem(item));
+            }
+        }
+
+        // Nothing to do if this ingredient never referenced a variant
+        if (!foundVariant) return null;
+
+        // Rebuild as a flat item list
+        // We lose the original tag wrapper, but the resolved members plus the bases are exactly what should match, and this is only the runtime recipe set
+        return Ingredient.of(items.toArray(new Item[0]));
     }
 
     // Core method that reads the config and builds our maps

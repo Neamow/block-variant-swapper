@@ -6,6 +6,8 @@ import net.minecraft.util.profiling.ProfilerFiller;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.event.AddReloadListenerEvent;
+import net.neoforged.neoforge.event.OnDatapackSyncEvent;
+import net.neoforged.neoforge.event.server.ServerStartedEvent;
 
 // Game-bus (server-side) event listeners
 //
@@ -21,6 +23,19 @@ public class ModEvents {
     @SubscribeEvent
     public static void onAddReloadListeners(AddReloadListenerEvent event) {
         event.addListener(new VariantReloadListener());
+    }
+
+    // Widen variant-consuming recipes so a recipe that needs a variant child also accepts its base block
+    // Must run after item tags are bound: at recipe-load time tags are not yet populated, so a tag ingredient like #wooden_slabs would resolve to nothing
+    @SubscribeEvent
+    public static void onServerStarted(ServerStartedEvent event) {
+        RecipeWidener.widenAll(event.getServer());	// fires at world load (tags are bound already)
+    }
+
+    @SubscribeEvent
+    public static void onDatapackSync(OnDatapackSyncEvent event) {
+        if (event.getPlayer() != null) return;	// gate on the full /reload, not the per-player login syncs
+        RecipeWidener.widenAll(event.getPlayerList().getServer());	// fires at /reload command
     }
 
     // Simple reload listener: on every server data (re)load, rebuild the variant families

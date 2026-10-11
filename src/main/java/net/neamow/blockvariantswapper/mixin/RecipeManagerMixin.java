@@ -25,6 +25,10 @@ import java.util.Map;
 // Dynamically remove any loaded recipe whose result is a block variant
 // It is result-based, so it works across every namespace/mod and needs no per-mod tuning
 // Runs server-side on data load/reload; clients receive the filtered set via the normal recipe sync
+//
+// Note: ingredient WIDENING (letting a recipe that consumes a variant also accept the base) is NOT done here (RecipeWidener instead)
+// Tags are not bound until after this reload step, so it runs later at ServerStartedEvent / OnDatapackSyncEvent
+// Removal is safe here because it only reads each recipe's result item, not any tags
 @Mixin(RecipeManager.class)
 public abstract class RecipeManagerMixin {
 
