@@ -9,7 +9,13 @@
 		"PlayerInventoryMixin",
 		"RecipeMapMixin",
 		"ServerGamePacketListenerImplMixin",
-		"SlotMixin"
+		"SlotMixin",
+		"accessor.IngredientAccessor",
+		"accessor.NormalCraftingRecipeAccessor",
+		"accessor.ShapedRecipeAccessor",
+		"accessor.ShapedRecipePatternAccessor",
+		"accessor.ShapelessRecipeAccessor",
+		"accessor.SingleItemRecipeAccessor"
 	],
 	"injectors": {
 		"defaultRequire": 1
