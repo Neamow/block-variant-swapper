@@ -4,8 +4,6 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.crafting.RecipeHolder;
 import net.minecraft.world.item.crafting.RecipeManager;
 import net.minecraft.world.item.crafting.RecipeMap;
-import net.minecraft.world.item.crafting.display.RecipeDisplay;
-import net.minecraft.world.item.crafting.display.SlotDisplay;
 import net.neamow.blockvariantswapper.BlockVariantManager;
 import net.neamow.blockvariantswapper.BlockVariantSwapper;
 import org.spongepowered.asm.mixin.Mixin;
@@ -37,7 +35,8 @@ public abstract class RecipeManagerMixin {
             List<RecipeHolder<?>> kept = new ArrayList<>();
             int removed = 0;
             for (RecipeHolder<?> holder : this.recipes.values()) {
-                if (blockvariantswapper$producesVariant(holder)) {
+                Item result = BlockVariantManager.recipeResultItem(holder.value());
+                if (result != null && BlockVariantManager.isVariant(result)) {
                     removed++;
                 } else {
                     kept.add(holder);
@@ -52,30 +51,5 @@ public abstract class RecipeManagerMixin {
         } catch (Throwable t) {
             BlockVariantSwapper.LOGGER.error("Failed to filter variant-producing recipes; leaving recipes unchanged.", t);
         }
-    }
-
-    // A recipe produces a variant if its displayed result item is a block variant
-    private static boolean blockvariantswapper$producesVariant(RecipeHolder<?> holder) {
-        try {
-            for (RecipeDisplay display : holder.value().display()) {
-                Item resultItem = blockvariantswapper$extractResultItem(display.result());
-                if (resultItem != null && BlockVariantManager.isVariant(resultItem)) {
-                    return true;
-                }
-            }
-        } catch (Exception e) {
-            // Some special recipes may not have a simple result; those are never variants
-        }
-        return false;
-    }
-
-    // Extract the result Item directly from common SlotDisplay types without component resolution
-    private static Item blockvariantswapper$extractResultItem(SlotDisplay display) {
-        if (display instanceof SlotDisplay.ItemSlotDisplay itemDisplay) {
-            return itemDisplay.item().value();
-        } else if (display instanceof SlotDisplay.ItemStackSlotDisplay stackDisplay) {
-            return stackDisplay.stack().item().value();
-        }
-        return null;
     }
 }
