@@ -1,8 +1,13 @@
 package net.neamow.blockvariantswapper;
 
+import net.minecraft.core.Holder;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.Identifier;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.crafting.Ingredient;
+import net.minecraft.world.item.crafting.Recipe;
+import net.minecraft.world.item.crafting.display.RecipeDisplay;
+import net.minecraft.world.item.crafting.display.SlotDisplay;
 
 import java.util.*;
 import java.util.stream.Collectors;
@@ -35,6 +40,60 @@ public class BlockVariantManager {
         if (!initialized) return false;
         // An item is a variant if it exists as a key in our reverse map
         return ORIGINAL_ITEM_MAP.containsKey(item);
+    }
+
+    // Build a widened copy of a recipe ingredient that also accepts the base block of any variant it matches
+    // Returns a new Ingredient, or null if the ingredient referenced no variant
+    // This lets recipes that consume a variant child still be crafted from the base block
+    //
+    // IMPORTANT: must run only after item tags are bound (e.g. END_DATA_PACK_RELOAD)
+    // At recipe-load time tags are not yet populated, so an ingredient's tag would resolve to nothing
+    public static Ingredient widenToIncludeBase(Ingredient ingredient) {
+        if (!initialized || ingredient == null || ingredient.isEmpty()) return null;
+
+        // On 26.2 an Ingredient is a HolderSet of items; read the items it currently accepts
+        List<Item> items = new ArrayList<>();
+        boolean foundVariant = false;
+        for (Holder<Item> holder : ingredient.items().toList()) {
+            Item item = holder.value();
+            if (!items.contains(item)) items.add(item);
+            if (isVariant(item)) {
+                foundVariant = true;
+                Item base = getOriginalItem(item);
+                if (!items.contains(base)) items.add(base);
+            }
+        }
+
+        // Nothing to do if this ingredient never referenced a variant
+        if (!foundVariant) return null;
+
+        // Rebuild from the item set (resolved members plus the bases); this is only the runtime recipe set
+        return Ingredient.of(items.stream());
+    }
+
+    // Resolve a recipe's result item from its display, or null if it has none
+    // On 26.2 recipes expose no getResult(); read the item directly from the SlotDisplay type
+    // (ItemSlotDisplay / ItemStackSlotDisplay), avoiding component resolution which is unavailable during recipe load
+    public static Item recipeResultItem(Recipe<?> recipe) {
+        try {
+            for (RecipeDisplay display : recipe.display()) {
+                Item item = extractResultItem(display.result());
+                if (item != null) return item;
+            }
+        } catch (Exception e) {
+            // Some special recipes may not have a simple result; treat as none
+        }
+        return null;
+    }
+
+    // Extract the result Item directly from the common SlotDisplay types without component resolution
+    private static Item extractResultItem(SlotDisplay display) {
+        if (display instanceof SlotDisplay.ItemSlotDisplay itemDisplay) {
+            return itemDisplay.item().value();
+        } else if (display instanceof SlotDisplay.ItemStackSlotDisplay stackDisplay) {
+            return stackDisplay.stack().item().value();
+        }
+        return null;
     }
 
     // Core method that reads the config and builds our maps

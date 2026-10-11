@@ -1,6 +1,7 @@
 package net.neamow.blockvariantswapper;
 
 import net.fabricmc.api.ModInitializer;
+import net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents;
 import net.fabricmc.fabric.api.resource.ResourceManagerHelper;
 import net.fabricmc.fabric.api.resource.SimpleSynchronousResourceReloadListener;
 import net.minecraft.resources.Identifier;
@@ -39,6 +40,12 @@ public class BlockVariantSwapper implements ModInitializer {
 				BlockVariantManager.initialize();
 			}
 		});
+
+		// Widen variant-consuming recipes so a recipe that needs a variant child also accepts its base block
+		// Must run after item tags are bound: at recipe-load time tags are not yet populated, so a tag ingredient like #wooden_slabs would resolve to nothing
+		ServerLifecycleEvents.SERVER_STARTING.register(RecipeWidener::widenAll);	// fires at world load (tags are bound already)
+		ServerLifecycleEvents.END_DATA_PACK_RELOAD.register((server, resourceManager, success) ->
+				RecipeWidener.widenAll(server));	// fires at /reload command
 	}
 
 	public static Identifier id(String path) {
