@@ -1,0 +1,20 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": ["biomesoplenty"]
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "#": "biomesoplenty:sphalerite"
+  },
+  "pattern": [
+    "#",
+    "#"
+  ],
+  "result": {
+    "id": "biomesoplenty:chiseled_sphalerite",
+    "count": 2
+  }
+}

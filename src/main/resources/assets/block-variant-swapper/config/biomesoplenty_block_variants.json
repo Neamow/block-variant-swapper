@@ -1,0 +1,293 @@
+{
+  "biomesoplenty:black_sandstone": [
+    "biomesoplenty:black_sandstone",
+    "biomesoplenty:black_sandstone_stairs",
+    "biomesoplenty:black_sandstone_slab",
+    "biomesoplenty:black_sandstone_wall"
+  ],
+  "biomesoplenty:cut_black_sandstone": [
+    "biomesoplenty:cut_black_sandstone",
+    "biomesoplenty:cut_black_sandstone_slab"
+  ],
+  "biomesoplenty:cut_orange_sandstone": [
+    "biomesoplenty:cut_orange_sandstone",
+    "biomesoplenty:cut_orange_sandstone_slab"
+  ],
+  "biomesoplenty:cut_white_sandstone": [
+    "biomesoplenty:cut_white_sandstone",
+    "biomesoplenty:cut_white_sandstone_slab"
+  ],
+  "biomesoplenty:dead_planks": [
+    "biomesoplenty:dead_planks",
+    "biomesoplenty:dead_stairs",
+    "biomesoplenty:dead_slab",
+    "biomesoplenty:dead_fence",
+    "biomesoplenty:dead_fence_gate",
+    "biomesoplenty:dead_door",
+    "biomesoplenty:dead_trapdoor",
+    "biomesoplenty:dead_button",
+    "biomesoplenty:dead_pressure_plate"
+  ],
+  "biomesoplenty:empyreal_planks": [
+    "biomesoplenty:empyreal_planks",
+    "biomesoplenty:empyreal_stairs",
+    "biomesoplenty:empyreal_slab",
+    "biomesoplenty:empyreal_fence",
+    "biomesoplenty:empyreal_fence_gate",
+    "biomesoplenty:empyreal_door",
+    "biomesoplenty:empyreal_trapdoor",
+    "biomesoplenty:empyreal_button",
+    "biomesoplenty:empyreal_pressure_plate"
+  ],
+  "biomesoplenty:fir_planks": [
+    "biomesoplenty:fir_planks",
+    "biomesoplenty:fir_stairs",
+    "biomesoplenty:fir_slab",
+    "biomesoplenty:fir_fence",
+    "biomesoplenty:fir_fence_gate",
+    "biomesoplenty:fir_door",
+    "biomesoplenty:fir_trapdoor",
+    "biomesoplenty:fir_button",
+    "biomesoplenty:fir_pressure_plate"
+  ],
+  "biomesoplenty:hellbark_planks": [
+    "biomesoplenty:hellbark_planks",
+    "biomesoplenty:hellbark_stairs",
+    "biomesoplenty:hellbark_slab",
+    "biomesoplenty:hellbark_fence",
+    "biomesoplenty:hellbark_fence_gate",
+    "biomesoplenty:hellbark_door",
+    "biomesoplenty:hellbark_trapdoor",
+    "biomesoplenty:hellbark_button",
+    "biomesoplenty:hellbark_pressure_plate"
+  ],
+  "biomesoplenty:jacaranda_planks": [
+    "biomesoplenty:jacaranda_planks",
+    "biomesoplenty:jacaranda_stairs",
+    "biomesoplenty:jacaranda_slab",
+    "biomesoplenty:jacaranda_fence",
+    "biomesoplenty:jacaranda_fence_gate",
+    "biomesoplenty:jacaranda_door",
+    "biomesoplenty:jacaranda_trapdoor",
+    "biomesoplenty:jacaranda_button",
+    "biomesoplenty:jacaranda_pressure_plate"
+  ],
+  "biomesoplenty:magic_planks": [
+    "biomesoplenty:magic_planks",
+    "biomesoplenty:magic_stairs",
+    "biomesoplenty:magic_slab",
+    "biomesoplenty:magic_fence",
+    "biomesoplenty:magic_fence_gate",
+    "biomesoplenty:magic_door",
+    "biomesoplenty:magic_trapdoor",
+    "biomesoplenty:magic_button",
+    "biomesoplenty:magic_pressure_plate"
+  ],
+  "biomesoplenty:mahogany_planks": [
+    "biomesoplenty:mahogany_planks",
+    "biomesoplenty:mahogany_stairs",
+    "biomesoplenty:mahogany_slab",
+    "biomesoplenty:mahogany_fence",
+    "biomesoplenty:mahogany_fence_gate",
+    "biomesoplenty:mahogany_door",
+    "biomesoplenty:mahogany_trapdoor",
+    "biomesoplenty:mahogany_button",
+    "biomesoplenty:mahogany_pressure_plate"
+  ],
+  "biomesoplenty:maple_planks": [
+    "biomesoplenty:maple_planks",
+    "biomesoplenty:maple_stairs",
+    "biomesoplenty:maple_slab",
+    "biomesoplenty:maple_fence",
+    "biomesoplenty:maple_fence_gate",
+    "biomesoplenty:maple_door",
+    "biomesoplenty:maple_trapdoor",
+    "biomesoplenty:maple_button",
+    "biomesoplenty:maple_pressure_plate"
+  ],
+  "biomesoplenty:orange_sandstone": [
+    "biomesoplenty:orange_sandstone",
+    "biomesoplenty:orange_sandstone_stairs",
+    "biomesoplenty:orange_sandstone_slab",
+    "biomesoplenty:orange_sandstone_wall"
+  ],
+  "biomesoplenty:origin_oak_planks": [
+    "biomesoplenty:origin_oak_planks",
+    "biomesoplenty:origin_oak_stairs",
+    "biomesoplenty:origin_oak_slab",
+    "biomesoplenty:origin_oak_fence",
+    "biomesoplenty:origin_oak_fence_gate",
+    "biomesoplenty:origin_oak_door",
+    "biomesoplenty:origin_oak_trapdoor",
+    "biomesoplenty:origin_oak_button",
+    "biomesoplenty:origin_oak_pressure_plate"
+  ],
+  "biomesoplenty:orpiment": [
+    "biomesoplenty:orpiment",
+    "biomesoplenty:orpiment_stairs",
+    "biomesoplenty:orpiment_slab",
+    "biomesoplenty:orpiment_wall"
+  ],
+  "biomesoplenty:orpiment_bricks": [
+    "biomesoplenty:orpiment_bricks",
+    "biomesoplenty:orpiment_brick_stairs",
+    "biomesoplenty:orpiment_brick_slab",
+    "biomesoplenty:orpiment_brick_wall"
+  ],
+  "biomesoplenty:palm_planks": [
+    "biomesoplenty:palm_planks",
+    "biomesoplenty:palm_stairs",
+    "biomesoplenty:palm_slab",
+    "biomesoplenty:palm_fence",
+    "biomesoplenty:palm_fence_gate",
+    "biomesoplenty:palm_door",
+    "biomesoplenty:palm_trapdoor",
+    "biomesoplenty:palm_button",
+    "biomesoplenty:palm_pressure_plate"
+  ],
+  "biomesoplenty:pine_planks": [
+    "biomesoplenty:pine_planks",
+    "biomesoplenty:pine_stairs",
+    "biomesoplenty:pine_slab",
+    "biomesoplenty:pine_fence",
+    "biomesoplenty:pine_fence_gate",
+    "biomesoplenty:pine_door",
+    "biomesoplenty:pine_trapdoor",
+    "biomesoplenty:pine_button",
+    "biomesoplenty:pine_pressure_plate"
+  ],
+  "biomesoplenty:polished_orpiment": [
+    "biomesoplenty:polished_orpiment",
+    "biomesoplenty:polished_orpiment_stairs",
+    "biomesoplenty:polished_orpiment_slab",
+    "biomesoplenty:polished_orpiment_wall"
+  ],
+  "biomesoplenty:polished_sphalerite": [
+    "biomesoplenty:polished_sphalerite",
+    "biomesoplenty:polished_sphalerite_stairs",
+    "biomesoplenty:polished_sphalerite_slab",
+    "biomesoplenty:polished_sphalerite_wall"
+  ],
+  "biomesoplenty:redwood_planks": [
+    "biomesoplenty:redwood_planks",
+    "biomesoplenty:redwood_stairs",
+    "biomesoplenty:redwood_slab",
+    "biomesoplenty:redwood_fence",
+    "biomesoplenty:redwood_fence_gate",
+    "biomesoplenty:redwood_door",
+    "biomesoplenty:redwood_trapdoor",
+    "biomesoplenty:redwood_button",
+    "biomesoplenty:redwood_pressure_plate"
+  ],
+  "biomesoplenty:smooth_black_sandstone": [
+    "biomesoplenty:smooth_black_sandstone",
+    "biomesoplenty:smooth_black_sandstone_stairs",
+    "biomesoplenty:smooth_black_sandstone_slab"
+  ],
+  "biomesoplenty:smooth_orange_sandstone": [
+    "biomesoplenty:smooth_orange_sandstone",
+    "biomesoplenty:smooth_orange_sandstone_stairs",
+    "biomesoplenty:smooth_orange_sandstone_slab"
+  ],
+  "biomesoplenty:smooth_white_sandstone": [
+    "biomesoplenty:smooth_white_sandstone",
+    "biomesoplenty:smooth_white_sandstone_stairs",
+    "biomesoplenty:smooth_white_sandstone_slab"
+  ],
+  "biomesoplenty:sphalerite": [
+    "biomesoplenty:sphalerite",
+    "biomesoplenty:sphalerite_stairs",
+    "biomesoplenty:sphalerite_slab",
+    "biomesoplenty:sphalerite_wall"
+  ],
+  "biomesoplenty:sphalerite_bricks": [
+    "biomesoplenty:sphalerite_bricks",
+    "biomesoplenty:sphalerite_brick_stairs",
+    "biomesoplenty:sphalerite_brick_slab",
+    "biomesoplenty:sphalerite_brick_wall"
+  ],
+  "biomesoplenty:stripped_dead_log": [
+    "biomesoplenty:stripped_dead_log",
+    "biomesoplenty:dead_shelf"
+  ],
+  "biomesoplenty:stripped_empyreal_log": [
+    "biomesoplenty:stripped_empyreal_log",
+    "biomesoplenty:empyreal_shelf"
+  ],
+  "biomesoplenty:stripped_fir_log": [
+    "biomesoplenty:stripped_fir_log",
+    "biomesoplenty:fir_shelf"
+  ],
+  "biomesoplenty:stripped_hellbark_log": [
+    "biomesoplenty:stripped_hellbark_log",
+    "biomesoplenty:hellbark_shelf"
+  ],
+  "biomesoplenty:stripped_jacaranda_log": [
+    "biomesoplenty:stripped_jacaranda_log",
+    "biomesoplenty:jacaranda_shelf"
+  ],
+  "biomesoplenty:stripped_magic_log": [
+    "biomesoplenty:stripped_magic_log",
+    "biomesoplenty:magic_shelf"
+  ],
+  "biomesoplenty:stripped_mahogany_log": [
+    "biomesoplenty:stripped_mahogany_log",
+    "biomesoplenty:mahogany_shelf"
+  ],
+  "biomesoplenty:stripped_maple_log": [
+    "biomesoplenty:stripped_maple_log",
+    "biomesoplenty:maple_shelf"
+  ],
+  "biomesoplenty:stripped_origin_oak_log": [
+    "biomesoplenty:stripped_origin_oak_log",
+    "biomesoplenty:origin_oak_shelf"
+  ],
+  "biomesoplenty:stripped_palm_log": [
+    "biomesoplenty:stripped_palm_log",
+    "biomesoplenty:palm_shelf"
+  ],
+  "biomesoplenty:stripped_pine_log": [
+    "biomesoplenty:stripped_pine_log",
+    "biomesoplenty:pine_shelf"
+  ],
+  "biomesoplenty:stripped_redwood_log": [
+    "biomesoplenty:stripped_redwood_log",
+    "biomesoplenty:redwood_shelf"
+  ],
+  "biomesoplenty:stripped_umbran_log": [
+    "biomesoplenty:stripped_umbran_log",
+    "biomesoplenty:umbran_shelf"
+  ],
+  "biomesoplenty:stripped_willow_log": [
+    "biomesoplenty:stripped_willow_log",
+    "biomesoplenty:willow_shelf"
+  ],
+  "biomesoplenty:umbran_planks": [
+    "biomesoplenty:umbran_planks",
+    "biomesoplenty:umbran_stairs",
+    "biomesoplenty:umbran_slab",
+    "biomesoplenty:umbran_fence",
+    "biomesoplenty:umbran_fence_gate",
+    "biomesoplenty:umbran_door",
+    "biomesoplenty:umbran_trapdoor",
+    "biomesoplenty:umbran_button",
+    "biomesoplenty:umbran_pressure_plate"
+  ],
+  "biomesoplenty:white_sandstone": [
+    "biomesoplenty:white_sandstone",
+    "biomesoplenty:white_sandstone_stairs",
+    "biomesoplenty:white_sandstone_slab",
+    "biomesoplenty:white_sandstone_wall"
+  ],
+  "biomesoplenty:willow_planks": [
+    "biomesoplenty:willow_planks",
+    "biomesoplenty:willow_stairs",
+    "biomesoplenty:willow_slab",
+    "biomesoplenty:willow_fence",
+    "biomesoplenty:willow_fence_gate",
+    "biomesoplenty:willow_door",
+    "biomesoplenty:willow_trapdoor",
+    "biomesoplenty:willow_button",
+    "biomesoplenty:willow_pressure_plate"
+  ]
+}

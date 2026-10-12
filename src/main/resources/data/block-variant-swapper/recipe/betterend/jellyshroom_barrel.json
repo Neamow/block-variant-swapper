@@ -1,0 +1,20 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": ["betterend"]
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "P": "betterend:jellyshroom_planks"
+  },
+  "pattern": [
+    "P P",
+    "P P",
+    "PPP"
+  ],
+  "result": {
+    "id": "betterend:jellyshroom_barrel"
+  }
+}
