@@ -5,6 +5,8 @@ import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.event.AddServerReloadListenersEvent;
+import net.neoforged.neoforge.event.OnDatapackSyncEvent;
+import net.neoforged.neoforge.event.server.ServerStartedEvent;
 import net.neamow.blockvariantswapper.network.NetworkHandler;
 
 import org.slf4j.Logger;
@@ -27,11 +29,28 @@ public class BlockVariantSwapper {
 
         // Register a data reload listener so the variant manager rebuilds on world load and /reload
         NeoForge.EVENT_BUS.addListener(this::onAddReloadListeners);
+
+        // Widen variant-consuming recipes so a recipe that needs a variant child also accepts its base block
+        // Must run after item tags are bound: at recipe-load time tags are not yet populated, so a tag ingredient like #wooden_slabs would resolve to nothing
+        // Owned-result removal happens earlier at RecipeMap.create (the immutable map can only be filtered at build time); this handles the generic widening
+        NeoForge.EVENT_BUS.addListener(this::onServerStarted);  // fires on world load
+        NeoForge.EVENT_BUS.addListener(this::onDatapackSync);   // fires on /reload command
     }
 
     // Fires during server/data reload; we add a simple listener that initialises the variant maps
     private void onAddReloadListeners(AddServerReloadListenersEvent event) {
         event.addListener(id("block_variant_loader"), new BlockVariantReloadListener());
+    }
+
+    // Fires once on initial world load, after tags are bound
+    private void onServerStarted(ServerStartedEvent event) {
+        RecipeWidener.widenAll(event.getServer());
+    }
+
+    // Fires on /reload (and per-player on login); gate on getPlayer() == null so we run on the full reload only
+    private void onDatapackSync(OnDatapackSyncEvent event) {
+        if (event.getPlayer() != null) return;
+        RecipeWidener.widenAll(event.getPlayerList().getServer());
     }
 
     public static Identifier id(String path) {

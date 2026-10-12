@@ -1,11 +1,25 @@
 package net.neamow.blockvariantswapper;
 
+import com.mojang.datafixers.util.Either;
+import net.minecraft.core.Holder;
+import net.minecraft.core.HolderSet;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.Identifier;
+import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.crafting.Recipe;
+import net.minecraft.world.item.crafting.ShapedRecipe;
+import net.minecraft.world.item.crafting.ShapedRecipePattern;
+import net.minecraft.world.item.crafting.ShapelessRecipe;
+import net.minecraft.world.item.crafting.SingleItemRecipe;
 import net.minecraft.world.item.crafting.display.RecipeDisplay;
 import net.minecraft.world.item.crafting.display.SlotDisplay;
+import net.neamow.blockvariantswapper.mixin.accessor.IngredientAccessor;
+import net.neamow.blockvariantswapper.mixin.accessor.ShapedRecipeAccessor;
+import net.neamow.blockvariantswapper.mixin.accessor.ShapedRecipePatternAccessor;
+import net.neamow.blockvariantswapper.mixin.accessor.ShapelessRecipeAccessor;
+import net.neamow.blockvariantswapper.mixin.accessor.SingleItemRecipeAccessor;
 
 import java.util.*;
 import java.util.stream.Collectors;
@@ -63,6 +77,92 @@ public class BlockVariantManager {
             return stackDisplay.stack().item().value();
         }
         return null;
+    }
+
+    // Resolve a recipe's result item from its display, or null if it has none
+    // Reads the displayed result (same tag-free path as recipeProducesVariant), avoiding component resolution
+    public static Item recipeResultItem(Recipe<?> recipe) {
+        try {
+            for (RecipeDisplay display : recipe.display()) {
+                Item item = extractResultItem(display.result());
+                if (item != null) return item;
+            }
+        } catch (Exception e) {
+            // Some special recipes have no simple result; treat as none
+        }
+        return null;
+    }
+
+    // Build a widened copy of a recipe ingredient that also accepts the base block of any variant it matches
+    // Returns a new Ingredient, or null if the ingredient referenced no variant
+    // This lets recipes that consume a variant child still be crafted from the base block
+    //
+    // IMPORTANT: must run only after item tags are bound (e.g. ServerStartedEvent / OnDatapackSyncEvent)
+    // At recipe-load time tags are not yet populated, so an ingredient's tag would resolve to nothing
+    public static Ingredient widenToIncludeBase(Ingredient ingredient) {
+        if (!initialized || ingredient == null || ingredient.isEmpty()) return null;
+
+        // On 26.3 an Ingredient is a HolderSet of items; read the items it currently accepts
+        List<Item> items = new ArrayList<>();
+        boolean foundVariant = false;
+        for (Holder<Item> holder : ingredient.items().toList()) {
+            Item item = holder.value();
+            if (!items.contains(item)) items.add(item);
+            if (isVariant(item)) {
+                foundVariant = true;
+                Item base = getOriginalItem(item);
+                if (!items.contains(base)) items.add(base);
+            }
+        }
+
+        // Nothing to do if this ingredient never referenced a variant
+        if (!foundVariant) return null;
+
+        // Rebuild from the item set (resolved members plus the bases); this is only the runtime recipe set
+        return Ingredient.of(items.stream());
+    }
+
+    // Tag-SAFE check: does this recipe consume a variant child, decided WITHOUT resolving any tags?
+    // This runs at RecipeMap.create (removal of competitors to our hand-authored recipes), where item tags are NOT yet bound, so we must not call Ingredient.items()/getMatchingStacks on a tag ingredient
+    // We only inspect direct (explicit) ingredient sets; a tag-backed ingredient is treated as "unknown" and left alone (its contents cannot be read safely this early)
+    // In practice the competitors we remove are concrete recipes consuming a concrete variant, so direct-set detection catches them
+    public static boolean recipeConsumesVariantTagSafe(Recipe<?> recipe) {
+        try {
+            if (recipe instanceof ShapedRecipe shaped) {
+                ShapedRecipePattern pattern = ((ShapedRecipeAccessor) shaped).blockvariantswapper$getPattern();
+                for (Optional<Ingredient> slot : ((ShapedRecipePatternAccessor) (Object) pattern).blockvariantswapper$getIngredients()) {
+                    if (slot.isPresent() && ingredientConsumesVariantTagSafe(slot.get())) return true;
+                }
+            } else if (recipe instanceof ShapelessRecipe shapeless) {
+                for (Ingredient ingredient : ((ShapelessRecipeAccessor) shapeless).blockvariantswapper$getIngredients()) {
+                    if (ingredientConsumesVariantTagSafe(ingredient)) return true;
+                }
+            } else if (recipe instanceof SingleItemRecipe single) {
+                if (ingredientConsumesVariantTagSafe(((SingleItemRecipeAccessor) single).blockvariantswapper$getInput())) return true;
+            }
+        } catch (Exception e) {
+            // Unreadable recipe: treat as "no variant" so we never wrongly remove it
+            return false;
+        }
+        return false;
+    }
+
+    // Tag-safe variant check for a single ingredient: inspect its HolderSet via unwrap()
+    // A direct (Right) set gives us the explicit holder list with no tag resolution; a tag (Left) set is skipped
+    private static boolean ingredientConsumesVariantTagSafe(Ingredient ingredient) {
+        if (ingredient == null || ingredient.isEmpty()) return false;
+        HolderSet<Item> values = ((IngredientAccessor) (Object) ingredient).blockvariantswapper$getValues();
+        if (values == null) return false;
+
+        Either<TagKey<Item>, List<Holder<Item>>> unwrapped = values.unwrap();
+        // Only the Right (direct item list) side is safe to read before tags bind
+        Optional<List<Holder<Item>>> direct = unwrapped.right();
+        if (direct.isEmpty()) return false; // tag-backed set: cannot determine safely, leave it alone
+
+        for (Holder<Item> holder : direct.get()) {
+            if (isVariant(holder.value())) return true;
+        }
+        return false;
     }
 
     // Core method that reads the config and builds the lookup maps
