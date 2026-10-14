@@ -17,7 +17,7 @@ import java.util.stream.Stream;
 // Config model:
 //  - Default variant groups are bundled inside the mod jar and loaded fresh on every (re)load,
 //    so they always stay current with the installed mod version. They are never written to disk.
-//  - The on-disk config folder (config/block-variant-swapper/) is user territory. It is never auto-populated.
+//  - The on-disk config folder (config/blockvariantswapper/) is user territory. It is never auto-populated.
 //    Any *_block_variants.json files a user places there are layered on top of the defaults,
 //    and a user entry for a given base block replaces the default group for that block.
 public class BlockVariantConfig {
