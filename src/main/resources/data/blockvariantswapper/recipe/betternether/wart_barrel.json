@@ -1,0 +1,21 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "betternether"
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "group": "barrel",
+  "key": {
+    "P": "betternether:wart_planks"
+  },
+  "pattern": [
+    "P P",
+    "P P",
+    "PPP"
+  ],
+  "result": {
+    "id": "betternether:wart_barrel"
+  }
+}

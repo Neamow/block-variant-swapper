@@ -1,0 +1,21 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "betternether"
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "group": "chiseled_bookshelf",
+  "key": {
+    "#": "betternether:wart_planks"
+  },
+  "pattern": [
+    "###",
+    " # ",
+    "###"
+  ],
+  "result": {
+    "id": "betternether:wart_chiseled_bookshelf"
+  }
+}

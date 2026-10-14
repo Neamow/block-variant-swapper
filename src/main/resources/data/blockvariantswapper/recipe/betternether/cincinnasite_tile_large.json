@@ -1,0 +1,21 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "betternether"
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "group": "nether_cincinnasite_tile_large",
+  "key": {
+    "#": "betternether:cincinnasite_forged"
+  },
+  "pattern": [
+    "#",
+    "#"
+  ],
+  "result": {
+    "id": "betternether:cincinnasite_tile_large",
+    "count": 2
+  }
+}

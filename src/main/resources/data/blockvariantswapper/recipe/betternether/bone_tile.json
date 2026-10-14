@@ -1,0 +1,21 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "betternether"
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "group": "nether_bone_tile",
+  "key": {
+    "#": "betternether:bone_block"
+  },
+  "pattern": [
+    "#",
+    "#"
+  ],
+  "result": {
+    "id": "betternether:bone_tile",
+    "count": 2
+  }
+}
