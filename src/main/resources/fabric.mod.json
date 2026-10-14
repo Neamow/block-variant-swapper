@@ -1,6 +1,6 @@
 {
 	"schemaVersion": 1,
-	"id": "block-variant-swapper",
+	"id": "blockvariantswapper",
 	"version": "${version}",
 	"name": "Block Variant Swapper",
 	"description": "Swap block variants, such as stairs, slabs or doors, on the fly.",
@@ -12,7 +12,7 @@
 		"sources": "https://github.com/Neamow/block-variant-swapper"
 	},
 	"license": "LGPL-3.0-only",
-	"icon": "assets/block-variant-swapper/icon.png",
+	"icon": "assets/blockvariantswapper/icon.png",
 	"environment": "*",
 	"entrypoints": {
 		"main": [
@@ -26,9 +26,9 @@
 		]
 	},
 	"mixins": [
-		"block-variant-swapper.mixins.json",
+		"blockvariantswapper.mixins.json",
 		{
-			"config": "block-variant-swapper.client.mixins.json",
+			"config": "blockvariantswapper.client.mixins.json",
 			"environment": "client"
 		}
 	],

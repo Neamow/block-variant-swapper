@@ -18,7 +18,7 @@ public class ModKeyBinding {
 
     public static void register() {
         swapKey = KeyMappingHelper.registerKeyMapping(new KeyMapping(
-                "key.block-variant-swapper.swap_variant",
+                "key.blockvariantswapper.swap_variant",
                 InputConstants.Type.KEYSYM,
                 GLFW.GLFW_KEY_LEFT_ALT,
                 CATEGORY

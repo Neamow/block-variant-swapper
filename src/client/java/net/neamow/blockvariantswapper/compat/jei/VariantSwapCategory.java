@@ -99,7 +99,7 @@ public class VariantSwapCategory implements IRecipeCategory<VariantSwapRecipe> {
 
     @Override
     public Component getTitle() {
-        return Component.translatable("gui.block-variant-swapper.jei.category");
+        return Component.translatable("gui.blockvariantswapper.jei.category");
     }
 
     @Override
@@ -137,14 +137,14 @@ public class VariantSwapCategory implements IRecipeCategory<VariantSwapRecipe> {
     public void createRecipeExtras(IRecipeExtrasBuilder builder, VariantSwapRecipe recipe, IFocusGroup focuses) {
         // Text is drawn with JEI text widgets rather than in draw(), which keeps us off the version-specific
         // GuiGraphics API. "Base block" label to the right of the base slot, vertically centred against it
-        Component baseLabel = Component.translatable("gui.block-variant-swapper.jei.base");
+        Component baseLabel = Component.translatable("gui.blockvariantswapper.jei.base");
         builder.addText(baseLabel, WIDTH - BASE_LABEL_X, SLOT)
                 .setColor(LABEL_COLOUR)
                 .setTextAlignment(VerticalAlignment.CENTER)
                 .setPosition(BASE_LABEL_X, BASE_SLOT_Y);
 
         // Keybind hint below the base row. The key comes from the live keybind, so it follows any rebind
-        Component hint = Component.translatable("gui.block-variant-swapper.jei.hint", ModKeyBinding.swapKey.getTranslatedKeyMessage());
+        Component hint = Component.translatable("gui.blockvariantswapper.jei.hint", ModKeyBinding.swapKey.getTranslatedKeyMessage());
         builder.addText(hint, WIDTH - 2 * PADDING, 10)
                 .setColor(LABEL_COLOUR)
                 .setTextAlignment(HorizontalAlignment.LEFT)
