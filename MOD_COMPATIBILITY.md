@@ -10,11 +10,11 @@ Status: ✅ Done | ❌ Not started | ➖ N/A (mod not available for this version
 |--------------------------|:-------------:|:-------------------------------------:|:-----------:|:-------------:|:-----------:|:-----------:|
 | Minecraft (vanilla)      | ✅            | ✅                                    | ✅          | ✅           | ✅          | ✅          |
 | JEI                      | ✅            | ✅                                    | ✅          | ✅           | ✅          | ✅          |
-| Biomes O' Plenty         | ✅            | ✅                                    | ✅          | ✅            | ➖          | ➖          |
+| Biomes O' Plenty         | ✅            | ✅                                    | ✅          | ✅            | ✅          | ✅          |
 | Oh The Biomes We've Gone | ✅            | ✅                                    | ➖          | ➖            | ➖          | ➖          |
-| BetterNether             | ✅            | ✅<sup>*(New Dawn port)*</sup>        | ✅          | ✅<sup>*(New Dawn port)*</sup>            | ➖          | ➖          |
-| BetterEnd                | ✅            | ✅<sup>*(New Dawn port)*</sup>        | ✅          | ✅<sup>*(New Dawn port)*</sup>            | ➖          | ➖          |
+| BetterNether             | ✅            | ✅<sup>*(New Dawn port)*</sup>        | ✅          | ✅<sup>*(New Dawn port)*</sup>            | ✅          | ✅<sup>*(New Dawn port)*</sup>          |
+| BetterEnd                | ✅            | ✅<sup>*(New Dawn port)*</sup>        | ✅          | ✅<sup>*(New Dawn port)*</sup>            | ✅          | ✅<sup>*(New Dawn port)*</sup>          |
 | Twilight Forest          | ✅            | ✅                                    | ➖          | ➖            | ➖          | ➖          |
 | Deeper & Darker          | ✅            | ❌                                    | ➖          | ➖            | ➖          | ➖          |
-| Ecologics                | ✅            | ✅                                    | ✅          | ✅            | ➖          | ➖          |
+| Ecologics                | ✅            | ✅                                    | ✅          | ✅            | ✅          | ✅          |
 | Regions Unexplored       | ✅            | ✅                                    | ➖          | ➖            | ➖          | ➖          |
